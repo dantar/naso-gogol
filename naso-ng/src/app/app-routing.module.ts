@@ -1,0 +1,14 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { SanPietroburgoComponent } from './components/main/san-pietroburgo/san-pietroburgo.component';
+
+
+const routes: Routes = [
+  {path: '', component: SanPietroburgoComponent},
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
