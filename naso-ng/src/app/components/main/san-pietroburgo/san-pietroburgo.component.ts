@@ -34,6 +34,7 @@ export class SanPietroburgoComponent implements OnInit {
     this.locations = [
       {name: 'A', state: 'mini', x: 10, y:30},
       {name: 'B', state: 'mini', x: 30, y:10},
+      {name: 'C', state: 'mini', x: 70, y:60},
     ];
   }
 
