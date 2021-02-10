@@ -1,3 +1,45 @@
 <svg class="fullsvg" viewBox="0 0 100 100">
-    <g><circle cx="50" cy="50" r="50" style="fill:gold;"></circle></g>
+
+    <defs>
+        <g id="pin-A">
+            <circle cx="50" cy="50" r="50" style="fill:#d40000;"></circle>
+        </g>
+        <g id="pin-B">
+            <circle cx="50" cy="50" r="50" style="fill:#71d400;"></circle>
+        </g>
+    </defs>
+
+    <g style="display:inline" id="layer1">
+        <image transform="rotate(15)" width="139.72601" height="100" preserveAspectRatio="none"
+            xlink:href="assets/pietroburgo.jpg" id="image110"
+            x="-8.6257629" y="-14.644661" />
+    </g>
+    <g style="display:inline" id="layer2">
+        <g transform="matrix(0.77803823,0,0,0.77803823,10.961811,4.3058428)" id="g944">
+            <path
+                style="opacity:1;vector-effect:none;fill:#d40000;fill-opacity:0.66666667;stroke:none;stroke-width:6.95384121;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.33333333;paint-order:markers fill stroke"
+                id="path114"
+                d="m 1.6136747,26.302469 c -0.092832,0 -1.54398602,-3.17221 -1.61908853,-3.226775 -0.07510252,-0.05457 -3.54048487,-0.454428 -3.56917157,-0.542716 -0.028687,-0.08829 2.5398331,-2.448685 2.5685197,-2.536973 0.0286866,-0.08829 -0.6618834,-3.507627 -0.5867809,-3.562192 0.075102,-0.05457 3.1136892,1.658839 3.206521,1.658839 0.092832,0 3.1314185,-1.713405 3.206521,-1.65884 0.075102,0.05457 -0.6154673,3.473904 -0.5867807,3.562193 0.028687,0.08829 2.5972064,2.448684 2.5685198,2.536973 -0.028687,0.08829 -3.4940689,0.488151 -3.5691714,0.542716 -0.075103,0.05457 -1.5262566,3.226775 -1.6190884,3.226775 z"
+                transform="scale(-1)" />
+            <circle
+                style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.66666667;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.66666667;paint-order:markers fill stroke"
+                id="path940" cx="-1.6136745" cy="-20.619293" r="6.9642859" />
+        </g>
+        <use height="100%" width="100%" transform="rotate(15,-148.60096,37.921587)" id="use952" xlink:href="#g944" y="0"
+            x="0" />
+        <use x="0" y="0" xlink:href="#g944" id="use954" transform="rotate(15,-125.63468,283.53755)" width="100%"
+            height="100%" />
+        <use height="100%" width="100%" transform="rotate(15,-234.3658,354.77625)" id="use956" xlink:href="#g944" y="0"
+            x="0" />
+        <use x="0" y="0" xlink:href="#g944" id="use958" transform="rotate(15,-227.36291,239.06843)" width="100%"
+            height="100%" />
+        <use height="100%" width="100%" transform="rotate(15,-278.5558,124.06801)" id="use960" xlink:href="#g944" y="0"
+            x="0" />
+        <use x="0" y="0" xlink:href="#g944" id="use962" transform="rotate(15,-230.94629,2.1731828)" width="100%"
+            height="100%" />
+        <use height="100%" width="100%" transform="rotate(15,-126.81701,162.55499)" id="use964" xlink:href="#g944" y="0"
+            x="0" />
+        <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name" [@location]="locationState(location)" (click)="clickLocation(location)"></use>
+    </g>
+
 </svg>

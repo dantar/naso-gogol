@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="naso-gogol.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="66.035251"
+     inkscape:cy="51.619951"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:lockguides="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="mappa"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <image
+       sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
+       y="-14.644661"
+       x="-8.6257629"
+       id="image110"
+       xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
+       preserveAspectRatio="none"
+       height="100"
+       width="139.72601"
+       transform="rotate(15)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="locations"
+     style="display:inline">
+    <g
+       id="g944"
+       transform="matrix(0.77803823,0,0,0.77803823,10.961811,4.3058428)">
+      <path
+         transform="scale(-1)"
+         d="m 1.6136747,26.302469 c -0.092832,0 -1.54398602,-3.17221 -1.61908853,-3.226775 -0.07510252,-0.05457 -3.54048487,-0.454428 -3.56917157,-0.542716 -0.028687,-0.08829 2.5398331,-2.448685 2.5685197,-2.536973 0.0286866,-0.08829 -0.6618834,-3.507627 -0.5867809,-3.562192 0.075102,-0.05457 3.1136892,1.658839 3.206521,1.658839 0.092832,0 3.1314185,-1.713405 3.206521,-1.65884 0.075102,0.05457 -0.6154673,3.473904 -0.5867807,3.562193 0.028687,0.08829 2.5972064,2.448684 2.5685198,2.536973 -0.028687,0.08829 -3.4940689,0.488151 -3.5691714,0.542716 -0.075103,0.05457 -1.5262566,3.226775 -1.6190884,3.226775 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0.025713777"
+         inkscape:flatsided="false"
+         sodipodi:arg2="2.1991148"
+         sodipodi:arg1="1.5707963"
+         sodipodi:r2="2.7545578"
+         sodipodi:r1="5.4552593"
+         sodipodi:cy="20.84721"
+         sodipodi:cx="1.6136745"
+         sodipodi:sides="5"
+         id="path114"
+         style="opacity:1;vector-effect:none;fill:#d40000;fill-opacity:0.66666667;stroke:none;stroke-width:6.95384121;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.33333333;paint-order:markers fill stroke"
+         sodipodi:type="star" />
+      <circle
+         r="6.9642859"
+         cy="-20.619293"
+         cx="-1.6136745"
+         id="path940"
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.66666667;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.66666667;paint-order:markers fill stroke" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use952"
+       transform="rotate(15,-148.60096,37.921587)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="rotate(15,-125.63468,283.53755)"
+       id="use954"
+       xlink:href="#g944"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use956"
+       transform="rotate(15,-234.3658,354.77625)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="rotate(15,-227.36291,239.06843)"
+       id="use958"
+       xlink:href="#g944"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use960"
+       transform="rotate(15,-278.5558,124.06801)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="rotate(15,-230.94629,2.1731828)"
+       id="use962"
+       xlink:href="#g944"
+       y="0"
+       x="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use964"
+       transform="rotate(15,-126.81701,162.55499)"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>
