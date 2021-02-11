@@ -13,7 +13,7 @@ import { TickersService } from 'src/app/services/tickers.service';
         transform: 'translate({{x}}px,{{y}}px) scale(0.15)',
       }), {params: {x:0, y:0}}),
       state('full', style({
-        transform: 'translate(0,0) scale(1)',
+        transform: 'translate(-20px,-20px) scale(1.4)',
       })),
       // transitions
       transition('mini => full', animate('1000ms')),
