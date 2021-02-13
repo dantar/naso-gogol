@@ -9,12 +9,14 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ListenTrackComponent } from './components/listen-track/listen-track.component';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { MatSliderModule } from '@angular/material/slider';
+import { WatchVideoComponent } from './components/watch-video/watch-video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SanPietroburgoComponent,
-    ListenTrackComponent
+    ListenTrackComponent,
+    WatchVideoComponent
   ],
   imports: [
     BrowserModule,
