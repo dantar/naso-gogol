@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SanPietroburgoComponent } from './components/main/san-pietroburgo/san-pietroburgo.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ListenTrackComponent } from './components/listen-track/listen-track.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SanPietroburgoComponent
+    SanPietroburgoComponent,
+    ListenTrackComponent
   ],
   imports: [
     BrowserModule,

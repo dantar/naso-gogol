@@ -18,7 +18,8 @@
             x="-8.6257629" y="-14.644661" />
     </g>
     <g style="display:inline" id="layer2">
-        <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name" [@location]="locationState(location)" (click)="clickLocation(location)"></use>
+        <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name" [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)" (click)="clickLocation(location)"></use>
     </g>
 
 </svg>
+<app-listen-track *ngIf="track" [track]="track"></app-listen-track>
