@@ -1,2 +1,8 @@
-<div style="color: white;">listen-track works!</div>
-<mat-basic-audio-player></mat-basic-audio-player>
+<div class="audio-slider">
+    <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="true" 
+        [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
+        [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration" [expanded]="true"
+        (trackEnded)="onEnded($event)" [displayVolumeControls]="msaapDisplayVolumeControls"
+        [displayRepeatControls]="msaapDisplayRepeatControls" [disablePositionSlider]="msaapDisablePositionSlider">
+    </ngx-audio-player>
+</div>

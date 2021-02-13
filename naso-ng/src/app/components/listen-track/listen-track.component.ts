@@ -8,15 +8,15 @@ import { Track } from 'ngx-audio-player';
 })
 export class ListenTrackComponent implements OnInit {
 
-  msaapDisplayTitle = true;
-  msaapDisplayPlayList = true;
+  msaapDisplayTitle = false;
+  msaapDisplayPlayList = false;
   msaapPageSizeOptions = [2, 4, 6];
-  msaapDisplayVolumeControls = true;
-  msaapDisplayRepeatControls = true;
+  msaapDisplayVolumeControls = false;
+  msaapDisplayRepeatControls = false;
   msaapDisplayArtist = false;
-  msaapDisplayDuration = false;
-  msaapDisablePositionSlider = true;
-  
+  msaapDisplayDuration = true;
+  msaapDisablePositionSlider = false;
+
   // Material Style Advance Audio Player Playlist
   msaapPlaylist: Track[];
 
@@ -28,4 +28,7 @@ export class ListenTrackComponent implements OnInit {
     this.msaapPlaylist = [this.track];
   }
 
+  onEnded(event: any) {
+    console.log(event);
+  }
 }
