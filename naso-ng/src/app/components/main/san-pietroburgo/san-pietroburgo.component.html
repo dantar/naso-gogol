@@ -1,31 +1,43 @@
-<svg class="fullsvg" viewBox="0 0 100 100">
+<svg class="fullsvg" viewBox="0 0 100 100" (pan)="onPan($event)">
 
     <defs>
+        <g id="pin-visited">
+            <circle cx="0" cy="0" r="60" style="fill:#00ccff;"></circle>
+        </g>
         <g id="pin-A">
-            <circle cx="50" cy="50" r="50" style="fill:#d40000;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#d40000;"></circle>
         </g>
         <g id="pin-B">
-            <circle cx="50" cy="50" r="50" style="fill:#71d400;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#71d400;"></circle>
         </g>
         <g id="pin-C">
-            <circle cx="50" cy="50" r="50" style="fill:#fff290;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
     </defs>
 
     <g style="display:inline" id="layer1">
         <image transform="rotate(15)" width="139.72601" height="100" preserveAspectRatio="none"
-            xlink:href="assets/pietroburgo.jpg" id="image110"
-            x="-8.6257629" y="-14.644661" />
+            xlink:href="assets/pietroburgo.jpg" id="image110" x="-8.6257629" y="-14.644661" />
     </g>
+
     <g style="display:inline" id="layer2">
-        <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name" [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)" (click)="clickLocation(location)"></use>
+        <path id="segment" *ngIf="visits.length > 1" [attr.d]="visitsPathD()"
+            style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="visitedStyle(location)"></use>
+        <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name"
+            [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)"
+            (click)="clickLocation(location)" 
+            (mouseover)="onOverLocation($event, location)" 
+            (touchmove)="onOverLocation($event, location)"
+            (pointermove)="onOverLocation($event, location)"
+            ></use>
     </g>
 
 </svg>
 <app-listen-track *ngIf="track" [track]="track" [@mediaitem]></app-listen-track>
 <app-watch-video *ngIf="video" [video]="video" [@mediaitem]></app-watch-video>
 <div class="panel-menu-list top-right-menu" *ngIf="video">
-  <div class="panel-menu-item" (click)="clickCloseVideo()">
-    close
-  </div>
+    <div class="panel-menu-item" (click)="clickCloseVideo()">
+        close
+    </div>
 </div>

@@ -12,8 +12,8 @@ import { VideoData } from 'src/app/models/media.model';
     trigger('location', [
       // states
       state('mini', style({
-        transform: 'translate({{x}}px,{{y}}px) scale(0.15)',
-      }), { params: { x: 0, y: 0 } }),
+        transform: 'translate({{x}}px,{{y}}px) scale({{s}})',
+      }), { params: { x: 0, y: 0, s: 0.1 } }),
       state('full', style({
         transform: 'translate(-20px,-20px) scale(1.4)',
       })),
@@ -39,11 +39,16 @@ export class SanPietroburgoComponent implements OnInit {
 
   locations: MapLocation[];
   location: MapLocation;
+  locationScale: number = 0.1;
+
+  visits: MapLocation[];
 
   track: Track;
   video: VideoData;
+  panning: boolean;
 
   ngOnInit(): void {
+    this.panning = false;
     this.locations = [
       {
         name: 'A', state: 'mini', x: 10, y: 30, track: {
@@ -60,6 +65,7 @@ export class SanPietroburgoComponent implements OnInit {
       { name: 'C', state: 'mini', x: 70, y: 60, video: { url: 'assets/video-01.mp4' } },
     ];
     this.track = null;
+    this.visits = [];
   }
 
   clickLocation(location: MapLocation) {
@@ -83,7 +89,15 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   locationState(location: MapLocation) {
-    return { value: location.state, params: { x: location.x, y: location.y } };
+    return { value: location.state, params: { x: location.x, y: location.y, s: this.locationScale } };
+  }
+
+  visitedStyle(location: MapLocation) {
+    return `translate(${location.x} ${location.y}) scale(0.1)`
+  }
+  visitsPathD(): string {
+    let path = this.visits.map(l => `${l.x},${l.y}`).join(' ');
+    return `M ${path}`;
   }
 
   animationLocationDone(event: any, location: MapLocation) {
@@ -100,6 +114,40 @@ export class SanPietroburgoComponent implements OnInit {
     }
   }
 
+  onPan(event: any) {
+    this.panning = !event.isFinal;
+    if (event.isFinal) {
+      this.visits = [];
+    } else {
+      console.log(event);
+      let c: Coordinates = this.panEventCoordinates(event);
+      let closeTo = this.locations
+      .filter(l => (l.x-c.x)*(l.x-c.x) + (l.y-c.y)*(l.y-c.y) < 10)
+      .filter(l => !this.visits.includes(l))
+      .forEach(l => this.visits.push(l));      
+    }
+  }
+
+  onPanLocation(event: any, location: MapLocation) {
+    this.panning = !event.isFinal;
+  }
+
+  panEventCoordinates(event: any): Coordinates {
+    let side = Math.min(window.innerWidth, window.innerHeight);
+    let ratio = 100 / side;
+    return {
+      x: (event.center.x - (window.innerWidth-side)/2) * ratio,
+      y: (event.center.y - (window.innerHeight-side)/2) * ratio,
+    }
+  }
+
+  onOverLocation(event: any, location: MapLocation) {
+    console.log(event, location);
+    if (this.panning) {
+      console.log('evviva', event, location);
+    }
+  }
+
 }
 
 class MapLocation {
@@ -112,4 +160,9 @@ class MapLocation {
   video?: VideoData;
   track?: Track;
 
+}
+
+class Coordinates {
+  x: number;
+  y: number;
 }

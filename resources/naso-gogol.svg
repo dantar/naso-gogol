@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="66.035251"
-     inkscape:cy="51.619951"
+     inkscape:zoom="5.6"
+     inkscape:cx="88.04354"
+     inkscape:cy="41.184471"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,7 +55,7 @@
      inkscape:label="mappa"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:none">
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
        y="-14.644661"
@@ -154,5 +154,11 @@
        transform="rotate(15,-126.81701,162.55499)"
        width="100%"
        height="100%" />
+    <path
+       style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M -0.17857143,6.139371e-7 50.446428,50.625"
+       id="segment"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path27" />
   </g>
 </svg>

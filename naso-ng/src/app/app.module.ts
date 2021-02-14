@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +10,14 @@ import { ListenTrackComponent } from './components/listen-track/listen-track.com
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { MatSliderModule } from '@angular/material/slider';
 import { WatchVideoComponent } from './components/watch-video/watch-video.component';
+
+import * as Hammer from 'hammerjs';
+
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any>{
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  };
+}
 
 @NgModule({
   declarations: [
@@ -24,9 +32,11 @@ import { WatchVideoComponent } from './components/watch-video/watch-video.compon
     BrowserAnimationsModule,
     NgxAudioPlayerModule,
     MatSliderModule,
+    HammerModule,
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig },
   ],
   bootstrap: [AppComponent]
 })

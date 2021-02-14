@@ -26,7 +26,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer1">
     <image
        transform="rotate(15)"
@@ -112,5 +112,9 @@
        xlink:href="#g944"
        y="0"
        x="0" />
+    <path
+       id="segment"
+       d="M 0,0 50,50"
+       style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
 </svg>
