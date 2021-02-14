@@ -1,4 +1,4 @@
-<div class="video-player">
+<div class="video-player" (click)="clickEvent($event)">
     <video controls>
         <source [src]="video.url" type="video/mp4">
         Il tuo browser non supporta i video.

@@ -153,7 +153,7 @@ export class SanPietroburgoComponent implements OnInit {
       console.log(event);
       let c: Coordinates = this.panEventCoordinates(event);
       let closeTo = this.locations
-      .filter(l => (l.x-c.x)*(l.x-c.x) + (l.y-c.y)*(l.y-c.y) < 10)
+      .filter(l => (l.x-c.x)*(l.x-c.x) + (l.y-c.y)*(l.y-c.y) < 100)
       .filter(l => !this.visits.includes(l))
       .forEach(l => this.visits.push(l));      
     }

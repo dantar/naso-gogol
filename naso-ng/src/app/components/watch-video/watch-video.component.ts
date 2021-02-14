@@ -15,4 +15,8 @@ export class WatchVideoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickEvent(event: any) {
+    console.log(event);
+  }
+
 }
