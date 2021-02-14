@@ -15,7 +15,7 @@ import { VideoData } from 'src/app/models/media.model';
         transform: 'translate({{x}}px,{{y}}px) scale({{s}})',
       }), { params: { x: 0, y: 0, s: 0.1 } }),
       state('full', style({
-        transform: 'translate(-20px,-20px) scale(1.4)',
+        transform: 'translate(50px,50px) scale(1.4) ',
       })),
       // transitions
       transition('mini => full', animate('1000ms')),
@@ -46,6 +46,7 @@ export class SanPietroburgoComponent implements OnInit {
   track: Track;
   video: VideoData;
   panning: boolean;
+  panEvent: any;
 
   ngOnInit(): void {
     this.panning = false;
@@ -66,6 +67,7 @@ export class SanPietroburgoComponent implements OnInit {
     ];
     this.track = null;
     this.visits = [];
+    this.panEvent = null;
   }
 
   clickLocation(location: MapLocation) {
@@ -96,8 +98,10 @@ export class SanPietroburgoComponent implements OnInit {
     return `translate(${location.x} ${location.y}) scale(0.1)`
   }
   visitsPathD(): string {
-    let path = this.visits.map(l => `${l.x},${l.y}`).join(' ');
-    return `M ${path}`;
+    let points = this.visits.map(l => `${l.x},${l.y}`);
+    let c = this.panEventCoordinates(this.panEvent);
+    points.push(`${c.x},${c.y}`);
+    return `M ${points.join(' ')}`;
   }
 
   animationLocationDone(event: any, location: MapLocation) {
@@ -116,6 +120,7 @@ export class SanPietroburgoComponent implements OnInit {
 
   onPan(event: any) {
     this.panning = !event.isFinal;
+    this.panEvent = event;
     if (event.isFinal) {
       this.visits = [];
     } else {

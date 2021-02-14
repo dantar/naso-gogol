@@ -21,7 +21,7 @@
     </g>
 
     <g style="display:inline" id="layer2">
-        <path id="segment" *ngIf="visits.length > 1" [attr.d]="visitsPathD()"
+        <path id="segment" *ngIf="visits.length > 0" [attr.d]="visitsPathD()"
             style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="visitedStyle(location)"></use>
         <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name"
