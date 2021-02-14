@@ -97,6 +97,10 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   clickLocation(location: MapLocation) {
+    this.visits = [];
+    this.panning = false;
+    this.panEvent = null;
+
     this.locations = this.locations.filter(l => l.name != location.name);
     this.locations.push(location);
     if (this.location) {
@@ -146,10 +150,12 @@ export class SanPietroburgoComponent implements OnInit {
 
   onPan(event: any) {
     this.panning = !event.isFinal;
-    this.panEvent = event;
     if (event.isFinal) {
       this.visits = [];
+      this.panning = false;
+      this.panEvent = null;
     } else {
+      this.panEvent = event;
       console.log(event);
       let c: Coordinates = this.panEventCoordinates(event);
       let closeTo = this.locations
@@ -161,6 +167,11 @@ export class SanPietroburgoComponent implements OnInit {
 
   onPanLocation(event: any, location: MapLocation) {
     this.panning = !event.isFinal;
+  }
+
+  onTouchStart(event: any, location: MapLocation) {
+    this.panning = true;
+    this.visits = [location];
   }
 
   panEventCoordinates(event: any): Coordinates {
