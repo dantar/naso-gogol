@@ -64,6 +64,32 @@ export class SanPietroburgoComponent implements OnInit {
         }
       },
       { name: 'C', state: 'mini', x: 70, y: 60, video: { url: 'assets/video-01.mp4' } },
+      {
+        name: 'D', state: 'mini', x: -10, y: 80, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        }
+      },
+      {
+        name: 'E', state: 'mini', x: -15, y: 40, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        }
+      },
+      { name: 'F', state: 'mini', x: 110, y: 35, video: { url: 'assets/video-01.mp4' } },
+      {
+        name: 'G', state: 'mini', x: 45, y: 55, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        }
+      },
+      {
+        name: 'H', state: 'mini', x: 20, y: 85, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        }
+      },
+      { name: 'I', state: 'mini', x: 80, y: 20, video: { url: 'assets/video-01.mp4' } },
     ];
     this.track = null;
     this.visits = [];
