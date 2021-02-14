@@ -45,11 +45,9 @@ export class SanPietroburgoComponent implements OnInit {
 
   track: Track;
   video: VideoData;
-  panning: boolean;
   panEvent: any;
 
   ngOnInit(): void {
-    this.panning = false;
     this.locations = [
       {
         name: 'A', state: 'mini', x: 10, y: 30, track: {
@@ -98,7 +96,6 @@ export class SanPietroburgoComponent implements OnInit {
 
   clickLocation(location: MapLocation) {
     this.visits = [];
-    this.panning = false;
     this.panEvent = null;
 
     this.locations = this.locations.filter(l => l.name != location.name);
@@ -149,10 +146,8 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   onPan(event: any) {
-    this.panning = !event.isFinal;
     if (event.isFinal) {
       this.visits = [];
-      this.panning = false;
       this.panEvent = null;
     } else {
       this.panEvent = event;
@@ -165,12 +160,7 @@ export class SanPietroburgoComponent implements OnInit {
     }
   }
 
-  onPanLocation(event: any, location: MapLocation) {
-    this.panning = !event.isFinal;
-  }
-
   onTouchStart(event: any, location: MapLocation) {
-    this.panning = true;
     this.visits = [location];
   }
 
@@ -185,7 +175,7 @@ export class SanPietroburgoComponent implements OnInit {
 
   onOverLocation(event: any, location: MapLocation) {
     console.log(event, location);
-    if (this.panning) {
+    if (this.panEvent) {
       console.log('evviva', event, location);
     }
   }
