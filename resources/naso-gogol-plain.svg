@@ -29,17 +29,16 @@
      style="display:none"
      id="layer1">
     <image
-       transform="rotate(15)"
        width="139.72601"
        height="100"
        preserveAspectRatio="none"
        xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
        id="image110"
-       x="-8.6257629"
-       y="-14.644661" />
+       x="-19.863007"
+       y="1.2694414e-08" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer2">
     <g
        transform="matrix(0.77803823,0,0,0.77803823,10.961811,4.3058428)"
@@ -114,7 +113,28 @@
        x="0" />
     <path
        id="segment"
-       d="M 0,0 50,50"
+       d="M -0.17857143,6.139371e-7 50.446428,50.625"
        style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <g
+     id="layer3">
+    <image
+       width="106.1088"
+       height="117.83941"
+       preserveAspectRatio="none"
+       xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/Kazan-icon-01.png"
+       id="image74"
+       x="-52.120205"
+       y="-56.419712"
+       style="display:inline" />
+    <image
+       width="97.710739"
+       height="123.57143"
+       preserveAspectRatio="none"
+       xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/Nevskij-icon-01.png"
+       id="image85"
+       x="-47.921173"
+       y="-59.285713"
+       style="display:inline" />
   </g>
 </svg>

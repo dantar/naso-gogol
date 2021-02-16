@@ -5,10 +5,14 @@
             <circle cx="0" cy="0" r="60" style="fill:#00ccff;"></circle>
         </g>
         <g id="pin-A">
-            <circle cx="0" cy="0" r="50" style="fill:#d40000;"></circle>
+            <image width="106.1088" height="117.83941" preserveAspectRatio="none"
+                xlink:href="./assets/Kazan-icon-01.png" id="image74"
+                x="-52.120205" y="-56.419712" style="display:inline" />
         </g>
         <g id="pin-B">
-            <circle cx="0" cy="0" r="50" style="fill:#71d400;"></circle>
+            <image width="97.710739" height="123.57143" preserveAspectRatio="none"
+                xlink:href="./assets/Nevskij-icon-01.png"
+                id="image85" x="-47.921173" y="-59.285713" style="display:inline" />
         </g>
         <g id="pin-C">
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
@@ -34,8 +38,8 @@
     </defs>
 
     <g style="display:inline" id="layer1">
-        <image transform="rotate(15)" width="139.72601" height="100" preserveAspectRatio="none"
-            xlink:href="assets/pietroburgo.jpg" id="image110" x="-8.6257629" y="-14.644661" />
+        <image width="139.72601" height="100" preserveAspectRatio="none" xlink:href="assets/pietroburgo.jpg"
+            id="image110" x="-19.863007" y="1.2694414e-08" />
     </g>
 
     <g style="display:inline" id="layer2">
@@ -44,13 +48,9 @@
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="visitedStyle(location)"></use>
         <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name"
             [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)"
-            (click)="clickLocation(location)"  
-            (touchstart)="onTouchStart($event, location)"
-            (mousedown)="onTouchStart($event, location)"
-            (mouseover)="onOverLocation($event, location)" 
-            (touchmove)="onOverLocation($event, location)"
-            (pointermove)="onOverLocation($event, location)"
-            ></use>
+            (click)="clickLocation(location)" (touchstart)="onTouchStart($event, location)"
+            (mousedown)="onTouchStart($event, location)" (mouseover)="onOverLocation($event, location)"
+            (touchmove)="onOverLocation($event, location)" (pointermove)="onOverLocation($event, location)"></use>
     </g>
 
 </svg>
