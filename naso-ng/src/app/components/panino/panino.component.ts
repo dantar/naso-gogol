@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Track } from 'ngx-audio-player';
 import { TickersService } from 'src/app/services/tickers.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-panino',
@@ -43,14 +44,19 @@ export class PaninoComponent implements OnInit {
 
   track: Track;
   mediastate: string;
+  intro: boolean;
 
-  constructor(private tickers: TickersService) { }
+  constructor(
+    private tickers: TickersService,
+    private router: Router,
+    ) { }
 
   ngOnInit(): void {
     this.breadUp = 'none';
     this.breadDown = 'none';
     this.track = null;
     this.mediastate = 'hidden';
+    this.intro = true;
   }
 
   clickAnywhere() {
@@ -76,6 +82,10 @@ export class PaninoComponent implements OnInit {
     this.tickers.once('inactive', 2000, () => {
       this.mediastate = 'hidden';
     });
+  }
+
+  clickSkip() {
+    this.router.navigate(['mappa']);
   }
 
 }

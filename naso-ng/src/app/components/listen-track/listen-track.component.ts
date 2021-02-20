@@ -10,6 +10,8 @@ export class ListenTrackComponent implements OnInit, AfterViewInit {
 
   @ViewChild(AudioPlayerComponent) audioplayer: AudioPlayerComponent;
 
+  @Input() track: Track;
+
   msaapDisplayTitle = false;
   msaapDisplayPlayList = false;
   msaapPageSizeOptions = [2, 4, 6];
@@ -20,14 +22,6 @@ export class ListenTrackComponent implements OnInit, AfterViewInit {
   msaapDisablePositionSlider = false;
   // Material Style Advance Audio Player Playlist
   msaapPlaylist: Track[];
-
-
-  // Material Style Basic Audio Player (Optional Parameters)
-  msbapTitle = 'Audio Title';
-  msbapDisplayTitle = false; 
-  msbapDisplayVolumeControls = true; 
-  msbapDisablePositionSlider = true;   
-  @Input() track: Track;
 
   constructor() { }
 
