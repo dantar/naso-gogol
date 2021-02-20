@@ -12,6 +12,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { WatchVideoComponent } from './components/watch-video/watch-video.component';
 
 import * as Hammer from 'hammerjs';
+import { PaninoComponent } from './components/panino/panino.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -24,7 +25,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     AppComponent,
     SanPietroburgoComponent,
     ListenTrackComponent,
-    WatchVideoComponent
+    WatchVideoComponent,
+    PaninoComponent
   ],
   imports: [
     BrowserModule,

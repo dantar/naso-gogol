@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="184.54439"
-     inkscape:cy="30.276538"
+     inkscape:zoom="3.959798"
+     inkscape:cx="58.766491"
+     inkscape:cy="52.448751"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="panino-sopra"
      showgrid="false"
      units="px"
      inkscape:window-width="1853"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -163,7 +163,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="vincenzo">
+     inkscape:label="vincenzo"
+     style="display:none">
     <image
        style="display:inline"
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/Kazan-icon-01.png"
@@ -184,5 +185,52 @@
        preserveAspectRatio="none"
        height="123.57143"
        width="97.710739" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="panino">
+    <g
+       id="panino-sotto"
+       inkscape:label="#g857">
+      <path
+         style="fill:#c87137;stroke:#784421;stroke-width:1.38181758px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+         d="M 4.1458503,55.900877 C 28.737307,64.320636 57.344981,66.250344 96.431527,54.913864 92.646406,64.996373 89.545234,75.717237 76.19777,76.874895 L 19.691298,76.134635 C 8.8220344,72.044191 5.1978308,64.572719 4.1458503,55.900877 Z"
+         id="path34"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path36"
+         d="M 4.1458503,55.900877 C 28.737307,64.320636 57.344981,66.250344 96.431527,54.913864 95.528208,52.718117 33.027056,45.132043 4.1458503,55.900877 Z"
+         style="fill:#ffeeaa;stroke:#784421;stroke-width:1.38181758px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="panino-naso"
+       inkscape:label="#g864">
+      <path
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path843"
+         d="m 39.86465,59.427754 c -6.72851,-0.58079 -5.04484,-3.749939 -3.21429,-6.964286 v 0 L 52.103137,36.163343 v 0 c 1.24448,-1.076949 1.93314,-2.709717 6.07143,-0.892857 v 0 L 57.399,59.916422 v 0 c -2.64688,1.345069 -0.78883,-0.462584 -4.43518,-2.115935 -5.23411,-2.626006 -11.07739,1.135868 -13.09917,1.627267 z"
+         style="fill:#ffd5d5;stroke:#ff8080;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path851"
+         d="m 43.19753,58.457477 c -1.36556,0.861351 1.06915,-0.207007 2.67281,1.99466 5.18637,1.944021 8.43676,0.829348 11.52866,-0.535715 l -5.04734,-4.741941 c -2.50422,-2.082276 -6.64992,1.694131 -9.15413,3.282996 z"
+         style="fill:#ffd5d5;stroke:#ff8080;stroke-width:1.12511885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="panino-sopra"
+       inkscape:label="#g860">
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path32"
+         d="M 96.431527,54.913864 C 61.115025,66.364441 30.970374,63.787721 4.1458543,55.900877 7.930976,45.818368 11.032148,35.097504 24.379612,33.939846 l 56.506471,0.74026 c 10.869264,4.090444 14.493468,11.561916 15.545444,20.233758 z"
+         style="fill:#c87137;stroke:#784421;stroke-width:1.38181758px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    </g>
   </g>
 </svg>

@@ -1,8 +1,15 @@
-<div class="audio-slider">
-    <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="true" 
-        [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
-        [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration" [expanded]="true"
-        (trackEnded)="onEnded($event)" [displayVolumeControls]="msaapDisplayVolumeControls"
-        [displayRepeatControls]="msaapDisplayRepeatControls" [disablePositionSlider]="msaapDisablePositionSlider">
-    </ngx-audio-player>
+<div class="audio-slider" (click)="logMe($event)">
+
+    <mat-basic-audio-player [audioUrl]="track.link" [title]="msbapTitle" [autoPlay]="false" muted="muted" (trackEnded)="onEnded($event)"
+    [displayTitle]="msbapDisplayTitle" [displayVolumeControls]="msaapDisplayVolumeControls" 
+        [disablePositionSlider]="msbapDisablePositionSlider"></mat-basic-audio-player>
+
+</div>
+<div class="panel-menu-list top-right-menu" *ngIf="audioplayer" style="color: white;">
+    <div class="panel-menu-item" (click)="audioplayer.toggleRepeat()">
+        {{audioplayer.repeat}}
+    </div>
+    <div class="panel-menu-item" (click)="logMe(audioplayer)">
+        {{audioplayer.currentTime}}
+    </div>
 </div>
