@@ -1,4 +1,4 @@
-<svg class="fullsvg" viewBox="0 0 100 100" (pan)="onPan($event)" (click)="clickedScreen($event)">
+<svg class="fullsvg" viewBox="0 0 100 100" (pan)="onPan($event)">
 
     <defs>
         <g id="pin-visited">
@@ -37,7 +37,8 @@
         </g>
     </defs>
 
-    <g style="display:inline" id="layer1">
+    <g style="display:inline" id="layer1" (click)="clickedScreen($event)">
+        <rect x="-100" y="-100" width="300" height="300" style="opacity: 0;" ></rect>
         <image width="139.72601" height="100" preserveAspectRatio="none" xlink:href="assets/pietroburgo.jpg"
             id="image110" x="-19.863007" y="1.2694414e-08" />
     </g>
@@ -49,8 +50,7 @@
         <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name"
             [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)"
             (click)="clickLocation(location)" (touchstart)="onTouchStart($event, location)"
-            (mousedown)="onTouchStart($event, location)" (mouseover)="onOverLocation($event, location)"
-            (touchmove)="onOverLocation($event, location)" (pointermove)="onOverLocation($event, location)"></use>
+            (mousedown)="onTouchStart($event, location)"></use>
     </g>
 
 </svg>

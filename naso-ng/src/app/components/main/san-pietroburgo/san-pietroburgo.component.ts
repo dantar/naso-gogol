@@ -115,14 +115,15 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   clickedScreen(event: any){
-    console.log(event);
     if (this.location && this.location.confirmed === 'full') {
       this.closeCurrentLocation();
     }
   }
 
   clickLocation(location: MapLocation) {
-    console.log(location);
+    if (location.confirmed === 'full') {
+      console.log('location full click', location);
+    }
     this.visits = [];
     this.panEvent = null;
     this.locations = this.locations.filter(l => l.name != location.name);
@@ -196,22 +197,13 @@ export class SanPietroburgoComponent implements OnInit {
     }
   }
 
-  onOverLocation(event: any, location: MapLocation) {
-    console.log(event, location);
-    if (this.panEvent) {
-      console.log('evviva', event, location);
-    }
-  }
-
   doneDissolve(event:any) {
-    console.log(event);
     if (event.toState === 'hidden') {
       this.intro = false;
     }
   }
 
   introSkipped() {
-    console.log('intro skipped');
     this.breadDissolve = 'hidden';
   }
 
