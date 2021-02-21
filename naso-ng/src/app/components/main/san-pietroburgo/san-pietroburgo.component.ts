@@ -3,6 +3,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 import { TickersService } from 'src/app/services/tickers.service';
 import { Track } from 'ngx-audio-player';
 import { VideoData } from 'src/app/models/media.model';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
 @Component({
   selector: 'app-san-pietroburgo',
@@ -106,27 +107,43 @@ export class SanPietroburgoComponent implements OnInit {
     this.breadDissolve = 'shown';
   }
 
+  clickCloseVideo() {
+    this.video = null;
+    if (this.location) {
+      this.clickLocation(this.location);
+    }
+  }
+
+  clickedScreen(event: any){
+    console.log(event);
+    if (this.location) {
+      this.closeCurrentLocation();
+    }
+  }
+
   clickLocation(location: MapLocation) {
+    console.log(location);
     this.visits = [];
     this.panEvent = null;
-
     this.locations = this.locations.filter(l => l.name != location.name);
     this.locations.push(location);
-    if (this.location) {
-      this.tickers.once('toggle', 5, () => {
-        this.location.state = 'mini';
-        this.track = null;
-        this.video = null;
-        if (this.location === location) {
-          this.location = null;
-        }
-      });
-    } else {
-      this.location = location;
-      this.tickers.once('toggle', 5, () => {
+    if (!this.location) {
+      this.tickers.once('toggle', 10, () => {
+        this.location = location;
         this.location.state = 'full';
       });
     }
+  }
+
+  private closeCurrentLocation() {
+    this.tickers.once('toggle', 5, () => {
+      if (this.location) {
+        this.location.state = 'mini';
+      }
+      this.track = null;
+      this.video = null;
+      this.location = null;
+    });
   }
 
   locationState(location: MapLocation) {
@@ -147,13 +164,6 @@ export class SanPietroburgoComponent implements OnInit {
     if (event.toState === 'full') {
       this.video = location.video;
       this.track = location.track;
-    }
-  }
-
-  clickCloseVideo() {
-    this.video = null;
-    if (this.location) {
-      this.clickLocation(this.location);
     }
   }
 
