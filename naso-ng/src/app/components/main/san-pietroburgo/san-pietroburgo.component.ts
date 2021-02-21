@@ -61,44 +61,44 @@ export class SanPietroburgoComponent implements OnInit {
   ngOnInit(): void {
     this.locations = [
       {
-        name: 'A', state: 'mini', x: 10, y: 30, track: {
+        name: 'A', state: 'mini', confirmed: 'mini', x: 10, y: 30, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         }
       },
       {
-        name: 'B', state: 'mini', x: 30, y: 10, track: {
+        name: 'B', state: 'mini', confirmed: 'mini', x: 30, y: 10, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         }
       },
-      { name: 'C', state: 'mini', x: 70, y: 60, video: { url: 'assets/video-01.mp4' } },
+      { name: 'C', state: 'mini', confirmed: 'mini', x: 70, y: 60, video: { url: 'assets/video-01.mp4' } },
       {
-        name: 'D', state: 'mini', x: -10, y: 80, track: {
-          title: 'some track',
-          link: 'assets/audio-01.mp3',
-        }
-      },
-      {
-        name: 'E', state: 'mini', x: -15, y: 40, track: {
-          title: 'some track',
-          link: 'assets/audio-01.mp3',
-        }
-      },
-      { name: 'F', state: 'mini', x: 110, y: 35, video: { url: 'assets/video-01.mp4' } },
-      {
-        name: 'G', state: 'mini', x: 45, y: 55, track: {
+        name: 'D', state: 'mini', confirmed: 'mini', x: -10, y: 80, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         }
       },
       {
-        name: 'H', state: 'mini', x: 20, y: 85, track: {
+        name: 'E', state: 'mini', confirmed: 'mini', x: -15, y: 40, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         }
       },
-      { name: 'I', state: 'mini', x: 80, y: 20, video: { url: 'assets/video-01.mp4' } },
+      { name: 'F', state: 'mini', confirmed: 'mini', x: 110, y: 35, video: { url: 'assets/video-01.mp4' } },
+      {
+        name: 'G', state: 'mini', confirmed: 'mini', x: 45, y: 55, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        }
+      },
+      {
+        name: 'H', state: 'mini', confirmed: 'mini', x: 20, y: 85, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        }
+      },
+      { name: 'I', state: 'mini', confirmed: 'mini', x: 80, y: 20, video: { url: 'assets/video-01.mp4' } },
     ];
     this.track = null;
     this.visits = [];
@@ -116,7 +116,7 @@ export class SanPietroburgoComponent implements OnInit {
 
   clickedScreen(event: any){
     console.log(event);
-    if (this.location) {
+    if (this.location && this.location.confirmed === 'full') {
       this.closeCurrentLocation();
     }
   }
@@ -161,6 +161,7 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   animationLocationDone(event: any, location: MapLocation) {
+    location.confirmed = event.toState;
     if (event.toState === 'full') {
       this.video = location.video;
       this.track = location.track;
@@ -220,6 +221,7 @@ class MapLocation {
 
   name: string;
   state: string;
+  confirmed: string;
   x: number;
   y: number;
 
