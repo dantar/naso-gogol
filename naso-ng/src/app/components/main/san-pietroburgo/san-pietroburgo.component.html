@@ -54,8 +54,12 @@
     </g>
 
 </svg>
+
+<app-panino [@dissolve]="breadDissolve" *ngIf="intro" (@dissolve.done)="doneDissolve($event)" (skipped)="introSkipped()"></app-panino>
+
 <app-listen-track *ngIf="track" [track]="track" [@mediaitem]></app-listen-track>
 <app-watch-video *ngIf="video" [video]="video" (click)="clickCloseVideo()" [@mediaitem]></app-watch-video>
+
 <div class="panel-menu-list top-right-menu" *ngIf="video">
     <div class="panel-menu-item" (click)="clickCloseVideo()">
         close

@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SanPietroburgoComponent } from './components/main/san-pietroburgo/san-pietroburgo.component';
-import { PaninoComponent } from './components/panino/panino.component';
-
 
 const routes: Routes = [
-  {path: '', component: PaninoComponent},
-  {path: 'mappa', component: SanPietroburgoComponent},
+  {path: '', component: SanPietroburgoComponent},
 ];
 
 @NgModule({

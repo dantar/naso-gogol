@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Track } from 'ngx-audio-player';
 import { TickersService } from 'src/app/services/tickers.service';
@@ -23,10 +23,13 @@ import { Router } from '@angular/router';
       // transitions
       transition('none => up', animate('10000ms')),
       transition('none => down', animate('10000ms')),
+      transition('up => none', animate('1000ms')),
+      transition('down => none', animate('1000ms')),
+      transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
     trigger('fadeinout', [
       // states
-      transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
+      transition(':enter', [style({opacity: 0}), animate('3s', style({opacity: 1}))]),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
     trigger('mediaitem', [
@@ -39,12 +42,14 @@ import { Router } from '@angular/router';
 })
 export class PaninoComponent implements OnInit {
 
+  @Output() skipped = new EventEmitter();
+
   breadUp: string;
   breadDown: string;
 
   track: Track;
   mediastate: string;
-  intro: boolean;
+  shown: boolean;
 
   constructor(
     private tickers: TickersService,
@@ -56,10 +61,11 @@ export class PaninoComponent implements OnInit {
     this.breadDown = 'none';
     this.track = null;
     this.mediastate = 'hidden';
-    this.intro = true;
+    this.shown = true;
   }
 
   clickAnywhere() {
+    console.log('clickAnywhere')
     if (! this.track) {
       this.startIntro();
     } else {
@@ -68,6 +74,7 @@ export class PaninoComponent implements OnInit {
   }
 
   startIntro() {
+    this.shown = true;
     this.breadUp = 'up';
     this.breadDown = 'down';
     this.track = {
@@ -85,7 +92,21 @@ export class PaninoComponent implements OnInit {
   }
 
   clickSkip() {
-    this.router.navigate(['mappa']);
+    this.track = null;
+    this.mediastate = 'hidden';
+    this.breadUp = 'none';
+    this.breadDown = 'none';
+    this.shown = false;
+    this.skipped.emit(true);
+  }
+  
+  doneBreadFade(event: any) {
+    console.log(event);
+    if (event.toState === 'void') {
+      this.skipped.emit(true);
+    } else {
+      console.log(event);
+    }
   }
 
 }

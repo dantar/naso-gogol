@@ -29,6 +29,12 @@ import { VideoData } from 'src/app/models/media.model';
       transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
+    trigger('dissolve', [
+      state('hidden', style({opacity: 0})),
+      state('shown', style({opacity: 1})),
+      transition('hidden => shown', animate('500ms')),
+      transition('shown => hidden', animate('500ms')),
+    ]),
   ],
 })
 export class SanPietroburgoComponent implements OnInit {
@@ -46,6 +52,10 @@ export class SanPietroburgoComponent implements OnInit {
   track: Track;
   video: VideoData;
   panEvent: any;
+
+  intro: boolean;
+
+  breadDissolve: string;
 
   ngOnInit(): void {
     this.locations = [
@@ -92,6 +102,8 @@ export class SanPietroburgoComponent implements OnInit {
     this.track = null;
     this.visits = [];
     this.panEvent = null;
+    this.intro = true;
+    this.breadDissolve = 'shown';
   }
 
   clickLocation(location: MapLocation) {
@@ -178,6 +190,18 @@ export class SanPietroburgoComponent implements OnInit {
     if (this.panEvent) {
       console.log('evviva', event, location);
     }
+  }
+
+  doneDissolve(event:any) {
+    console.log(event);
+    if (event.toState === 'hidden') {
+      this.intro = false;
+    }
+  }
+
+  introSkipped() {
+    console.log('intro skipped');
+    this.breadDissolve = 'hidden';
   }
 
 }
