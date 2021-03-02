@@ -79,7 +79,7 @@ export class PaninoComponent implements OnInit {
     this.breadDown = 'down';
     this.track = {
       title: 'intro',
-      link: 'assets/audio-01.mp3',
+      link: 'assets/intro.mp3',
     };
   }
 
