@@ -6,13 +6,13 @@
         </g>
         <g id="pin-A">
             <image width="106.1088" height="117.83941" preserveAspectRatio="none"
-                xlink:href="./assets/Kazan-icon-01.png" id="image74"
-                x="-52.120205" y="-56.419712" style="display:inline" />
+                xlink:href="./assets/Kazan-icon-01.png" id="image74" x="-52.120205" y="-56.419712"
+                style="display:inline" />
         </g>
         <g id="pin-B">
             <image width="97.710739" height="123.57143" preserveAspectRatio="none"
-                xlink:href="./assets/Nevskij-icon-01.png"
-                id="image85" x="-47.921173" y="-59.285713" style="display:inline" />
+                xlink:href="./assets/Nevskij-icon-01.png" id="image85" x="-47.921173" y="-59.285713"
+                style="display:inline" />
         </g>
         <g id="pin-C">
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
@@ -38,7 +38,7 @@
     </defs>
 
     <g style="display:inline" id="layer1" (click)="clickedScreen($event)">
-        <rect x="-100" y="-100" width="300" height="300" style="opacity: 0;" ></rect>
+        <rect x="-100" y="-100" width="300" height="300" style="opacity: 0;"></rect>
         <image width="139.72601" height="100" preserveAspectRatio="none" xlink:href="assets/pietroburgo.jpg"
             id="image110" x="-19.863007" y="1.2694414e-08" />
     </g>
@@ -46,6 +46,18 @@
     <g style="display:inline" id="layer2">
         <path id="segment" *ngIf="(visits.length > 0) && panEvent" [attr.d]="visitsPathD()"
             style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+
+        <g *ngIf="showNaso()" id="naso-mappa" [@nasopopup]="animationStateNasopopup()" (@nasopopup.done)="animationDoneNasopopup($event)">
+            <path
+                style="fill:#ffd5d5;stroke:#ff8080;stroke-width:3.49195528px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="M -46.382312,38.828708 C -69.877967,36.800616 -63.998667,25.73409 -57.606469,14.509735 v 0 l 53.9604047,-56.919307 v 0 c 4.34566839,-3.760658 6.7504382,-9.462211 21.2011613,-3.117817 v 0 l -2.708245,86.062503 v 0 C 5.6040656,45.232035 12.092293,38.919792 -0.64059783,33.146366 -18.917875,23.97647 -39.322347,37.112766 -46.382312,38.828708 Z"
+                id="path843-3" />
+            <path
+                style="fill:#ffd5d5;stroke:#ff8080;stroke-width:3.92886448px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="m -34.744045,35.440545 c -4.768474,3.007798 3.733424,-0.722859 9.333333,6.965262 18.1105716,6.788434 29.4607877,2.896046 40.257564,-1.870693 L -2.7782331,23.97647 C -11.522857,16.705256 -25.999456,29.8923 -34.744045,35.440545 Z"
+                id="path851-8" />
+        </g>
+
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="visitedStyle(location)"></use>
         <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name"
             [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)"
@@ -55,7 +67,8 @@
 
 </svg>
 
-<app-panino [@dissolve]="breadDissolve" *ngIf="intro" (@dissolve.done)="doneDissolve($event)" (skipped)="introSkipped()"></app-panino>
+<app-panino [@dissolve]="breadDissolve" *ngIf="intro" (@dissolve.done)="doneDissolve($event)"
+    (skipped)="introSkipped()"></app-panino>
 
 <app-listen-track *ngIf="track" [track]="track" [@mediaitem]></app-listen-track>
 <app-watch-video *ngIf="video" [video]="video" (click)="clickCloseVideo()" [@mediaitem]></app-watch-video>

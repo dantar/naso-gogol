@@ -4,6 +4,7 @@ import { TickersService } from 'src/app/services/tickers.service';
 import { Track } from 'ngx-audio-player';
 import { VideoData } from 'src/app/models/media.model';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import { GamesCommonService } from 'src/app/services/games-common.service';
 
 @Component({
   selector: 'app-san-pietroburgo',
@@ -21,6 +22,18 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
       // transitions
       transition('mini => full', animate('1000ms')),
       transition('full => mini', animate('1000ms')),
+    ]),
+    trigger('nasopopup', [
+      // states
+      state('hidden', style({
+        transform: 'translate({{x}}px,{{y}}px) scale(0) rotate(0deg)',
+      }), { params: { x: 0, y: 0, s: 0.1 } }),
+      state('shown', style({
+        transform: 'translate({{x}}px,{{y}}px) scale(0.08) rotate(30deg) ',
+      }), { params: { x: 0, y: 0, s: 1 } }),
+      // transitions
+      transition('hidden => shown', animate('3500ms')),
+      transition('shown => hidden', animate('300ms')),
     ]),
     trigger('fadeinout', [
       transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
@@ -42,9 +55,11 @@ export class SanPietroburgoComponent implements OnInit {
 
   constructor(
     private tickers: TickersService,
+    private games: GamesCommonService,
   ) { }
 
   locations: MapLocation[];
+  locationsDict: {[id: string]: MapLocation};
   location: MapLocation;
   locationScale: number = 0.1;
 
@@ -57,6 +72,10 @@ export class SanPietroburgoComponent implements OnInit {
   intro: boolean;
 
   breadDissolve: string;
+
+  nasopopupState: string;
+  currentStep: number;
+  namessequence: string[];
 
   ngOnInit(): void {
     this.locations = [
@@ -100,11 +119,18 @@ export class SanPietroburgoComponent implements OnInit {
       },
       { name: 'I', state: 'mini', confirmed: 'mini', x: 80, y: 20, video: { url: 'assets/video-01.mp4' } },
     ];
+    this.locationsDict = {};
+    this.locations.forEach(l => this.locationsDict[l.name] = l);
+    this.namessequence = this.locations.map(l => l.name);
     this.track = null;
     this.visits = [];
     this.panEvent = null;
     this.intro = true;
     this.breadDissolve = 'shown';
+    // nasopopup
+    this.nasopopupState = 'hidden';
+    this.scheduleRandomNasoPopup();
+    this.currentStep = 0;
   }
 
   clickCloseVideo() {
@@ -123,6 +149,9 @@ export class SanPietroburgoComponent implements OnInit {
   clickLocation(location: MapLocation) {
     if (location.confirmed === 'full') {
       console.log('location full click', location);
+    }
+    if (location.name === this.namessequence[this.currentStep]) {
+      this.currentStep = this.currentStep + 1;
     }
     this.visits = [];
     this.panEvent = null;
@@ -205,6 +234,38 @@ export class SanPietroburgoComponent implements OnInit {
 
   introSkipped() {
     this.breadDissolve = 'hidden';
+  }
+
+  animationStateNasopopup() {
+    let location = this.locationsDict[this.namessequence[this.currentStep]];
+    let x = location.x + (this.nasopopupState === 'hidden' ? 0: 10);
+    let y = location.y + (this.nasopopupState === 'hidden' ? 0: -2);
+    return { value: this.nasopopupState, params: { x: x, y: y, s: 0.1 } };
+  }
+
+  showNaso(): boolean {
+    return this.currentStep < this.namessequence.length;
+  }
+
+  animationDoneNasopopup(event: any) {
+    console.log(event);
+    switch (event.toState) {
+      case 'hidden':
+        this.scheduleRandomNasoPopup();
+        break;
+      case 'shown':
+        this.nasopopupState = 'hidden';
+        break;
+      default:
+        break;
+    }
+  }
+  scheduleRandomNasoPopup() {
+    this.tickers.once('nasopopup', this.games.randomInt(2000, 8000), () => {
+      if (this.currentStep < this.namessequence.length) {
+        this.nasopopupState = 'shown';
+      }
+    });
   }
 
 }

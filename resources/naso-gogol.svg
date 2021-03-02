@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="75.981081"
-     inkscape:cy="52.069944"
+     inkscape:zoom="2.8"
+     inkscape:cx="-31.637897"
+     inkscape:cy="1.0731379"
      inkscape:document-units="px"
-     inkscape:current-layer="panino-sopra"
+     inkscape:current-layer="layer5"
      showgrid="false"
      units="px"
      inkscape:window-width="1853"
@@ -55,7 +55,7 @@
      inkscape:label="mappa"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:none">
+     style="display:inline">
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
        y="1.2694414e-08"
@@ -188,8 +188,31 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="naso-mappa"
+     style="display:inline">
+    <g
+       id="naso-mappa"
+       inkscape:label="#g887">
+      <path
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path843-3"
+         d="M -46.382312,38.828708 C -69.877967,36.800616 -63.998667,25.73409 -57.606469,14.509735 v 0 l 53.9604047,-56.919307 v 0 c 4.34566839,-3.760658 6.7504382,-9.462211 21.2011613,-3.117817 v 0 l -2.708245,86.062503 v 0 C 5.6040656,45.232035 12.092293,38.919792 -0.64059783,33.146366 -18.917875,23.97647 -39.322347,37.112766 -46.382312,38.828708 Z"
+         style="fill:#ffd5d5;stroke:#ff8080;stroke-width:3.49195528px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path851-8"
+         d="m -34.744045,35.440545 c -4.768474,3.007798 3.733424,-0.722859 9.333333,6.965262 18.1105716,6.788434 29.4607877,2.896046 40.257564,-1.870693 L -2.7782331,23.97647 C -11.522857,16.705256 -25.999456,29.8923 -34.744045,35.440545 Z"
+         style="fill:#ffd5d5;stroke:#ff8080;stroke-width:3.92886448px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="panino">
+     inkscape:label="panino"
+     style="display:none">
     <g
        id="panino-sotto"
        inkscape:label="#g857">
@@ -227,7 +250,7 @@
        inkscape:label="#g860">
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e6e6e6;fill-opacity:1;stroke:none;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e6e6e6;fill-opacity:1;stroke:none"
          x="50.089806"
          y="19.440334"
          id="text847"><tspan
