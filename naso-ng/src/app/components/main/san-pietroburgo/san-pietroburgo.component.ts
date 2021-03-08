@@ -20,8 +20,8 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
         transform: 'translate(50px,50px) scale(1.4) ',
       })),
       // transitions
-      transition('mini => full', animate('1000ms')),
-      transition('full => mini', animate('1000ms')),
+      transition('mini => full', animate('1000ms ease-in-out')),
+      transition('full => mini', animate('1000ms ease-in-out')),
     ]),
     trigger('nasopopup', [
       // states
@@ -32,8 +32,8 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
         transform: 'translate({{x}}px,{{y}}px) scale(0.08) rotate(30deg) ',
       }), { params: { x: 0, y: 0, s: 1 } }),
       // transitions
-      transition('hidden => shown', animate('3500ms')),
-      transition('shown => hidden', animate('300ms')),
+      transition('hidden => shown', animate('3500ms ease-in-out')),
+      transition('shown => hidden', animate('300ms ease-in-out')),
     ]),
     trigger('fadeinout', [
       transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
@@ -46,8 +46,8 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
     trigger('dissolve', [
       state('hidden', style({opacity: 0})),
       state('shown', style({opacity: 1})),
-      transition('hidden => shown', animate('500ms')),
-      transition('shown => hidden', animate('500ms')),
+      transition('hidden => shown', animate('500ms ease-in-out')),
+      transition('shown => hidden', animate('500ms ease-in-out')),
     ]),
   ],
 })
@@ -57,6 +57,9 @@ export class SanPietroburgoComponent implements OnInit {
     private tickers: TickersService,
     private games: GamesCommonService,
   ) { }
+
+  unlocked: boolean;
+  unlockedLocation: MapLocation;
 
   locations: MapLocation[];
   locationsDict: {[id: string]: MapLocation};
@@ -106,7 +109,7 @@ export class SanPietroburgoComponent implements OnInit {
       },
       { name: 'F', state: 'mini', confirmed: 'mini', x: 110, y: 35, video: { url: 'assets/video-01.mp4' } },
       {
-        name: 'G', state: 'mini', confirmed: 'mini', x: 45, y: 55, track: {
+        name: 'G', state: 'mini', confirmed: 'mini', x: 45, y: 75, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         }
@@ -121,7 +124,7 @@ export class SanPietroburgoComponent implements OnInit {
     ];
     this.locationsDict = {};
     this.locations.forEach(l => this.locationsDict[l.name] = l);
-    this.namessequence = this.locations.map(l => l.name);
+    this.namessequence = 'A-B-I-F-C-G-H-D-E'.split('-');
     this.track = null;
     this.visits = [];
     this.panEvent = null;
@@ -131,6 +134,7 @@ export class SanPietroburgoComponent implements OnInit {
     this.nasopopupState = 'hidden';
     this.scheduleRandomNasoPopup();
     this.currentStep = 0;
+    this.unlocked = false;
   }
 
   clickCloseVideo() {
@@ -147,9 +151,6 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   clickLocation(location: MapLocation) {
-    if (location.confirmed === 'full') {
-      console.log('location full click', location);
-    }
     if (location.name === this.namessequence[this.currentStep]) {
       this.currentStep = this.currentStep + 1;
     }
@@ -200,16 +201,24 @@ export class SanPietroburgoComponent implements OnInit {
 
   onPan(event: any) {
     if (event.isFinal) {
+      this.checkVisits();
       this.visits = [];
       this.panEvent = null;
     } else {
       this.panEvent = event;
-      console.log(event);
       let c: Coordinates = this.panEventCoordinates(event);
-      let closeTo = this.locations
+      this.locations
       .filter(l => (l.x-c.x)*(l.x-c.x) + (l.y-c.y)*(l.y-c.y) < 100)
       .filter(l => !this.visits.includes(l))
-      .forEach(l => this.visits.push(l));      
+      .forEach(l => this.visits.push(l));
+      this.checkVisits();
+    }
+  }
+
+  checkVisits() {
+    console.log(this.visits.map(v => v.name).join('-'));
+    if (this.visits.map(v => v.name).join('-') === this.namessequence.join('-') && !this.unlocked) {
+      this.unlocked = true;
     }
   }
 
@@ -244,11 +253,10 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   showNaso(): boolean {
-    return this.currentStep < this.namessequence.length;
+    return ! this.intro && ! this.unlocked &&  this.currentStep < this.namessequence.length;
   }
 
   animationDoneNasopopup(event: any) {
-    console.log(event);
     switch (event.toState) {
       case 'hidden':
         this.scheduleRandomNasoPopup();

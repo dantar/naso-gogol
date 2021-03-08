@@ -35,6 +35,9 @@
         <g id="pin-I">
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
+        <g id="pin-J">
+            <circle cx="0" cy="0" r="50" style="fill:#ffbb00;"></circle>
+        </g>
     </defs>
 
     <g style="display:inline" id="layer1" (click)="clickedScreen($event)">
@@ -66,6 +69,8 @@
     </g>
 
 </svg>
+
+<app-finale-premio [@fadeinout] *ngIf="unlocked" (triggerVideo)="video = $event"></app-finale-premio>
 
 <app-panino [@dissolve]="breadDissolve" *ngIf="intro" (@dissolve.done)="doneDissolve($event)"
     (skipped)="introSkipped()"></app-panino>

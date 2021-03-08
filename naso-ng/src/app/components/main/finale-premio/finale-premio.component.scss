@@ -1,0 +1,15 @@
+.finale {
+    background-color: rgba(0,0,0,0.75);
+}
+
+.maskgrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .maskitem {
+        height: 200px;
+        width: 200px;
+        background-color: gray;
+    }
+}

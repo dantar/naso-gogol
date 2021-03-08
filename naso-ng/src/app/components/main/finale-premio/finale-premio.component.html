@@ -1,0 +1,12 @@
+<div class="fullpage finale">
+
+    <div class="maskgrid">
+        <div class="maskitem" *ngFor="let reader of readers" style="color: white; background-image: url('assets/reader-01.jpg');"
+            (click)="clickReader(reader)">
+            {{reader.name}}
+        </div>
+    </div>
+
+    <div class="bottom"></div>
+
+</div>

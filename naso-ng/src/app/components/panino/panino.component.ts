@@ -65,7 +65,6 @@ export class PaninoComponent implements OnInit {
   }
 
   clickAnywhere() {
-    console.log('clickAnywhere')
     if (! this.track) {
       this.startIntro();
     } else {
@@ -101,7 +100,6 @@ export class PaninoComponent implements OnInit {
   }
   
   doneBreadFade(event: any) {
-    console.log(event);
     if (event.toState === 'void') {
       this.skipped.emit(true);
     } else {
