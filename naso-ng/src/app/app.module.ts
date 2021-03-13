@@ -14,6 +14,7 @@ import { WatchVideoComponent } from './components/watch-video/watch-video.compon
 import * as Hammer from 'hammerjs';
 import { PaninoComponent } from './components/panino/panino.component';
 import { FinalePremioComponent } from './components/main/finale-premio/finale-premio.component';
+import { FullscreenToggleComponent } from './components/widgets/fullscreen-toggle/fullscreen-toggle.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -28,7 +29,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     ListenTrackComponent,
     WatchVideoComponent,
     PaninoComponent,
-    FinalePremioComponent
+    FinalePremioComponent,
+    FullscreenToggleComponent
   ],
   imports: [
     BrowserModule,
