@@ -131,26 +131,38 @@
      style="display:inline"
      id="layer3">
     <image
-       width="106.1088"
-       height="117.83941"
+       xlink:href="Nevskij-icon-02.png"
+       y="-64.16906"
+       x="-71.432701"
+       id="image90"
        preserveAspectRatio="none"
-       xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/Kazan-icon-01.png"
-       id="image74"
-       x="-52.120205"
-       y="-56.419712"
-       style="display:inline" />
+       height="140.48317"
+       width="140.48317" />
+    <circle
+       r="50"
+       cy="0"
+       cx="0"
+       id="path93"
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.01438856;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
     <image
-       width="97.710739"
-       height="123.57143"
+       xlink:href="Kazan-icon-02.png"
+       y="-73.669762"
+       x="-77.367348"
+       id="image68"
        preserveAspectRatio="none"
-       xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/Nevskij-icon-01.png"
-       id="image85"
-       x="-47.921173"
-       y="-59.285713"
-       style="display:inline" />
+       height="147.8373"
+       width="154.37878" />
+    <image
+       xlink:href="Kazan-icon-SCRITTA.png"
+       y="-11.057654"
+       x="-49.86834"
+       id="image79"
+       preserveAspectRatio="none"
+       height="22.474625"
+       width="99.480148" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer5">
     <circle
        style="opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.64814806;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
@@ -169,15 +181,6 @@
          d="m -34.744045,35.440545 c -4.768474,3.007798 3.733424,-0.722859 9.333333,6.965262 18.1105716,6.788434 29.4607877,2.896046 40.257564,-1.870693 L -2.7782331,23.97647 C -11.522857,16.705256 -25.999456,29.8923 -34.744045,35.440545 Z"
          id="path851-8" />
     </g>
-    <image
-       clip-path="url(#clipPath937)"
-       width="155.90056"
-       height="149.2946"
-       preserveAspectRatio="none"
-       xlink:href="file:///home/daniele/Downloads/Kazan-icon-02.png"
-       id="image859"
-       x="-78.055603"
-       y="-74.331604" />
   </g>
   <g
      style="display:none"

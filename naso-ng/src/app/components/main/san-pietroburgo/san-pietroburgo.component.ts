@@ -17,7 +17,19 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
         transform: 'translate({{x}}px,{{y}}px) scale({{s}})',
       }), { params: { x: 0, y: 0, s: 0.1 } }),
       state('full', style({
-        transform: 'translate(50px,35px) scale(0.6) ',
+        transform: 'translate(50px,40px) scale(0.7)',
+      })),
+      // transitions
+      transition('mini => full', animate('1000ms ease-in-out')),
+      transition('full => mini', animate('1000ms ease-in-out')),
+    ]),
+    trigger('names', [
+      // states
+      state('mini', style({
+        transform: 'translate({{x}}px,{{y}}px) scale({{s}})',
+      }), { params: { x: 0, y: 0, s: 0.1 } }),
+      state('full', style({
+        transform: 'translate(50px,80px) scale(0.7)',
       })),
       // transitions
       transition('mini => full', animate('1000ms ease-in-out')),
@@ -64,7 +76,8 @@ export class SanPietroburgoComponent implements OnInit {
   locations: MapLocation[];
   locationsDict: {[id: string]: MapLocation};
   location: MapLocation;
-  locationScale: number = 0.1;
+  locationScalePin: number = 0.1;
+  locationScaleName: number = 0;
 
   visits: MapLocation[];
 
@@ -189,8 +202,12 @@ export class SanPietroburgoComponent implements OnInit {
     });
   }
 
-  locationState(location: MapLocation) {
-    return { value: location.state, params: { x: location.x, y: location.y, s: this.locationScale } };
+  locationStatePin(location: MapLocation) {
+    return { value: location.state, params: { x: location.x, y: location.y, s: this.locationScalePin } };
+  }
+
+  locationStateName(location: MapLocation) {
+    return { value: location.state, params: { x: location.x, y: location.y, s: this.locationScaleName } };
   }
 
   visitedStyle(location: MapLocation) {
@@ -204,6 +221,7 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   animationLocationDone(event: any, location: MapLocation) {
+    console.log('animationLocationDone');
     location.confirmed = event.toState;
     if (event.toState === 'full') {
       this.video = location.video;

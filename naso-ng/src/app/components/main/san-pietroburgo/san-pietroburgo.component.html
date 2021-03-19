@@ -6,13 +6,11 @@
         </g>
         <g id="pin-A">
             <image width="155.90056" height="149.2946" preserveAspectRatio="none"
-                xlink:href="./assets/Kazan-icon-02.png" id="image859" x="-78.055603"
-                y="-74.331604" />
+                xlink:href="./assets/Kazan-icon-02.png" x="-78.055603" y="-74.331604" />
         </g>
         <g id="pin-B">
-            <image width="97.710739" height="123.57143" preserveAspectRatio="none"
-                xlink:href="./assets/Nevskij-icon-01.png" id="image85" x="-47.921173" y="-59.285713"
-                style="display:inline" />
+            <image xlink:href="./assets/Nevskij-icon-02.png" y="-64.16906" x="-71.432701"
+                preserveAspectRatio="none" height="140.48317" width="140.48317" />
         </g>
         <g id="pin-C">
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
@@ -38,6 +36,46 @@
         <g id="pin-J">
             <circle cx="0" cy="0" r="50" style="fill:#ffbb00;"></circle>
         </g>
+        <g id="name-A">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-B">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-C">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-D">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-E">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-F">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-G">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-H">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-I">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
+        <g id="name-J">
+            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
+                height="22.474625" width="99.480148" />
+        </g>
     </defs>
 
     <g style="display:inline" id="layer1">
@@ -62,15 +100,18 @@
         </g>
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="visitedStyle(location)"></use>
 
-        <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name"
-            [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)"></use>
+        <g *ngFor="let location of locations" >
+            <use [attr.href]="'#name-'+location.name"
+                [@names]="locationStateName(location)"></use>
+            <use [attr.href]="'#pin-'+location.name"
+                [@location]="locationStatePin(location)"></use>
+        </g>
         <g (click)="clickedScreen($event)">
             <rect x="-100" y="-100" width="300" height="300" style="opacity: 0;"></rect>
         </g>
         <circle *ngFor="let location of locations" cx="0" cy="0" r="50" style="opacity: 0;"
-            [@location]="locationState(location)"
-            (click)="clickLocation(location)" (touchstart)="onTouchStart($event, location)"
-            (mousedown)="onTouchStart($event, location)"></circle>
+            [@location]="locationStatePin(location)" (@location.done)="animationLocationDone($event, location)"
+            (click)="clickLocation(location)" (touchstart)="onTouchStart($event, location)" (mousedown)="onTouchStart($event, location)"></circle>
 
     </g>
 
