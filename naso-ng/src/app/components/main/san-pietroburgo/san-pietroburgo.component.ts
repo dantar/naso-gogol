@@ -17,7 +17,7 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
         transform: 'translate({{x}}px,{{y}}px) scale({{s}})',
       }), { params: { x: 0, y: 0, s: 0.1 } }),
       state('full', style({
-        transform: 'translate(50px,50px) scale(1.4) ',
+        transform: 'translate(50px,35px) scale(0.6) ',
       })),
       // transitions
       transition('mini => full', animate('1000ms ease-in-out')),
@@ -94,7 +94,11 @@ export class SanPietroburgoComponent implements OnInit {
           link: 'assets/audio-01.mp3',
         }
       },
-      { name: 'C', state: 'mini', confirmed: 'mini', x: 70, y: 60, video: { url: 'assets/video-01.mp4' } },
+      { name: 'C', state: 'mini', confirmed: 'mini', x: 70, y: 60, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        },
+      },
       {
         name: 'D', state: 'mini', confirmed: 'mini', x: -10, y: 80, track: {
           title: 'some track',
@@ -107,7 +111,11 @@ export class SanPietroburgoComponent implements OnInit {
           link: 'assets/audio-01.mp3',
         }
       },
-      { name: 'F', state: 'mini', confirmed: 'mini', x: 110, y: 35, video: { url: 'assets/video-01.mp4' } },
+      { name: 'F', state: 'mini', confirmed: 'mini', x: 110, y: 35, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        },
+      },
       {
         name: 'G', state: 'mini', confirmed: 'mini', x: 45, y: 75, track: {
           title: 'some track',
@@ -120,7 +128,11 @@ export class SanPietroburgoComponent implements OnInit {
           link: 'assets/audio-01.mp3',
         }
       },
-      { name: 'I', state: 'mini', confirmed: 'mini', x: 80, y: 20, video: { url: 'assets/video-01.mp4' } },
+      { name: 'I', state: 'mini', confirmed: 'mini', x: 80, y: 20, track: {
+          title: 'some track',
+          link: 'assets/audio-01.mp3',
+        },
+      },
     ];
     this.locationsDict = {};
     this.locations.forEach(l => this.locationsDict[l.name] = l);

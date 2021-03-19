@@ -12,7 +12,18 @@
    height="100"
    width="100">
   <defs
-     id="defs2" />
+     id="defs2">
+    <clipPath
+       id="clipPath937"
+       clipPathUnits="userSpaceOnUse">
+      <circle
+         style="opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.64814806;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+         id="circle939"
+         cx="2.8247621e-07"
+         cy="-0.00027972413"
+         r="50" />
+    </clipPath>
+  </defs>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -26,7 +37,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer1">
     <image
        width="139.72601"
@@ -117,7 +128,7 @@
        style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      id="layer3">
     <image
        width="106.1088"
@@ -141,6 +152,12 @@
   <g
      style="display:inline"
      id="layer5">
+    <circle
+       style="opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.64814806;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       id="circle874"
+       cx="2.8247621e-07"
+       cy="-2.9021112e-07"
+       r="50" />
     <g
        id="naso-mappa">
       <path
@@ -152,6 +169,15 @@
          d="m -34.744045,35.440545 c -4.768474,3.007798 3.733424,-0.722859 9.333333,6.965262 18.1105716,6.788434 29.4607877,2.896046 40.257564,-1.870693 L -2.7782331,23.97647 C -11.522857,16.705256 -25.999456,29.8923 -34.744045,35.440545 Z"
          id="path851-8" />
     </g>
+    <image
+       clip-path="url(#clipPath937)"
+       width="155.90056"
+       height="149.2946"
+       preserveAspectRatio="none"
+       xlink:href="file:///home/daniele/Downloads/Kazan-icon-02.png"
+       id="image859"
+       x="-78.055603"
+       y="-74.331604" />
   </g>
   <g
      style="display:none"
