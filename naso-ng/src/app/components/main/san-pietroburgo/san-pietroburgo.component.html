@@ -5,12 +5,7 @@
             <circle cx="0" cy="0" r="60" style="fill:#00ccff;"></circle>
         </g>
         <g id="pin-A">
-            <clipPath id="clipPath937" clipPathUnits="userSpaceOnUse">
-                <circle
-                    style="opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.64814806;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
-                    id="circle939" cx="0" cy="0" r="50" />
-            </clipPath>
-            <image clip-path="url(#clipPath937)" width="155.90056" height="149.2946" preserveAspectRatio="none"
+            <image width="155.90056" height="149.2946" preserveAspectRatio="none"
                 xlink:href="./assets/Kazan-icon-02.png" id="image859" x="-78.055603"
                 y="-74.331604" />
         </g>
@@ -45,7 +40,7 @@
         </g>
     </defs>
 
-    <g style="display:inline" id="layer1" (click)="clickedScreen($event)">
+    <g style="display:inline" id="layer1">
         <rect x="-100" y="-100" width="300" height="300" style="opacity: 0;"></rect>
         <image width="139.72601" height="100" preserveAspectRatio="none" xlink:href="assets/pietroburgo.jpg"
             id="image110" x="-19.863007" y="1.2694414e-08" />
@@ -54,7 +49,6 @@
     <g style="display:inline" id="layer2">
         <path id="segment" *ngIf="(visits.length > 0) && panEvent" [attr.d]="visitsPathD()"
             style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-
         <g *ngIf="showNaso()" id="naso-mappa" [@nasopopup]="animationStateNasopopup()"
             (@nasopopup.done)="animationDoneNasopopup($event)">
             <path
@@ -66,12 +60,18 @@
                 d="m -34.744045,35.440545 c -4.768474,3.007798 3.733424,-0.722859 9.333333,6.965262 18.1105716,6.788434 29.4607877,2.896046 40.257564,-1.870693 L -2.7782331,23.97647 C -11.522857,16.705256 -25.999456,29.8923 -34.744045,35.440545 Z"
                 id="path851-8" />
         </g>
-
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="visitedStyle(location)"></use>
+
         <use *ngFor="let location of locations" [attr.href]="'#pin-'+location.name"
-            [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)"
+            [@location]="locationState(location)" (@location.done)="animationLocationDone($event, location)"></use>
+        <g (click)="clickedScreen($event)">
+            <rect x="-100" y="-100" width="300" height="300" style="opacity: 0;"></rect>
+        </g>
+        <circle *ngFor="let location of locations" cx="0" cy="0" r="50" style="opacity: 0;"
+            [@location]="locationState(location)"
             (click)="clickLocation(location)" (touchstart)="onTouchStart($event, location)"
-            (mousedown)="onTouchStart($event, location)"></use>
+            (mousedown)="onTouchStart($event, location)"></circle>
+
     </g>
 
 </svg>
