@@ -15,6 +15,8 @@ import * as Hammer from 'hammerjs';
 import { PaninoComponent } from './components/panino/panino.component';
 import { FinalePremioComponent } from './components/main/finale-premio/finale-premio.component';
 import { FullscreenToggleComponent } from './components/widgets/fullscreen-toggle/fullscreen-toggle.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -39,6 +41,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     NgxAudioPlayerModule,
     MatSliderModule,
     HammerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },

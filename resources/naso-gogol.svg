@@ -66,7 +66,7 @@
      inkscape:label="mappa"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline">
+     style="display:none">
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
        y="1.2694414e-08"
@@ -175,7 +175,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="vincenzo"
-     style="display:none">
+     style="display:inline">
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/Nevskij-icon-02.png"
        xlink:href="Nevskij-icon-02.png"
