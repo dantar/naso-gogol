@@ -1,12 +1,7 @@
-<div class="fullpage finale">
-
-    <div class="maskgrid">
-        <div class="maskitem" *ngFor="let reader of readers" style="color: white; background-image: url('assets/reader-01.jpg');"
-            (click)="clickReader(reader)">
-            {{reader.name}}
-        </div>
-    </div>
-
-    <div class="bottom"></div>
-
-</div>
+<svg class="fullsvg showrotate" viewBox="0 0 100 100">
+    <g *ngFor="let reader of readers" [attr.transform]="readerTransform(reader)" (click)="clickReader(reader)">
+        <image width="100" height="100" preserveAspectRatio="none"
+            [attr.xlink:href]="reader.image"
+            x="-50" y="-50" />
+    </g>
+</svg>
