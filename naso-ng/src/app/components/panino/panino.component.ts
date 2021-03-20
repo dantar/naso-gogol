@@ -91,6 +91,9 @@ export class PaninoComponent implements OnInit {
   }
 
   clickSkip() {
+    this.skipThis();
+  }
+  skipThis() {
     this.track = null;
     this.mediastate = 'hidden';
     this.breadUp = 'none';
@@ -105,6 +108,11 @@ export class PaninoComponent implements OnInit {
     } else {
       console.log(event);
     }
+  }
+
+  trackEnded(event: any) {
+    console.log(event);
+    this.skipThis();
   }
 
 }

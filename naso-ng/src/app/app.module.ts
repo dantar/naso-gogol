@@ -17,6 +17,7 @@ import { FinalePremioComponent } from './components/main/finale-premio/finale-pr
 import { FullscreenToggleComponent } from './components/widgets/fullscreen-toggle/fullscreen-toggle.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RotateScreenComponent } from './components/main/rotate-screen/rotate-screen.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -32,7 +33,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     WatchVideoComponent,
     PaninoComponent,
     FinalePremioComponent,
-    FullscreenToggleComponent
+    FullscreenToggleComponent,
+    RotateScreenComponent
   ],
   imports: [
     BrowserModule,

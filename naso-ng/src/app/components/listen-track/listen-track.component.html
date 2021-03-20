@@ -1,5 +1,5 @@
 <div class="audio-slider" (click)="logMe($event)">
-    <audio controls autoplay (click)="logMe($event)">
+    <audio controls autoplay (click)="logMe($event)" (ended)="ended.emit($event)">
         <source [src]="track.link">
         Il tuo browser non supporta gli audio.
     </audio>

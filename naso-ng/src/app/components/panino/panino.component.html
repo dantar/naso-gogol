@@ -36,7 +36,7 @@
 
 </svg>
 <div>
-    <app-listen-track *ngIf="track" [track]="track" [@mediaitem]="mediastate"></app-listen-track>
+    <app-listen-track *ngIf="track" (ended)="trackEnded($event)" [track]="track" [@mediaitem]="mediastate"></app-listen-track>
 </div>
 <div class="panel-menu-list top-right-menu" style="color: gray;">
     <div class="panel-menu-item" (click)="clickSkip()">

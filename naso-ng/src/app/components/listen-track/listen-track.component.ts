@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { AudioPlayerComponent, Track } from 'ngx-audio-player';
 
 @Component({
@@ -11,6 +11,7 @@ export class ListenTrackComponent implements OnInit, AfterViewInit {
   @ViewChild(AudioPlayerComponent) audioplayer: AudioPlayerComponent;
 
   @Input() track: Track;
+  @Output() ended = new EventEmitter();
 
   msaapDisplayTitle = false;
   msaapDisplayPlayList = false;
