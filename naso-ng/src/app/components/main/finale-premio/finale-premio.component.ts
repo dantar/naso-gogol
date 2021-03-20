@@ -19,10 +19,10 @@ export class FinalePremioComponent implements OnInit {
     console.log(window.location.href);
     this.readers = [
       {name: 'Daniele', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
-      {name: 'Benedetta', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
-      {name: 'Chiara', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
-      {name: 'Loredana', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
-      {name: 'Andrea', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
+      {name: 'Michela', image: 'assets/readers/michela-melai.jpg', video: { url: 'assets/video-01.mp4' }},
+      {name: 'Carla', image: 'assets/readers/carla-congiu.jpg', video: { url: 'assets/video-01.mp4' }},
+      {name: 'Nadia', image: 'assets/readers/nadia-dellacroce.jpg', video: { url: 'assets/video-01.mp4' }},
+      {name: 'Michela', image: 'assets/readers/michela-podda.jpg', video: { url: 'assets/video-01.mp4' }},
       {name: 'Luca', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
       {name: 'Adele', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
       {name: 'Enza', image: 'assets/reader-01.jpg', video: { url: 'assets/video-01.mp4' }},
