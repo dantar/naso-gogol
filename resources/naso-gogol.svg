@@ -37,11 +37,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="141.29426"
-     inkscape:cy="67.180608"
+     inkscape:zoom="8"
+     inkscape:cx="29.576235"
+     inkscape:cy="73.370614"
      inkscape:document-units="px"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="touchfinger"
      showgrid="false"
      units="px"
      inkscape:window-width="1853"
@@ -63,28 +63,14 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="mappa"
      inkscape:groupmode="layer"
-     id="layer1"
-     style="display:none">
-    <image
-       sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
-       y="1.2694414e-08"
-       x="-19.863007"
-       id="image110"
-       xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
-       preserveAspectRatio="none"
-       height="100"
-       width="139.72601" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="locations"
+     id="layer8"
+     inkscape:label="master"
      style="display:none">
     <g
+       style="display:inline"
        id="g944"
-       transform="matrix(0.77803823,0,0,0.77803823,10.961811,4.3058428)">
+       transform="matrix(6.2780268,0,0,6.2780268,10.130692,129.44848)">
       <path
          transform="scale(-1)"
          d="m 1.6136747,26.302469 c -0.092832,0 -1.54398602,-3.17221 -1.61908853,-3.226775 -0.07510252,-0.05457 -3.54048487,-0.454428 -3.56917157,-0.542716 -0.028687,-0.08829 2.5398331,-2.448685 2.5685197,-2.536973 0.0286866,-0.08829 -0.6618834,-3.507627 -0.5867809,-3.562192 0.075102,-0.05457 3.1136892,1.658839 3.206521,1.658839 0.092832,0 3.1314185,-1.713405 3.206521,-1.65884 0.075102,0.05457 -0.6154673,3.473904 -0.5867807,3.562193 0.028687,0.08829 2.5972064,2.448684 2.5685198,2.536973 -0.028687,0.08829 -3.4940689,0.488151 -3.5691714,0.542716 -0.075103,0.05457 -1.5262566,3.226775 -1.6190884,3.226775 z"
@@ -108,68 +94,155 @@
          id="path940"
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.66666667;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.66666667;paint-order:markers fill stroke" />
     </g>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#g944"
-       id="use952"
-       transform="rotate(15,-148.60096,37.921587)"
-       width="100%"
-       height="100%" />
-    <use
-       height="100%"
-       width="100%"
-       transform="rotate(15,-125.63468,283.53755)"
-       id="use954"
-       xlink:href="#g944"
-       y="0"
-       x="0" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#g944"
-       id="use956"
-       transform="rotate(15,-234.3658,354.77625)"
-       width="100%"
-       height="100%" />
-    <use
-       height="100%"
-       width="100%"
-       transform="rotate(15,-227.36291,239.06843)"
-       id="use958"
-       xlink:href="#g944"
-       y="0"
-       x="0" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#g944"
-       id="use960"
-       transform="rotate(15,-278.5558,124.06801)"
-       width="100%"
-       height="100%" />
-    <use
-       height="100%"
-       width="100%"
-       transform="rotate(15,-230.94629,2.1731828)"
-       id="use962"
-       xlink:href="#g944"
-       y="0"
-       x="0" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#g944"
-       id="use964"
-       transform="rotate(15,-126.81701,162.55499)"
-       width="100%"
-       height="100%" />
+  </g>
+  <g
+     inkscape:label="mappa"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <image
+       sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
+       y="1.2694414e-08"
+       x="-19.863007"
+       id="image110"
+       xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
+       preserveAspectRatio="none"
+       height="100"
+       width="139.72601" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="locations"
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M -0.17857143,6.139371e-7 50.446428,50.625"
+       d="M 62.198348,-60.609152 112.82335,-9.9841523"
        id="segment"
        inkscape:connector-curvature="0"
        inkscape:label="#path27" />
+    <use
+       style="display:inline"
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use62"
+       transform="matrix(0.1,0,0,0.1,45.964235,47.399117)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0.1,0,0,0.1,65.940002,24.064593)"
+       id="use131"
+       xlink:href="#g944"
+       y="0"
+       x="0"
+       style="display:inline" />
+    <use
+       style="display:inline"
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use133"
+       transform="matrix(0.1,0,0,0.1,37.832508,26.716243)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0.1,0,0,0.1,92.456506,24.7717)"
+       id="use135"
+       xlink:href="#g944"
+       y="0"
+       x="0"
+       style="display:inline" />
+    <use
+       style="display:inline"
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use137"
+       transform="matrix(0.1,0,0,0.1,68.945206,68.965873)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0.1,0,0,0.1,89.097749,48.81333)"
+       id="use139"
+       xlink:href="#g944"
+       y="0"
+       x="0"
+       style="display:inline" />
+    <use
+       style="display:inline"
+       x="0"
+       y="0"
+       xlink:href="#g944"
+       id="use141"
+       transform="matrix(0.1,0,0,0.1,35.00408,66.137446)"
+       width="100%"
+       height="100%" />
+    <use
+       height="100%"
+       width="100%"
+       transform="matrix(0.1,0,0,0.1,1.5932845,48.636553)"
+       id="use143"
+       xlink:href="#g944"
+       y="0"
+       x="0"
+       style="display:inline" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="tutorial">
+    <g
+       id="tutorial"
+       inkscape:label="#g1005">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#483e37;fill-opacity:1;stroke:#483e37;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:0.75;"
+         x="50.0625"
+         y="93.136604"
+         id="text971"><tspan
+           sodipodi:role="line"
+           id="tspan969"
+           x="50.0625"
+           y="93.136604">Esplora le tappe del naso</tspan></text>
+      <text
+         id="text847-3"
+         y="93.136604"
+         x="50.0625"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;"
+         xml:space="preserve"><tspan
+           y="93.136604"
+           x="50.0625"
+           id="tspan845-6"
+           sodipodi:role="line">Esplora le tappe del naso</tspan></text>
+    </g>
+    <g
+       id="touchfinger"
+       inkscape:label="#g999">
+      <path
+         inkscape:connector-curvature="0"
+         id="path993"
+         d="m 0.3717935,-1.8265427 c 0.870507,0.01662 1.791673,0.615866 2.187695,1.47275998 l 0.180209,0.390323 0.01968,2.00237102 0.01928,2.002372 0.204213,-0.05233 c 0.112427,-0.02876 0.438568,-0.05043 0.724772,-0.0484 0.454293,0.0032 0.574414,0.02998 0.945116,0.212472 0.233543,0.114974 0.566694,0.351464 0.740511,0.525283 l 0.31635,0.315957 0.401341,-0.135746 c 0.31726,-0.10734 0.509009,-0.130308 0.915605,-0.109385 0.935638,0.04815 1.705248,0.550733 2.0846065,1.361407 l 0.188866,0.403702 0.236476,-0.06689 c 0.130113,-0.03679 0.43808,-0.06749 0.684244,-0.06807 1.011275,-0.0024 1.905345,0.627624 2.269932,1.599458 0.13529,0.360632 0.138078,0.427792 0.109777,2.7354057 -0.03431,2.79789 -0.08849,3.204948 -0.836124,6.298282 -0.539854,2.233645 -0.672131,3.062459 -0.763332,4.780272 -0.02441,0.459714 -0.156156,0.688316 -0.496954,0.862094 -0.203318,0.103673 -0.586225,0.111822 -5.2705365,0.110565 -4.470835,-0.0012 -5.074801,-0.01297 -5.25597704,-0.102302 -0.306203,-0.150988 -0.40497096,-0.355739 -0.46901796,-0.971479 -0.06468,-0.621832 -0.26389,-1.191421 -0.578008,-1.652576 -0.115906,-0.17016 -0.589533,-0.783916 -1.052533,-1.364162 -0.462997,-0.580246 -1.000844,-1.285468 -1.195363,-1.566799 -0.53548,-0.774462 -1.445422,-2.39229 -2.249864,-4.000808 -1.143632,-2.286745 -1.485672,-3.2850947 -1.426331,-4.1605557 0.06509,-0.960281 0.640768,-1.558203 1.669496,-1.734418 0.826736,-0.141614 1.725572,0.291954 2.682287,1.293337 0.270311,0.282931 0.505707,0.514267 0.522923,0.514267 0.01721,0 0.03148,-1.98073 0.03148,-4.401754 0,-4.12566302 0.0073,-4.42457102 0.11922,-4.76374702 0.291796,-0.88449298 0.990366,-1.46950898 1.971681,-1.65139498 0.120614,-0.02236 0.24393,-0.03189 0.368289,-0.02951 z"
+         style="opacity:0.75;vector-effect:none;fill:#483e37;fill-opacity:1;stroke:none;stroke-width:0.20145686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+      <path
+         inkscape:connector-curvature="0"
+         id="rect986"
+         d="m 0.3839895,-0.39509672 c -0.353422,0.0053 -0.52498604,0.09451 -0.68424404,0.355698 -0.12074096,0.19802 -0.12453296,0.382758 -0.12827196,6.59771202 -0.0029,4.7787747 -0.02323,6.4498147 -0.08027,6.6154177 -0.207871,0.603537 -1.13108,0.686654 -1.420033,0.127878 -0.05455,-0.10549 -0.12267,-0.447096 -0.151488,-0.759398 -0.04671,-0.506177 -0.08556,-0.629399 -0.358057,-1.133982 -0.753951,-1.396094 -1.982054,-2.7078637 -2.535131,-2.7078637 -0.232945,0 -0.374976,0.211733 -0.374976,0.559909 0,0.467587 0.597664,1.8550067 1.636837,3.7997437 1.198014,2.241996 1.745698,3.104931 2.832592,4.463529 0.436122,0.545146 0.950419,1.231415 1.143032,1.525091 0.35983,0.548633 0.738763,1.391536 0.816058,1.815866 l 0.04368,0.240017 h 4.17118 4.1711805 l 0.04092,-0.559515 c 0.06349,-0.869177 0.316231,-2.250434 0.768842,-4.204232 0.513272,-2.215662 0.530068,-2.302961 0.648045,-3.324431 0.06445,-0.558042 0.09617,-1.450122 0.09601,-2.717307 -2.01e-4,-1.7794757 -0.0077,-1.8987457 -0.129452,-2.0983777 -0.133431,-0.218852 -0.456116,-0.395437 -0.722019,-0.395437 -0.221178,0 -0.569626,0.25558 -0.698804,0.512691 -0.0857,0.170584 -0.112062,0.383228 -0.112139,0.910884 -1.27e-4,0.687675 -1.13e-4,0.688381 -0.207752,0.9132447 C 8.8983715,10.41428 8.5927975,10.48281 8.2565525,10.342318 7.8122205,10.156663 7.7950205,10.084494 7.7592055,8.2667603 l -0.03227,-1.62267 -0.238835,-0.21877 c -0.203647,-0.186509 -0.284816,-0.218771 -0.55086,-0.218771 -0.330488,0 -0.575292,0.135819 -0.729101,0.404488 -0.05197,0.09078 -0.09046,0.554205 -0.111351,1.337012 l -0.03227,1.197725 -0.208933,0.208933 c -0.184996,0.184843 -0.249283,0.208539 -0.558334,0.208539 -0.309061,0 -0.372941,-0.02407 -0.557941,-0.208933 l -0.209328,-0.208539 -0.03187,-1.613622 c -0.02308,-1.164647 -0.05544,-1.654068 -0.116073,-1.760387 -0.128359,-0.225049 -0.457658,-0.395955 -0.76412,-0.396225 -0.221442,-1.91e-4 -0.317559,0.04076 -0.511511,0.218377 l -0.238837,0.218768 -0.03187,1.204021 c -0.02092,0.787733 -0.05932,1.252028 -0.111353,1.342914 -0.217962,0.380735 -0.703212,0.515805 -1.105652,0.307695 -0.391376,-0.20239 -0.381557,-0.08855 -0.381666,-4.423789 -6.4e-5,-3.63556602 -0.0089,-3.96867702 -0.111746,-4.17039302 -0.163728,-0.321092 -0.404667,-0.473319 -0.741299,-0.46823 z"
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.20145686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+    </g>
+    <path
+       style="fill:#000000;stroke-width:0.31738281"
+       d="m -272.40187,82.627327 c -1.51994,-0.749478 -2.01077,-1.765909 -2.32869,-4.822347 -0.32107,-3.086677 -1.30965,-5.913038 -2.86888,-8.202139 -0.57534,-0.844648 -2.92645,-3.892291 -5.22471,-6.77254 -2.29824,-2.880249 -4.96863,-6.379395 -5.93419,-7.775879 -2.65804,-3.844306 -7.17366,-11.875103 -11.16678,-19.859532 -5.67681,-11.35104 -7.37595,-16.30638 -7.08139,-20.65203 0.32309,-4.7666799 3.18059,-7.7356799 8.28703,-8.6103799 4.10379,-0.70295 8.56729,1.44882 13.31627,6.4195299 1.34178,1.40442 2.5095,2.55349 2.59496,2.55349 0.0854,0 0.15536,-9.8325699 0.15536,-21.8501499 0,-20.4791401 0.0372,-21.9628601 0.59262,-23.6464801 1.44843,-4.39048 4.91585,-7.29486 9.78694,-8.19771 4.78963,-0.88776 10.44079,2.30344 12.68741,7.16457 l 0.89543,1.93748 0.0962,9.93974 0.0962,9.9397401 1.01467,-0.2595701 c 0.55807,-0.14275 2.17705,-0.25129 3.59772,-0.24119 2.25504,0.016 2.85069,0.15013 4.6908,1.0560101 1.15927,0.57071 2.81368,1.74357 3.67649,2.60638 l 1.56872,1.56872 1.99243,-0.67411 c 1.57483,-0.53282 2.52761,-0.64657 4.54589,-0.54271 4.64436,0.239 8.46359,2.73333 10.34667,6.75738997 l 0.93779,2.00402003 1.1743,-0.33205 c 0.64586,-0.18262 2.17405,-0.33437 3.39598,-0.33723 5.0198,-0.0117 9.45777,3.11539 11.26752,7.93942 0.67157,1.7901199 0.68494,2.1237399 0.54446,13.5783699 -0.17032,13.888282 -0.43832,15.907389 -4.14946,31.262208 -2.67975,11.08746 -3.3368,15.201681 -3.78951,23.728631 -0.12115,2.281947 -0.77568,3.417305 -2.46735,4.27991 -1.00924,0.51462 -2.90935,0.554436 -26.16152,0.548193 -22.19253,-0.006 -25.18999,-0.0643 -26.08932,-0.507755 z m 47.30308,-10.513579 c 0.31518,-4.314457 1.56844,-11.169577 3.81513,-20.86792 2.5478,-10.9982 2.63231,-11.431545 3.21793,-16.501958 0.31993,-2.77003 0.47593,-7.19866 0.47513,-13.48877 -0.001,-8.83304 -0.0376,-9.42439 -0.64171,-10.41533 -0.66233,-1.0863499 -2.26474,-1.9645499 -3.58464,-1.9645499 -1.0979,0 -2.82729,1.2691299 -3.4685,2.5453899 -0.42542,0.84675 -0.55504,1.90184 -0.55542,4.52104 -6.4e-4,3.41351 -0.001,3.41752 -1.03199,4.53371 -1.2477,1.35135 -2.76471,1.69148 -4.43377,0.9941 -2.2056,-0.92156 -2.29153,-1.2801 -2.46931,-10.30304 l -0.15869,-8.0542399 -1.18552,-1.08576 c -1.01086,-0.9258 -1.41371,-1.08577003 -2.7343,-1.08577003 -1.64049,0 -2.85655,0.67463003 -3.62003,2.00826003 -0.25796,0.45061 -0.4497,2.74945 -0.55341,6.63518 l -0.15869,5.9456699 -1.0376,1.03675 c -0.91828,0.91753 -1.23691,1.03674 -2.77099,1.03674 -1.53413,0 -1.85268,-0.11919 -2.771,-1.03684 l -1.0376,-1.03684 -0.15869,-8.0085699 c -0.11455,-5.78112 -0.27467,-8.21191003 -0.57567,-8.73966 -0.63715,-1.11711 -2.27177,-1.96414 -3.79301,-1.96548 -1.09919,-9.5e-4 -1.5763,0.20282 -2.53906,1.0845 l -1.18552,1.08568 -0.15869,5.97609 c -0.10383,3.91018 -0.29515,6.2144399 -0.55342,6.6655799 -1.08193,1.88991 -3.48959,2.55984 -5.48724,1.52681 -1.94273,-1.00463 -1.89387,-0.43819 -1.8944,-21.9576299 -3.2e-4,-18.0463701 -0.0448,-19.7011301 -0.55542,-20.7024201 -0.81273,-1.59385 -2.00875,-2.34919 -3.67973,-2.32393 -1.75434,0.0265 -2.60681,0.4697 -3.39734,1.7662 -0.59934,0.98294 -0.61714,1.89947 -0.6357,32.7495201 -0.0143,23.7210799 -0.11479,32.0160999 -0.39792,32.8381279 -1.03184,2.995862 -5.61504,3.408777 -7.04936,0.635102 -0.27078,-0.523634 -0.60936,-2.22042 -0.75241,-3.77063 -0.23185,-2.51258 -0.42481,-3.12359 -1.77743,-5.62826 -3.74249,-6.92999 -9.83908,-13.44202 -12.58447,-13.44202 -1.1563,0 -1.86016,1.05205 -1.86016,2.78034 0,2.32103 2.96628,9.20692 8.12457,18.86029 5.94675,11.128909 8.66586,15.41373 14.06103,22.157594 2.16484,2.706022 4.71834,6.112755 5.67444,7.570516 1.78614,2.723326 3.66577,6.907034 4.04946,9.013342 l 0.2168,1.190186 h 20.70573 20.70573 z"
+       id="path984"
+       inkscape:connector-curvature="0" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -179,12 +252,12 @@
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/Nevskij-icon-02.png"
        xlink:href="Nevskij-icon-02.png"
-       y="-64.16906"
-       x="-71.432701"
-       id="image90"
-       preserveAspectRatio="none"
+       width="140.48317"
        height="140.48317"
-       width="140.48317" />
+       preserveAspectRatio="none"
+       id="image90"
+       x="-71.432701"
+       y="-64.16906" />
     <circle
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.01438856;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
        id="path93"
@@ -194,21 +267,21 @@
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/Kazan-icon-02.png"
        xlink:href="Kazan-icon-02.png"
-       y="-73.669762"
-       x="-77.367348"
-       id="image68"
-       preserveAspectRatio="none"
+       width="154.37878"
        height="147.8373"
-       width="154.37878" />
+       preserveAspectRatio="none"
+       id="image68"
+       x="-77.367348"
+       y="-73.669762" />
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/Kazan-icon-SCRITTA.png"
        xlink:href="Kazan-icon-SCRITTA.png"
-       y="-11.057654"
-       x="-49.86834"
-       id="image79"
-       preserveAspectRatio="none"
+       width="99.480148"
        height="22.474625"
-       width="99.480148" />
+       preserveAspectRatio="none"
+       id="image79"
+       x="-49.86834"
+       y="-11.057654" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -312,7 +385,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="readers">
+     inkscape:label="readers"
+     style="display:none">
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/reader-01.jpg"
        y="-50"

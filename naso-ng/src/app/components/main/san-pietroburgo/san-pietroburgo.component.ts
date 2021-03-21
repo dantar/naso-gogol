@@ -61,6 +61,18 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
       transition('hidden => shown', animate('500ms ease-in-out')),
       transition('shown => hidden', animate('500ms ease-in-out')),
     ]),
+    trigger('pulsating', [
+      // states
+      state('big', style({
+        transform: 'scale(1.2)',
+      }), { params: { s: 1.2 } }),
+      state('small', style({
+        transform: 'scale(1)',
+      }), { params: { s: 1 } }),
+      // transitions
+      transition('big => small', animate('1000ms ease-in-out')),
+      transition('small => big', animate('1000ms ease-in-out')),
+    ]),
   ],
 })
 export class SanPietroburgoComponent implements OnInit {
@@ -92,6 +104,8 @@ export class SanPietroburgoComponent implements OnInit {
   nasopopupState: string;
   currentStep: number;
   namessequence: string[];
+
+  tutorial1: TutorialOverlay;
 
   ngOnInit(): void {
     this.locations = [
@@ -160,6 +174,12 @@ export class SanPietroburgoComponent implements OnInit {
     this.scheduleRandomNasoPopup();
     this.currentStep = 0;
     this.unlocked = false;
+    // tutorial
+    this.tutorial1 = {
+      text: 'Esplora le tappe del naso',
+      transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
+      pulse: 'small',
+    }
   }
 
   clickCloseVideo() {
@@ -306,6 +326,10 @@ export class SanPietroburgoComponent implements OnInit {
     });
   }
 
+  togglePulse(item:TutorialOverlay) {
+    item.pulse = item.pulse === 'big'? 'small' : 'big';
+  }
+
 }
 
 class MapLocation {
@@ -324,4 +348,10 @@ class MapLocation {
 class Coordinates {
   x: number;
   y: number;
+}
+
+class TutorialOverlay {
+  text: string;
+  transform: string;
+  pulse: string;
 }
