@@ -179,6 +179,7 @@ export class SanPietroburgoComponent implements OnInit {
       text: 'Esplora le tappe del naso',
       transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
       pulse: 'small',
+      show: true,
     }
   }
 
@@ -230,7 +231,7 @@ export class SanPietroburgoComponent implements OnInit {
     return { value: location.state, params: { x: location.x, y: location.y, s: this.locationScaleName } };
   }
 
-  visitedStyle(location: MapLocation) {
+  moveToLocation(location: MapLocation) {
     return `translate(${location.x} ${location.y}) scale(0.1)`
   }
   visitsPathD(): string {
@@ -330,6 +331,11 @@ export class SanPietroburgoComponent implements OnInit {
     item.pulse = item.pulse === 'big'? 'small' : 'big';
   }
 
+  clickTutorialFirst() {
+    this.tutorial1.show = false;
+    this.clickLocation(this.locations[0]);
+  }
+
 }
 
 class MapLocation {
@@ -354,4 +360,5 @@ class TutorialOverlay {
   text: string;
   transform: string;
   pulse: string;
+  show: boolean;
 }

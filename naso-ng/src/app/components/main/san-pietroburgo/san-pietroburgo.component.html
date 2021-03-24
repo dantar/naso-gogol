@@ -98,7 +98,7 @@
                 d="m -34.744045,35.440545 c -4.768474,3.007798 3.733424,-0.722859 9.333333,6.965262 18.1105716,6.788434 29.4607877,2.896046 40.257564,-1.870693 L -2.7782331,23.97647 C -11.522857,16.705256 -25.999456,29.8923 -34.744045,35.440545 Z"
                 id="path851-8" />
         </g>
-        <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="visitedStyle(location)"></use>
+        <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="moveToLocation(location)"></use>
 
         <g *ngFor="let location of locations">
             <use [attr.href]="'#name-'+location.name" [@names]="locationStateName(location)"></use>
@@ -111,10 +111,12 @@
             [@location]="locationStatePin(location)" (@location.done)="animationLocationDone($event, location)"
             (click)="clickLocation(location)" (touchstart)="onTouchStart($event, location)"
             (mousedown)="onTouchStart($event, location)"></circle>
-
     </g>
 
-    <g *ngIf="tutorial1">
+    <g *ngIf="tutorial1.show">
+        <g style="display:inline" id="layer1">
+            <rect x="-100" y="-100" width="300" height="300" style="opacity: 0;"></rect>
+        </g>
         <g id="tutorial">
             <text id="text971" y="93.136604" x="50.0625"
                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#483e37;fill-opacity:1;stroke:#483e37;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:0.75;"
@@ -139,6 +141,9 @@
                     id="rect986" />
             </g>
         </g>
+        <circle cx="0" cy="0" r="50" style="opacity: 0;"
+            [attr.transform]="moveToLocation(locations[0])"
+            (click)="clickTutorialFirst()"></circle>
     </g>
 
 
