@@ -111,14 +111,14 @@ export class SanPietroburgoComponent implements OnInit {
     this.locations = [
       {
         name: 'A', state: 'mini', confirmed: 'mini', x: 10, y: 30, track: {
-          title: 'some track',
-          link: 'assets/audio-01.mp3',
+          title: 'Cattedrale di Kazan',
+          link: 'assets/tappa-01.mp3',
         }
       },
       {
         name: 'B', state: 'mini', confirmed: 'mini', x: 30, y: 10, track: {
-          title: 'some track',
-          link: 'assets/audio-01.mp3',
+          title: 'Prospettiva Nevskij',
+          link: 'assets/tappa-02.mp3',
         }
       },
       { name: 'C', state: 'mini', confirmed: 'mini', x: 70, y: 60, track: {
@@ -129,7 +129,7 @@ export class SanPietroburgoComponent implements OnInit {
       {
         name: 'D', state: 'mini', confirmed: 'mini', x: -10, y: 80, track: {
           title: 'some track',
-          link: 'assets/audio-01.mp3',
+          link: 'assets/tappa-04.mp3',
         }
       },
       {
