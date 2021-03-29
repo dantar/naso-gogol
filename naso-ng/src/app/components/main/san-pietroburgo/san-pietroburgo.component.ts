@@ -135,7 +135,7 @@ export class SanPietroburgoComponent implements OnInit {
       {
         name: 'E', state: 'mini', confirmed: 'mini', x: -15, y: 40, track: {
           title: 'some track',
-          link: 'assets/audio-01.mp3',
+          link: 'assets/tappa-05.mp3',
         }
       },
       { name: 'F', state: 'mini', confirmed: 'mini', x: 110, y: 35, track: {
@@ -146,7 +146,7 @@ export class SanPietroburgoComponent implements OnInit {
       {
         name: 'G', state: 'mini', confirmed: 'mini', x: 45, y: 75, track: {
           title: 'some track',
-          link: 'assets/audio-01.mp3',
+          link: 'assets/tappa-07.mp3',
         }
       },
       {
