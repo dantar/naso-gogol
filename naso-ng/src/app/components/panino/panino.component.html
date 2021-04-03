@@ -1,6 +1,6 @@
 <svg class="fullsvg" viewBox="0 0 100 100" (click)="clickAnywhere()" style="background-color:black;">
 
-    <g *ngIf="shown" [@fadeinout]>
+    <g *ngIf="shown">
         <text id="gogolgame" y="19.440334" x="50.089806"
             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:17.33333397px;line-height:1.25;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e6e6e6;fill-opacity:1;stroke:none"
             xml:space="preserve">
@@ -13,10 +13,12 @@
                 Naso&quot; di N. Gogol'</tspan>
         </text>
 
-        <g *ngIf="step === 'spinning'" style="transform: translate(50px,50px);">
-            <g app-fx-spinning>
-                <image xlink:href="./assets/panino-above.png" y="-33.389297" x="-35" id="panino-above" preserveAspectRatio="none"
-                    height="68.162498" width="70" />
+        <g *ngIf="step === 'spinning'" style="transform: translate(50px,50px) scale(0.8);">
+            <g app-fx-fadeinout>
+                <g app-fx-spinning>
+                    <image xlink:href="./assets/panino-above.png" y="-33.389297" x="-35" id="panino-above" preserveAspectRatio="none"
+                        height="68.162498" width="70" />
+                </g>
             </g>
         </g>
         <g *ngIf="step === 'splitting'">

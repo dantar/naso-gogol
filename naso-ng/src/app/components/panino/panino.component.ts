@@ -27,16 +27,6 @@ import { Router } from '@angular/router';
       transition('down => none', animate('1000ms')),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
-    trigger('fadeinout', [
-      // states
-      transition(':enter', [style({opacity: 0}), animate('3s', style({opacity: 1}))]),
-      transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
-    ]),
-    trigger('spinning', [
-      // states
-      transition(':enter', [style({opacity: 0}), animate('3s', style({opacity: 1}))]),
-      transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
-    ]),
     trigger('mediaitem', [
       state('hidden', style({opacity: 0})),
       state('shown', style({opacity: 1})),

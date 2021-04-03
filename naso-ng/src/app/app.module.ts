@@ -19,6 +19,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RotateScreenComponent } from './components/main/rotate-screen/rotate-screen.component';
 import { FxSpinningComponent } from './components/fx/fx-spinning/fx-spinning.component';
+import { FxFadeinoutComponent } from './components/fx/fx-fadeinout/fx-fadeinout.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -36,7 +37,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     FinalePremioComponent,
     FullscreenToggleComponent,
     RotateScreenComponent,
-    FxSpinningComponent
+    FxSpinningComponent,
+    FxFadeinoutComponent
   ],
   imports: [
     BrowserModule,
