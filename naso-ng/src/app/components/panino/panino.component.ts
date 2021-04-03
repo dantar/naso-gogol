@@ -27,9 +27,20 @@ import { Router } from '@angular/router';
       transition('down => none', animate('1000ms')),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
+    trigger('naso', [
+      // states
+      state('none', style({
+        transform: 'translate(39px,39px) scale(0.4) translate(-39px,-39px)',
+      })),
+      state('up', style({
+        transform: 'translate(39px,39px) scale(1.1) translate(-39px,-39px)',
+      })),
+      // transitions
+      transition('none => up', animate('10000ms')),
+    ]),
     trigger('mediaitem', [
-      state('hidden', style({opacity: 0})),
-      state('shown', style({opacity: 1})),
+      state('hidden', style({opacity: 0.5, transform: 'translate(0px,200px)'})),
+      state('shown', style({opacity: 1, transform: 'translate(0px,0px)'})),
       transition('hidden => shown', animate('300ms')),
       transition('shown => hidden', animate('2000ms')),
     ]),
@@ -63,6 +74,19 @@ export class PaninoComponent implements OnInit {
   }
 
   clickAnywhere() {
+    switch (this.step) {
+      case 'spinning':
+        this.step = 'splitting';
+        break;
+      case 'splitting':
+        this.toggleTrack();
+        break;
+      default:
+        this.step = 'spinning';
+        break;
+    }
+  }
+  toggleTrack() {
     if (! this.track) {
       this.startIntro();
     } else {
