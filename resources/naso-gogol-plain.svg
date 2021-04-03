@@ -69,7 +69,7 @@
        y="1.2694414e-08" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer2">
     <path
        id="segment"
@@ -149,6 +149,7 @@
        height="100%" />
   </g>
   <g
+     style="display:none"
      id="layer9">
     <g
        id="tutorial">
@@ -156,14 +157,14 @@
          id="text971"
          y="93.136604"
          x="50.0625"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#483e37;fill-opacity:1;stroke:#483e37;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:0.75;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:0.75;fill:#483e37;fill-opacity:1;stroke:#483e37;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
          xml:space="preserve"><tspan
            y="93.136604"
            x="50.0625"
            id="tspan969">Esplora le tappe del naso</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
          x="50.0625"
          y="93.136604"
          id="text847-3"><tspan
@@ -192,12 +193,12 @@
      id="layer3">
     <image
        xlink:href="Nevskij-icon-02.png"
-       y="-64.16906"
-       x="-71.432701"
-       id="image90"
-       preserveAspectRatio="none"
+       width="140.48317"
        height="140.48317"
-       width="140.48317" />
+       preserveAspectRatio="none"
+       id="image90"
+       x="-71.432701"
+       y="-64.16906" />
     <circle
        r="50"
        cy="0"
@@ -206,20 +207,20 @@
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.01438856;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
     <image
        xlink:href="Kazan-icon-02.png"
-       y="-73.669762"
-       x="-77.367348"
-       id="image68"
-       preserveAspectRatio="none"
+       width="154.37878"
        height="147.8373"
-       width="154.37878" />
+       preserveAspectRatio="none"
+       id="image68"
+       x="-77.367348"
+       y="-73.669762" />
     <image
        xlink:href="Kazan-icon-SCRITTA.png"
-       y="-11.057654"
-       x="-49.86834"
-       id="image79"
-       preserveAspectRatio="none"
+       width="99.480148"
        height="22.474625"
-       width="99.480148" />
+       preserveAspectRatio="none"
+       id="image79"
+       x="-49.86834"
+       y="-11.057654" />
   </g>
   <g
      style="display:none"
@@ -243,46 +244,75 @@
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      id="layer4">
     <g
        id="panino-sotto">
-      <path
-         id="path34"
-         d="M 4.1458503,55.900877 C 28.737307,64.320636 57.344981,66.250344 96.431527,54.913864 92.646406,64.996373 89.545234,75.717237 76.19777,76.874895 L 19.691298,76.134635 C 8.8220344,72.044191 5.1978308,64.572719 4.1458503,55.900877 Z"
-         style="fill:#c87137;stroke:#784421;stroke-width:1.38181758px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
-      <path
-         style="fill:#ffeeaa;stroke:#784421;stroke-width:1.38181758px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 4.1458503,55.900877 C 28.737307,64.320636 57.344981,66.250344 96.431527,54.913864 95.528208,52.718117 33.027056,45.132043 4.1458503,55.900877 Z"
-         id="path36" />
+      <image
+         xlink:href="panino-lower.png"
+         width="70"
+         height="18.9"
+         preserveAspectRatio="none"
+         id="image1078"
+         x="15"
+         y="55.299999"
+         style="display:inline" />
     </g>
     <g
        id="panino-naso">
       <path
-         style="fill:#ffd5d5;stroke:#ff8080;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 39.86465,59.427754 c -6.72851,-0.58079 -5.04484,-3.749939 -3.21429,-6.964286 v 0 L 52.103137,36.163343 v 0 c 1.24448,-1.076949 1.93314,-2.709717 6.07143,-0.892857 v 0 L 57.399,59.916422 v 0 c -2.64688,1.345069 -0.78883,-0.462584 -4.43518,-2.115935 -5.23411,-2.626006 -11.07739,1.135868 -13.09917,1.627267 z"
-         id="path843" />
-      <path
          style="fill:#ffd5d5;stroke:#ff8080;stroke-width:1.12511885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 43.19753,58.457477 c -1.36556,0.861351 1.06915,-0.207007 2.67281,1.99466 5.18637,1.944021 8.43676,0.829348 11.52866,-0.535715 l -5.04734,-4.741941 c -2.50422,-2.082276 -6.64992,1.694131 -9.15413,3.282996 z"
          id="path851" />
+      <image
+         xlink:href="naso.png"
+         width="19.684422"
+         height="28.389927"
+         preserveAspectRatio="none"
+         id="image1056"
+         x="38.907787"
+         y="38.430035"
+         style="display:inline" />
     </g>
     <g
        id="panino-sopra">
-      <text
-         id="text847"
+      <image
+         xlink:href="panino-upper.png"
+         width="70"
+         height="24.412498"
+         preserveAspectRatio="none"
+         id="image1089"
+         x="15.009515"
+         y="37.821926"
+         style="display:inline" />
+    </g>
+    <text
+       id="gogolgame"
+       y="19.440334"
+       x="50.089806"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:17.33333397px;line-height:1.25;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e6e6e6;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
          y="19.440334"
          x="50.089806"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Garamond;-inkscape-font-specification:'Garamond, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e6e6e6;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           y="19.440334"
-           x="50.089806"
-           id="tspan845">Gogol game</tspan></text>
-      <path
-         style="fill:#c87137;stroke:#784421;stroke-width:1.38181758px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-         d="M 96.431527,54.913864 C 61.115025,66.364441 30.970374,63.787721 4.1458543,55.900877 7.930976,45.818368 11.032148,35.097504 24.379612,33.939846 l 56.506471,0.74026 c 10.869264,4.090444 14.493468,11.561916 15.545444,20.233758 z"
-         id="path32" />
-    </g>
+         id="tspan845">Gogol' game</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:8.61586571px;line-height:1.25;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.49706915"
+       x="50.070648"
+       y="91.720268"
+       id="subtitle"><tspan
+         style="stroke-width:0.49706915"
+         id="tspan967"
+         x="50.070648"
+         y="91.720268">dal racconto &quot;Il Naso&quot; di N. Gogol'</tspan></text>
+    <image
+       xlink:href="panino-above.png"
+       y="-33.389297"
+       x="-35"
+       id="panino-above"
+       preserveAspectRatio="none"
+       height="68.162498"
+       width="70" />
   </g>
   <g
      style="display:none"

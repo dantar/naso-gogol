@@ -32,6 +32,11 @@ import { Router } from '@angular/router';
       transition(':enter', [style({opacity: 0}), animate('3s', style({opacity: 1}))]),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
+    trigger('spinning', [
+      // states
+      transition(':enter', [style({opacity: 0}), animate('3s', style({opacity: 1}))]),
+      transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
+    ]),
     trigger('mediaitem', [
       state('hidden', style({opacity: 0})),
       state('shown', style({opacity: 1})),
@@ -51,6 +56,8 @@ export class PaninoComponent implements OnInit {
   mediastate: string;
   shown: boolean;
 
+  step: string;
+
   constructor(
     private tickers: TickersService,
     private router: Router,
@@ -62,6 +69,7 @@ export class PaninoComponent implements OnInit {
     this.track = null;
     this.mediastate = 'hidden';
     this.shown = true;
+    this.step = 'spinning';
   }
 
   clickAnywhere() {
