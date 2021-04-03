@@ -18,6 +18,7 @@ import { FullscreenToggleComponent } from './components/widgets/fullscreen-toggl
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RotateScreenComponent } from './components/main/rotate-screen/rotate-screen.component';
+import { FxSpinningComponent } from './components/fx/fx-spinning/fx-spinning.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -34,7 +35,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     PaninoComponent,
     FinalePremioComponent,
     FullscreenToggleComponent,
-    RotateScreenComponent
+    RotateScreenComponent,
+    FxSpinningComponent
   ],
   imports: [
     BrowserModule,

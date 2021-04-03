@@ -1,0 +1,6 @@
+<svg:g>
+    <svg:g [@spinning]="spinning" (@spinning.done)="doneSpinning($event)">
+        <svg:circle cx="10" cy="10" r="20" style="fill:aqua;"></svg:circle>
+        <ng-content></ng-content>
+    </svg:g>
+</svg:g>

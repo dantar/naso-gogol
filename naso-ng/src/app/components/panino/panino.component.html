@@ -14,8 +14,10 @@
         </text>
 
         <g *ngIf="step === 'spinning'" style="transform: translate(50px,50px);">
-            <image xlink:href="./assets/panino-above.png" y="-33.389297" x="-35" id="panino-above" preserveAspectRatio="none"
-                height="68.162498" width="70" />
+            <g app-fx-spinning>
+                <image xlink:href="./assets/panino-above.png" y="-33.389297" x="-35" id="panino-above" preserveAspectRatio="none"
+                    height="68.162498" width="70" />
+            </g>
         </g>
         <g *ngIf="step === 'splitting'">
             <g id="panino-sotto" [@bread]="breadDown">
