@@ -116,6 +116,7 @@ export class PaninoComponent implements OnInit {
     this.skipThis();
   }
   skipThis() {
+    this.router.navigate(['sanpietroburgo']);
     this.track = null;
     this.mediastate = 'hidden';
     this.breadUp = 'none';

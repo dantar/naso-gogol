@@ -4,6 +4,7 @@ import { TickersService } from 'src/app/services/tickers.service';
 import { Track } from 'ngx-audio-player';
 import { VideoData } from 'src/app/models/media.model';
 import { GamesCommonService } from 'src/app/services/games-common.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-san-pietroburgo',
@@ -79,6 +80,7 @@ export class SanPietroburgoComponent implements OnInit {
   constructor(
     private tickers: TickersService,
     private games: GamesCommonService,
+    private router: Router,
   ) { }
 
   unlocked: boolean;
@@ -95,8 +97,6 @@ export class SanPietroburgoComponent implements OnInit {
   track: Track;
   video: VideoData;
   panEvent: any;
-
-  intro: boolean;
 
   breadDissolve: string;
 
@@ -127,13 +127,13 @@ export class SanPietroburgoComponent implements OnInit {
       },
       {
         name: 'D', state: 'mini', confirmed: 'mini', x: -10, y: 80, track: {
-          title: 'some track',
+          title: 'Tappa quattro',
           link: 'assets/tappa-04.mp3',
         }
       },
       {
         name: 'E', state: 'mini', confirmed: 'mini', x: -15, y: 40, track: {
-          title: 'some track',
+          title: 'Tappa cinque',
           link: 'assets/tappa-05.mp3',
         }
       },
@@ -144,7 +144,7 @@ export class SanPietroburgoComponent implements OnInit {
       },
       {
         name: 'G', state: 'mini', confirmed: 'mini', x: 45, y: 75, track: {
-          title: 'some track',
+          title: 'Tappa sette',
           link: 'assets/tappa-07.mp3',
         }
       },
@@ -166,7 +166,6 @@ export class SanPietroburgoComponent implements OnInit {
     this.track = null;
     this.visits = [];
     this.panEvent = null;
-    this.intro = true;
     this.breadDissolve = 'shown';
     // nasopopup
     this.nasopopupState = 'hidden';
@@ -178,8 +177,12 @@ export class SanPietroburgoComponent implements OnInit {
       text: 'Esplora le tappe del naso',
       transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
       pulse: 'small',
-      show: false,
+      show: true,
     }
+  }
+
+  clickGoBack() {
+    this.router.navigate(['intro']);
   }
 
   clickCloseVideo() {
@@ -285,16 +288,6 @@ export class SanPietroburgoComponent implements OnInit {
     }
   }
 
-  doneDissolve(event:any) {
-    if (event.toState === 'hidden') {
-      this.intro = false;
-    }
-  }
-
-  introSkipped() {
-    this.breadDissolve = 'hidden';
-  }
-
   animationStateNasopopup() {
     let location = this.locationsDict[this.namessequence[this.currentStep]];
     let x = location.x + (this.nasopopupState === 'hidden' ? 0: 10);
@@ -303,7 +296,7 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   showNaso(): boolean {
-    return ! this.intro && ! this.unlocked &&  this.currentStep < this.namessequence.length;
+    return ! this.unlocked &&  this.currentStep < this.namessequence.length;
   }
 
   animationDoneNasopopup(event: any) {
