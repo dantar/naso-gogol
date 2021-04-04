@@ -2,7 +2,7 @@
 
     <defs>
         <g id="transparent-layer">
-            <rect x="-200" y="-100" width="500" height="300" style="opacity: 0;"></rect>
+            <rect x="-200" y="-100" width="500" height="300" style="fill:black; opacity: 0;"></rect>
         </g>
         <g id="tutorial-pointer">
             <path
@@ -30,29 +30,28 @@
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="pin-D">
-            <circle cx="0" cy="0" r="50" style="fill:#d40000;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="pin-E">
-            <circle cx="0" cy="0" r="50" style="fill:#71d400;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="pin-F">
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="pin-G">
-            <circle cx="0" cy="0" r="50" style="fill:#d40000;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="pin-H">
-            <circle cx="0" cy="0" r="50" style="fill:#71d400;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="pin-I">
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="pin-J">
-            <circle cx="0" cy="0" r="50" style="fill:#ffbb00;"></circle>
+            <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
         <g id="name-A">
-            <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
-                height="22.474625" width="99.480148" />
+            <g app-location-underline text="Cattedrale di Kazan"></g>
         </g>
         <g id="name-B">
             <image xlink:href="./assets/Kazan-icon-SCRITTA.png" y="-11.057654" x="-49.86834" preserveAspectRatio="none"
@@ -115,13 +114,13 @@
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="moveToLocation(location)"></use>
 
         <g *ngFor="let location of locations">
-            <use [attr.href]="'#name-'+location.name" [@names]="locationStateName(location)"></use>
+            <g [@names]="locationStateName(location)" app-location-underline [text]="location.track.title"></g>
             <use [attr.href]="'#pin-'+location.name" [@location]="locationStatePin(location)"></use>
         </g>
         <g (click)="clickedScreen($event)">
             <use href="#transparent-layer"></use>
         </g>
-        <circle *ngFor="let location of locations" cx="0" cy="0" r="50" style="opacity: 0;"
+        <circle *ngFor="let location of locations" cx="0" cy="0" r="50" style="opacity: 0; fill:blueviolet;"
             [@location]="locationStatePin(location)" (@location.done)="animationLocationDone($event, location)"
             (click)="clickLocation(location)" (touchstart)="onTouchStart($event, location)"
             (mousedown)="onTouchStart($event, location)"></circle>

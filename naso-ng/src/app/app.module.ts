@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { RotateScreenComponent } from './components/main/rotate-screen/rotate-screen.component';
 import { FxSpinningComponent } from './components/fx/fx-spinning/fx-spinning.component';
 import { FxFadeinoutComponent } from './components/fx/fx-fadeinout/fx-fadeinout.component';
+import { LocationUnderlineComponent } from './components/fragments/location-underline/location-underline.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -38,7 +39,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     FullscreenToggleComponent,
     RotateScreenComponent,
     FxSpinningComponent,
-    FxFadeinoutComponent
+    FxFadeinoutComponent,
+    LocationUnderlineComponent
   ],
   imports: [
     BrowserModule,

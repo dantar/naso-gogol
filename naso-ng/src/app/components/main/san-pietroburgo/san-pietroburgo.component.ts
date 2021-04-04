@@ -3,7 +3,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 import { TickersService } from 'src/app/services/tickers.service';
 import { Track } from 'ngx-audio-player';
 import { VideoData } from 'src/app/models/media.model';
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 import { GamesCommonService } from 'src/app/services/games-common.service';
 
 @Component({
@@ -17,7 +16,7 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
         transform: 'translate({{x}}px,{{y}}px) scale({{s}})',
       }), { params: { x: 0, y: 0, s: 0.1 } }),
       state('full', style({
-        transform: 'translate(50px,40px) scale(0.7)',
+        transform: 'translate(50px,35px) scale(0.65)',
       })),
       // transitions
       transition('mini => full', animate('1000ms ease-in-out')),
@@ -29,7 +28,7 @@ import { GamesCommonService } from 'src/app/services/games-common.service';
         transform: 'translate({{x}}px,{{y}}px) scale({{s}})',
       }), { params: { x: 0, y: 0, s: 0.1 } }),
       state('full', style({
-        transform: 'translate(50px,80px) scale(0.7)',
+        transform: 'translate(50px,85px) scale(0.75)',
       })),
       // transitions
       transition('mini => full', animate('1000ms ease-in-out')),
@@ -89,7 +88,7 @@ export class SanPietroburgoComponent implements OnInit {
   locationsDict: {[id: string]: MapLocation};
   location: MapLocation;
   locationScalePin: number = 0.1;
-  locationScaleName: number = 0;
+  locationScaleName: number = 0.05;
 
   visits: MapLocation[];
 
@@ -179,7 +178,7 @@ export class SanPietroburgoComponent implements OnInit {
       text: 'Esplora le tappe del naso',
       transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
       pulse: 'small',
-      show: true,
+      show: false,
     }
   }
 
@@ -205,7 +204,7 @@ export class SanPietroburgoComponent implements OnInit {
     this.locations = this.locations.filter(l => l.name != location.name);
     this.locations.push(location);
     if (!this.location) {
-      this.tickers.once('toggle', 10, () => {
+      this.tickers.once('toggle-full', 10, () => {
         this.location = location;
         this.location.state = 'full';
       });
@@ -213,7 +212,7 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   private closeCurrentLocation() {
-    this.tickers.once('toggle', 5, () => {
+    this.tickers.once('toggle-mini', 10, () => {
       if (this.location) {
         this.location.state = 'mini';
       }
@@ -242,7 +241,6 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   animationLocationDone(event: any, location: MapLocation) {
-    console.log('animationLocationDone');
     location.confirmed = event.toState;
     if (event.toState === 'full') {
       this.video = location.video;
@@ -251,6 +249,7 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   onPan(event: any) {
+    if (this.locations.filter(l => l.state === 'full').length > 0) return;
     if (event.isFinal) {
       this.checkVisits();
       this.visits = [];
@@ -267,13 +266,13 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   checkVisits() {
-    console.log(this.visits.map(v => v.name).join('-'));
     if (this.visits.map(v => v.name).join('-') === this.namessequence.join('-') && !this.unlocked) {
       this.unlocked = true;
     }
   }
 
   onTouchStart(event: any, location: MapLocation) {
+    if (this.locations.filter(l => l.state === 'full').length > 0) return;
     this.visits = [location];
   }
 
