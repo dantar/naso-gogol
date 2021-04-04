@@ -21,6 +21,9 @@ import { RotateScreenComponent } from './components/main/rotate-screen/rotate-sc
 import { FxSpinningComponent } from './components/fx/fx-spinning/fx-spinning.component';
 import { FxFadeinoutComponent } from './components/fx/fx-fadeinout/fx-fadeinout.component';
 import { LocationUnderlineComponent } from './components/fragments/location-underline/location-underline.component';
+import { AudioToggleComponent } from './components/widgets/audio-toggle/audio-toggle.component';
+import { SkipForwardComponent } from './components/widgets/skip-forward/skip-forward.component';
+import { GoBackComponent } from './components/widgets/go-back/go-back.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -40,7 +43,10 @@ export class MyHammerConfig extends HammerGestureConfig {
     RotateScreenComponent,
     FxSpinningComponent,
     FxFadeinoutComponent,
-    LocationUnderlineComponent
+    LocationUnderlineComponent,
+    AudioToggleComponent,
+    SkipForwardComponent,
+    GoBackComponent
   ],
   imports: [
     BrowserModule,
