@@ -105,6 +105,8 @@ export class SanPietroburgoComponent implements OnInit {
   namessequence: string[];
 
   tutorial1: TutorialOverlay;
+  tutorial2: TutorialOverlay;
+  currentTutorial: TutorialOverlay
 
   ngOnInit(): void {
     this.locations = [
@@ -178,7 +180,24 @@ export class SanPietroburgoComponent implements OnInit {
       transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
       pulse: 'small',
       show: true,
+      locations: [this.locations[0]],
+      done: false,
     }
+    this.tutorial2 = {
+      text: 'Ricostruisci la sequenza!',
+      transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
+      pulse: 'small',
+      show: false,
+      locations: [this.locations[0], this.locations[1], this.locations[2]],
+      done: false,
+    }
+    this.setCurrentTutorial();
+  }
+
+  setCurrentTutorial() {
+    this.currentTutorial = null;
+    if (!this.tutorial1.done && this.tutorial1.show) this.currentTutorial = this.tutorial1;
+    if (!this.tutorial2.done && this.tutorial2.show) this.currentTutorial = this.tutorial2;
   }
 
   clickGoBack() {
@@ -212,6 +231,10 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   private closeCurrentLocation() {
+    this.tutorial1.show = false;
+    this.tutorial1.done = true;
+    if (!this.tutorial2.done) this.tutorial2.show = true;
+    this.setCurrentTutorial();
     this.tickers.once('toggle-mini', 10, () => {
       if (this.location) {
         this.location.state = 'mini';
@@ -232,10 +255,12 @@ export class SanPietroburgoComponent implements OnInit {
   moveToLocation(location: MapLocation) {
     return `translate(${location.x} ${location.y}) scale(0.1)`
   }
-  visitsPathD(): string {
-    let points = this.visits.map(l => `${l.x},${l.y}`);
-    let c = this.panEventCoordinates(this.panEvent);
-    points.push(`${c.x},${c.y}`);
+  locsPathD(locs: MapLocation[]): string {
+    let points = locs.map(l => `${l.x},${l.y}`);
+    if (this.panEvent) {
+      let c = this.panEventCoordinates(this.panEvent);
+      points.push(`${c.x},${c.y}`);
+    }
     return `M ${points.join(' ')}`;
   }
 
@@ -248,6 +273,9 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   onPan(event: any) {
+    this.tutorial2.show = false;
+    this.tutorial2.done = true;
+    this.setCurrentTutorial();
     if (this.locations.filter(l => l.state === 'full').length > 0) return;
     if (event.isFinal) {
       this.checkVisits();
@@ -337,6 +365,8 @@ export class SanPietroburgoComponent implements OnInit {
 
   clickTutorialFirst() {
     this.tutorial1.show = false;
+    this.tutorial1.done = true;
+    this.setCurrentTutorial();
     this.clickLocation(this.locations[0]);
   }
 
@@ -366,4 +396,6 @@ class TutorialOverlay {
   transform: string;
   pulse: string;
   show: boolean;
+  done: boolean;
+  locations: MapLocation[];
 }

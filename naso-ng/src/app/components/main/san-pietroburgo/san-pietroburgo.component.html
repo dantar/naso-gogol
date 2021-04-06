@@ -97,13 +97,20 @@
             id="image110" x="-19.863007" y="1.2694414e-08" />
     </g>
 
+    <g *ngIf="tutorial2.show">
+        <path id="segmentDemo" [attr.d]="locsPathD(tutorial2.locations)"
+            style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <use *ngFor="let location of tutorial2.locations" href="#pin-visited"
+            [attr.transform]="moveToLocation(location)"></use>
+    </g>
+
     <g style="display:inline" id="layer2">
-        <path id="segment" *ngIf="(visits.length > 0) && panEvent" [attr.d]="visitsPathD()"
+        <path id="segment" *ngIf="(visits.length > 0) && panEvent" [attr.d]="locsPathD(visits)"
             style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <g *ngIf="showNaso()" id="naso-mappa" [@nasopopup]="animationStateNasopopup()"
             (@nasopopup.done)="animationDoneNasopopup($event)">
-            <image xlink:href="./assets/naso.png" width="69.32" height="100" preserveAspectRatio="none"
-                id="image1056" x="-20" y="-25" style="display:inline" />
+            <image xlink:href="./assets/naso.png" width="69.32" height="100" preserveAspectRatio="none" id="image1056"
+                x="-20" y="-25" style="display:inline" />
         </g>
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="moveToLocation(location)"></use>
 
@@ -111,7 +118,8 @@
             <g [@names]="locationStateName(location)" app-location-underline [text]="location.track.title"></g>
             <use [attr.href]="'#pin-'+location.name" [@location]="locationStatePin(location)"></use>
             <g [style]="{opacity: location.state === 'mini' && location.listen ? 0.5: 0}">
-                <circle cx="0" cy="0" r="50" style="opacity: 0.5; fill:#000000;" [@location]="locationStatePin(location)"></circle>
+                <circle cx="0" cy="0" r="50" style="opacity: 0.5; fill:#000000;"
+                    [@location]="locationStatePin(location)"></circle>
             </g>
         </g>
         <g (click)="clickedScreen($event)">
@@ -123,27 +131,28 @@
             (mousedown)="onTouchStart($event, location)"></circle>
     </g>
 
-    <g *ngIf="tutorial1.show">
+    <g *ngIf="currentTutorial != null">
         <use href="#transparent-layer"></use>
         <g>
             <text y="93.136604" x="50.0625"
                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Goudy Old Style;-inkscape-font-specification:'Goudy Old Style, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:0.75;"
                 xml:space="preserve">
-                <tspan y="93.136604" x="50.0625" id="tspan969">{{tutorial1.text}}</tspan>
+                <tspan y="93.136604" x="50.0625" id="tspan969">{{currentTutorial.text}}</tspan>
             </text>
             <text xml:space="preserve"
                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Goudy Old Style;-inkscape-font-specification:'Goudy Old Style, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;"
                 x="50.0625" y="93.136604">
-                <tspan id="tspan845-6" x="50.0625" y="93.136604">{{tutorial1.text}}</tspan>
+                <tspan id="tspan845-6" x="50.0625" y="93.136604">{{currentTutorial.text}}</tspan>
             </text>
         </g>
+    </g>
+    <g *ngIf="tutorial1.show">
         <g [attr.transform]="tutorial1.transform">
             <g id="touchfinger" [@pulsating]="tutorial1.pulse" (@pulsating.done)="togglePulse(tutorial1)">
                 <use href="#tutorial-pointer"></use>
             </g>
         </g>
-        <circle cx="0" cy="0" r="50" style="opacity: 0;"
-            [attr.transform]="moveToLocation(locations[0])"
+        <circle cx="0" cy="0" r="50" style="opacity: 0;" [attr.transform]="moveToLocation(locations[0])"
             (click)="clickTutorialFirst()"></circle>
     </g>
 
