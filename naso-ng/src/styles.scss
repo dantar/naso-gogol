@@ -12,6 +12,17 @@
     font-weight:300;
 }
 
+.background {
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* The image used */
+    background-image: url("./assets/tiled.jpg");
+    background-repeat: repeat;
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

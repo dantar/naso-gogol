@@ -9,7 +9,7 @@ import { AudioPlayerComponent, Track } from 'ngx-audio-player';
   animations: [
     trigger('mediaitem', [
       state('hidden', style({opacity: 0, transform: 'translate(0px,60px)'})),
-      state('shown', style({opacity: 0.5, transform: 'translate(0px,0px)'})),
+      state('shown', style({opacity: 1, transform: 'translate(0px,0px)'})),
       transition('hidden => shown', animate('500ms')),
       transition('shown => hidden', animate('500ms')),
     ]),
