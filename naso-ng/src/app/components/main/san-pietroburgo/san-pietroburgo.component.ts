@@ -109,52 +109,52 @@ export class SanPietroburgoComponent implements OnInit {
   ngOnInit(): void {
     this.locations = [
       {
-        name: 'A', state: 'mini', confirmed: 'mini', x: 10, y: 30, track: {
+        name: 'A', state: 'mini', listen: false, confirmed: 'mini', x: 10, y: 30, track: {
           title: 'Cattedrale di Kazan',
           link: 'assets/tappa-01.mp3',
         }
       },
       {
-        name: 'B', state: 'mini', confirmed: 'mini', x: 30, y: 10, track: {
+        name: 'B', state: 'mini', listen: false, confirmed: 'mini', x: 30, y: 10, track: {
           title: 'Prospettiva Nevskij',
           link: 'assets/tappa-02.mp3',
         }
       },
-      { name: 'C', state: 'mini', confirmed: 'mini', x: 70, y: 60, track: {
+      { name: 'C', state: 'mini', listen: false, confirmed: 'mini', x: 70, y: 60, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         },
       },
       {
-        name: 'D', state: 'mini', confirmed: 'mini', x: -10, y: 80, track: {
+        name: 'D', state: 'mini', listen: false, confirmed: 'mini', x: -10, y: 80, track: {
           title: 'Tappa quattro',
           link: 'assets/tappa-04.mp3',
         }
       },
       {
-        name: 'E', state: 'mini', confirmed: 'mini', x: -15, y: 40, track: {
+        name: 'E', state: 'mini', listen: false, confirmed: 'mini', x: -15, y: 40, track: {
           title: 'Tappa cinque',
           link: 'assets/tappa-05.mp3',
         }
       },
-      { name: 'F', state: 'mini', confirmed: 'mini', x: 110, y: 35, track: {
+      { name: 'F', state: 'mini', listen: false, confirmed: 'mini', x: 110, y: 35, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         },
       },
       {
-        name: 'G', state: 'mini', confirmed: 'mini', x: 45, y: 75, track: {
+        name: 'G', state: 'mini', listen: false, confirmed: 'mini', x: 45, y: 75, track: {
           title: 'Tappa sette',
           link: 'assets/tappa-07.mp3',
         }
       },
       {
-        name: 'H', state: 'mini', confirmed: 'mini', x: 20, y: 85, track: {
+        name: 'H', state: 'mini', listen: false, confirmed: 'mini', x: 20, y: 85, track: {
           title: 'Tappa otto',
           link: 'assets/tappa-08.mp3',
         }
       },
-      { name: 'I', state: 'mini', confirmed: 'mini', x: 80, y: 20, track: {
+      { name: 'I', state: 'mini', listen: false, confirmed: 'mini', x: 80, y: 20, track: {
           title: 'some track',
           link: 'assets/audio-01.mp3',
         },
@@ -243,6 +243,7 @@ export class SanPietroburgoComponent implements OnInit {
     location.confirmed = event.toState;
     if (event.toState === 'full') {
       this.track = location.track;
+      location.listen = true;
     }
   }
 
@@ -348,6 +349,7 @@ class MapLocation {
   confirmed: string;
   x: number;
   y: number;
+  listen: boolean;
 
   video?: VideoData;
   track?: Track;

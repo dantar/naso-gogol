@@ -110,6 +110,9 @@
         <g *ngFor="let location of locations">
             <g [@names]="locationStateName(location)" app-location-underline [text]="location.track.title"></g>
             <use [attr.href]="'#pin-'+location.name" [@location]="locationStatePin(location)"></use>
+            <g [style]="{opacity: location.state === 'mini' && location.listen ? 0.5: 0}">
+                <circle cx="0" cy="0" r="50" style="opacity: 0.5; fill:#000000;" [@location]="locationStatePin(location)"></circle>
+            </g>
         </g>
         <g (click)="clickedScreen($event)">
             <use href="#transparent-layer"></use>
