@@ -201,7 +201,11 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   clickGoBack() {
-    this.router.navigate(['intro']);
+    if (this.location && this.location.confirmed === 'full') {
+      this.closeCurrentLocation();
+    } else {
+      this.router.navigate(['intro']);
+    }
   }
 
   clickedScreen(event: any){
