@@ -42,7 +42,7 @@ import { fromEvent } from 'rxjs';
         transform: 'translate({{x}}px,{{y}}px) scale(0) rotate(0deg)',
       }), { params: { x: 0, y: 0, s: 0.1 } }),
       state('shown', style({
-        transform: 'translate({{x}}px,{{y}}px) scale(0.08) rotate(30deg) ',
+        transform: 'translate({{x}}px,{{y}}px) scale(0.15) rotate(25deg) ',
       }), { params: { x: 0, y: 0, s: 1 } }),
       // transitions
       transition('hidden => shown', animate('3500ms ease-in-out')),
@@ -323,7 +323,7 @@ export class SanPietroburgoComponent implements OnInit {
     }
   }
   scheduleRandomNasoPopup() {
-    this.tickers.once('nasopopup', this.games.randomInt(2000, 8000), () => {
+    this.tickers.once('nasopopup', this.games.randomInt(1000, 5000), () => {
       if (this.currentStep < this.namessequence.length) {
         this.nasopopupState = 'shown';
       }

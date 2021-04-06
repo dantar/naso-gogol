@@ -102,14 +102,8 @@
             style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <g *ngIf="showNaso()" id="naso-mappa" [@nasopopup]="animationStateNasopopup()"
             (@nasopopup.done)="animationDoneNasopopup($event)">
-            <path
-                style="fill:#ffd5d5;stroke:#ff8080;stroke-width:3.49195528px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                d="M -46.382312,38.828708 C -69.877967,36.800616 -63.998667,25.73409 -57.606469,14.509735 v 0 l 53.9604047,-56.919307 v 0 c 4.34566839,-3.760658 6.7504382,-9.462211 21.2011613,-3.117817 v 0 l -2.708245,86.062503 v 0 C 5.6040656,45.232035 12.092293,38.919792 -0.64059783,33.146366 -18.917875,23.97647 -39.322347,37.112766 -46.382312,38.828708 Z"
-                id="path843-3" />
-            <path
-                style="fill:#ffd5d5;stroke:#ff8080;stroke-width:3.92886448px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-                d="m -34.744045,35.440545 c -4.768474,3.007798 3.733424,-0.722859 9.333333,6.965262 18.1105716,6.788434 29.4607877,2.896046 40.257564,-1.870693 L -2.7782331,23.97647 C -11.522857,16.705256 -25.999456,29.8923 -34.744045,35.440545 Z"
-                id="path851-8" />
+            <image xlink:href="./assets/naso.png" width="69.32" height="100" preserveAspectRatio="none"
+                id="image1056" x="-20" y="-25" style="display:inline" />
         </g>
         <use *ngFor="let location of visits" href="#pin-visited" [attr.transform]="moveToLocation(location)"></use>
 
