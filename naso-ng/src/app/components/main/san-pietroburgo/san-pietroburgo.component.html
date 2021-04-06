@@ -153,18 +153,12 @@
 
 </svg>
 
-<app-finale-premio [@fadeinout] *ngIf="unlocked" (triggerVideo)="video = $event"></app-finale-premio>
-
 <app-listen-track *ngIf="track" (ended)="trackEnded($event)" [track]="track"></app-listen-track>
-<app-watch-video *ngIf="video" [video]="video" (click)="clickCloseVideo()" [@mediaitem]></app-watch-video>
 
 <div class="panel-menu-list top-right-menu">
     <div class="panel-menu-item" (click)="clickGoBack()">
         <svg viewBox="0 0 100 100">
             <g app-go-back></g>
         </svg>
-    </div>
-    <div class="panel-menu-item" (click)="clickCloseVideo()" *ngIf="video">
-        close
     </div>
 </div>

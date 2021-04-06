@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { VideoData } from 'src/app/models/media.model';
 
 @Component({
@@ -11,9 +12,14 @@ export class FinalePremioComponent implements OnInit {
   @Output() triggerVideo = new EventEmitter<VideoData>();
   readers: GogolReader[];
 
+  video: VideoData;
+
   ROW_MAX = 7;
 
-  constructor(private changes: ChangeDetectorRef) { }
+  constructor(
+    private changes: ChangeDetectorRef,
+    private router: Router,
+    ) { }
 
   ngOnInit(): void {
     console.log(window.location.href);
@@ -50,7 +56,8 @@ export class FinalePremioComponent implements OnInit {
   }
 
   clickReader(reader: GogolReader) {
-    this.triggerVideo.emit(reader.video);
+    this.video = reader.video;
+    //this.triggerVideo.emit(reader.video);
   }
 
   readerTransform(reader: GogolReader): string {
@@ -69,6 +76,22 @@ export class FinalePremioComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   windowResize(event: any) {
     this.changes.detectChanges();
+  }
+
+  clickGoBack() {
+    if (this.video) {
+      this.video = null;
+    } else {
+      this.router.navigate(['sanpietroburgo']);
+    }
+  }
+
+  clickCloseVideo() {
+    this.video = null;
+  }
+
+  clickedScreen(event: any){
+    this.clickCloseVideo();
   }
 
 }

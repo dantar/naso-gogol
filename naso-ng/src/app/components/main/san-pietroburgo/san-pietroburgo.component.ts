@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { TickersService } from 'src/app/services/tickers.service';
 import { Track } from 'ngx-audio-player';
 import { VideoData } from 'src/app/models/media.model';
 import { GamesCommonService } from 'src/app/services/games-common.service';
 import { Router } from '@angular/router';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-san-pietroburgo',
@@ -95,7 +96,6 @@ export class SanPietroburgoComponent implements OnInit {
   visits: MapLocation[];
 
   track: Track;
-  video: VideoData;
   panEvent: any;
 
   breadDissolve: string;
@@ -185,13 +185,6 @@ export class SanPietroburgoComponent implements OnInit {
     this.router.navigate(['intro']);
   }
 
-  clickCloseVideo() {
-    this.video = null;
-    if (this.location) {
-      this.clickLocation(this.location);
-    }
-  }
-
   clickedScreen(event: any){
     if (this.location && this.location.confirmed === 'full') {
       this.closeCurrentLocation();
@@ -224,7 +217,6 @@ export class SanPietroburgoComponent implements OnInit {
         this.location.state = 'mini';
       }
       this.track = null;
-      this.video = null;
       this.location = null;
     });
   }
@@ -250,7 +242,6 @@ export class SanPietroburgoComponent implements OnInit {
   animationLocationDone(event: any, location: MapLocation) {
     location.confirmed = event.toState;
     if (event.toState === 'full') {
-      this.video = location.video;
       this.track = location.track;
     }
   }
@@ -274,8 +265,24 @@ export class SanPietroburgoComponent implements OnInit {
 
   checkVisits() {
     if (this.visits.map(v => v.name).join('-') === this.namessequence.join('-') && !this.unlocked) {
-      this.unlocked = true;
+      this.openFinale();
     }
+  }
+
+  openFinale() {
+    this.unlocked = true;
+    let audio = new Audio();
+    fromEvent(audio, 'ended').subscribe(event =>  {
+      this.router.navigate(['finale']);
+    });
+    audio.src = './assets/evviva.wav'
+    audio.load();
+    audio.play();
+  }
+
+  @HostListener('ended',['$event'])
+  onEnded(event: any) {
+    console.log(event)
   }
 
   onTouchStart(event: any, location: MapLocation) {
