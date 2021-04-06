@@ -150,8 +150,8 @@ export class SanPietroburgoComponent implements OnInit {
       },
       {
         name: 'H', state: 'mini', confirmed: 'mini', x: 20, y: 85, track: {
-          title: 'some track',
-          link: 'assets/audio-01.mp3',
+          title: 'Tappa otto',
+          link: 'assets/tappa-08.mp3',
         }
       },
       { name: 'I', state: 'mini', confirmed: 'mini', x: 80, y: 20, track: {
@@ -212,6 +212,10 @@ export class SanPietroburgoComponent implements OnInit {
         this.location.state = 'full';
       });
     }
+  }
+
+  trackEnded(event: any) {
+    this.closeCurrentLocation();
   }
 
   private closeCurrentLocation() {

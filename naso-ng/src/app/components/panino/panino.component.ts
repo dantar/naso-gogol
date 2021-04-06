@@ -134,7 +134,6 @@ export class PaninoComponent implements OnInit {
   }
 
   trackEnded(event: any) {
-    console.log(event);
     this.skipThis();
   }
 
