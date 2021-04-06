@@ -41,7 +41,7 @@
      inkscape:cx="31.139051"
      inkscape:cy="52.763023"
      inkscape:document-units="px"
-     inkscape:current-layer="touchfinger"
+     inkscape:current-layer="layer4"
      showgrid="false"
      units="px"
      inkscape:window-width="1853"
@@ -198,7 +198,7 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="tutorial"
-     style="display:inline">
+     style="display:none">
     <g
        id="tutorial"
        inkscape:label="#g1005">
@@ -251,12 +251,12 @@
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/Nevskij-icon-02.png"
        xlink:href="Nevskij-icon-02.png"
-       y="-64.16906"
-       x="-71.432701"
-       id="image90"
-       preserveAspectRatio="none"
+       width="140.48317"
        height="140.48317"
-       width="140.48317" />
+       preserveAspectRatio="none"
+       id="image90"
+       x="-71.432701"
+       y="-64.16906" />
     <circle
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.01438856;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
        id="path93"
@@ -266,21 +266,21 @@
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/Kazan-icon-02.png"
        xlink:href="Kazan-icon-02.png"
-       y="-73.669762"
-       x="-77.367348"
-       id="image68"
-       preserveAspectRatio="none"
+       width="154.37878"
        height="147.8373"
-       width="154.37878" />
+       preserveAspectRatio="none"
+       id="image68"
+       x="-77.367348"
+       y="-73.669762" />
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/Kazan-icon-SCRITTA.png"
        xlink:href="Kazan-icon-SCRITTA.png"
-       y="-11.057654"
-       x="-49.86834"
-       id="image79"
-       preserveAspectRatio="none"
+       width="99.480148"
        height="22.474625"
-       width="99.480148" />
+       preserveAspectRatio="none"
+       id="image79"
+       x="-49.86834"
+       y="-11.057654" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -356,20 +356,20 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="panino"
-     style="display:none">
+     style="display:inline">
     <g
        id="panino-sotto"
        inkscape:label="#g857">
       <image
          sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/panino-lower.png"
          xlink:href="panino-lower.png"
-         style="display:inline"
-         y="55.299999"
-         x="15"
-         id="image1078"
-         preserveAspectRatio="none"
+         width="70"
          height="18.9"
-         width="70" />
+         preserveAspectRatio="none"
+         id="image1078"
+         x="15"
+         y="55.299999"
+         style="display:inline" />
     </g>
     <g
        id="panino-naso"
@@ -383,13 +383,13 @@
       <image
          sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/naso.png"
          xlink:href="naso.png"
-         style="display:inline"
-         y="38.430035"
-         x="38.907787"
-         id="image1056"
-         preserveAspectRatio="none"
+         width="19.684422"
          height="28.389927"
-         width="19.684422" />
+         preserveAspectRatio="none"
+         id="image1056"
+         x="38.907787"
+         y="38.430035"
+         style="display:inline" />
     </g>
     <g
        id="panino-sopra"
@@ -397,13 +397,13 @@
       <image
          sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/panino-upper.png"
          xlink:href="panino-upper.png"
-         style="display:inline"
-         y="37.821926"
-         x="15.009515"
-         id="image1089"
-         preserveAspectRatio="none"
+         width="70"
          height="24.412498"
-         width="70" />
+         preserveAspectRatio="none"
+         id="image1089"
+         x="15.009515"
+         y="37.821926"
+         style="display:inline" />
     </g>
     <text
        xml:space="preserve"
@@ -415,7 +415,7 @@
          sodipodi:role="line"
          id="tspan845"
          x="50.089806"
-         y="19.440334">Gogol' game</tspan></text>
+         y="19.440334">Gogol’ game</tspan></text>
     <text
        inkscape:label="#text847"
        id="subtitle"
@@ -427,17 +427,19 @@
          x="50.070648"
          id="tspan967"
          sodipodi:role="line"
-         style="stroke-width:0.49706915">dal racconto &quot;Il Naso&quot; di N. Gogol'</tspan></text>
+         style="stroke-width:0.49706915">dal racconto <tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.61586666px;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+   id="tspan892">Il Naso</tspan> di N. Gogol’</tspan></text>
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/resources/panino-above.png"
        xlink:href="panino-above.png"
-       inkscape:label="#image1067"
-       width="70"
-       height="68.162498"
-       preserveAspectRatio="none"
-       id="panino-above"
+       y="-33.389297"
        x="-35"
-       y="-33.389297" />
+       id="panino-above"
+       preserveAspectRatio="none"
+       height="68.162498"
+       width="70"
+       inkscape:label="#image1067" />
   </g>
   <g
      inkscape:groupmode="layer"

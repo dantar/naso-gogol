@@ -12,6 +12,13 @@
     font-weight:300;
 }
 
+@font-face {
+    font-family: 'Goudy Old Style';
+    src: url('./assets/Goudy-Old-Style-Italic.ttf') format("truetype");
+    font-weight:300;
+    font-style: italic;
+}
+
 .background {
     background-color: black;
     position: fixed;
