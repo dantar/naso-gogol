@@ -174,7 +174,7 @@ export class SanPietroburgoComponent implements OnInit {
     this.unlocked = false;
     // tutorial
     this.tutorial1 = {
-      text: 'Esplora le tappe del naso',
+      text: 'Vai alla ricerca del naso!',
       transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
       pulse: 'small',
       show: true,
