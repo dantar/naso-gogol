@@ -52,6 +52,10 @@ import { fromEvent } from 'rxjs';
       transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
+    trigger('zoominout', [
+      transition(':enter', [style({transform: 'scale(0)'}), animate('1s', style({transform: 'scale(1)'}))]),
+      transition(':leave', [style({transform: 'scale(1)'}), animate('1s', style({transform: 'scale(0)'}))]),
+    ]),
     trigger('mediaitem', [
       transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),

@@ -123,7 +123,12 @@
         <circle cx="0" cy="0" r="50" style="opacity: 0;" [attr.transform]="moveToLocation(locations[0])"
             (click)="clickTutorialFirst()"></circle>
     </g>
-
+    <g *ngIf="unlocked">
+        <g transform="translate(50 60) scale(1.5)">
+            <image [@zoominout] width="43.809399" height="60.932877" preserveAspectRatio="none" xlink:href="./assets/naso.png"
+            x="-22.227919" y="-38.775108" style="display:inline" />
+        </g>
+    </g>
 
 </svg>
 
