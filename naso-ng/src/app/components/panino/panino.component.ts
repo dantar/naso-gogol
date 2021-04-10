@@ -30,10 +30,10 @@ import { Router } from '@angular/router';
     trigger('naso', [
       // states
       state('none', style({
-        transform: 'translate(39px,39px) scale(0.4) translate(-39px,-39px)',
+        transform: 'translate(50px,55px) scale(0.4)',
       })),
       state('up', style({
-        transform: 'translate(39px,39px) scale(1.1) translate(-39px,-39px)',
+        transform: 'translate(50px,60px) scale(0.8)',
       })),
       // transitions
       transition('none => up', animate('10000ms')),
