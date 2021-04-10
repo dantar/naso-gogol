@@ -125,8 +125,8 @@
     </g>
     <g *ngIf="unlocked">
         <g transform="translate(50 60) scale(1.5)">
-            <image [@zoominout] width="43.809399" height="60.932877" preserveAspectRatio="none" xlink:href="./assets/naso.png"
-            x="-22.227919" y="-38.775108" style="display:inline" />
+            <image [@zoominout] width="43.809399" height="60.932877" preserveAspectRatio="none"
+                xlink:href="./assets/naso.png" x="-22.227919" y="-38.775108" style="display:inline" />
         </g>
     </g>
 
@@ -134,10 +134,13 @@
 
 <app-listen-track *ngIf="track" (ended)="trackEnded($event)" [track]="track"></app-listen-track>
 
-<div class="panel-menu-list top-right-menu">
+<div class="panel-menu-list top-left-menu">
     <div class="panel-menu-item" (click)="clickGoBack()">
         <svg viewBox="0 0 100 100">
             <g app-go-back></g>
         </svg>
+    </div>
+    <div class="panel-menu-item">
+        <app-fullscreen-toggle></app-fullscreen-toggle>
     </div>
 </div>

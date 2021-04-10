@@ -12,7 +12,8 @@
             <tspan style="stroke-width:0.49706915" id="tspan967" x="50.070648" y="91.720268">dal racconto<tspan
                     id="tspan892"
                     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.61586666px;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle">
-                    Il Naso</tspan> di N. Gogol<tspan style="fill: red;">’</tspan></tspan>
+                    Il Naso</tspan> di N. Gogol<tspan style="fill: red;">’</tspan>
+            </tspan>
         </text>
 
         <g *ngIf="step === 'spinning'" style="transform: translate(50px,54px) scale(0.8);">
@@ -44,10 +45,13 @@
     <app-listen-track *ngIf="track" (ended)="trackEnded($event)" [track]="track">
     </app-listen-track>
 </div>
-<div class="panel-menu-list top-right-menu" style="color: gray;">
+<div class="panel-menu-list top-left-menu" style="color: gray;">
     <div class="panel-menu-item" (click)="clickSkip()">
         <svg viewBox="0 0 100 100">
             <g app-skip-forward></g>
         </svg>
+    </div>
+    <div class="panel-menu-item">
+        <app-fullscreen-toggle></app-fullscreen-toggle>
     </div>
 </div>

@@ -14,7 +14,11 @@ export class AppComponent {
   }
 
   clickInfo() {
-    this.router.navigate(['finale']);
+    this.router.navigate(['about']);
+  }
+
+  facebookShare() {
+    return `https://facebook.com/sharer.php?u=${window.location}`;
   }
 
 }

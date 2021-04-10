@@ -24,6 +24,7 @@ import { LocationUnderlineComponent } from './components/fragments/location-unde
 import { AudioToggleComponent } from './components/widgets/audio-toggle/audio-toggle.component';
 import { SkipForwardComponent } from './components/widgets/skip-forward/skip-forward.component';
 import { GoBackComponent } from './components/widgets/go-back/go-back.component';
+import { AboutComponent } from './components/main/about/about.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -46,7 +47,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     LocationUnderlineComponent,
     AudioToggleComponent,
     SkipForwardComponent,
-    GoBackComponent
+    GoBackComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

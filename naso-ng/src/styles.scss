@@ -23,15 +23,15 @@
 }
 
 .background {
-    background-color: black;
+    background-color: lightgray;
     position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     /* The image used */
-    background-image: url("./assets/tiled.jpg");
-    background-repeat: repeat;
+    //background-image: url("./assets/tiled.jpg");
+    //background-repeat: repeat;
 }
 
 html, body { height: 100%; }
