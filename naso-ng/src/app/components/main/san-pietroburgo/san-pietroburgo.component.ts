@@ -291,14 +291,21 @@ export class SanPietroburgoComponent implements OnInit {
       this.locations
       .filter(l => (l.x-c.x)*(l.x-c.x) + (l.y-c.y)*(l.y-c.y) < 100)
       .filter(l => !this.visits.includes(l))
-      .forEach(l => this.visits.push(l));
+      .forEach(l => {
+        this.actionSound();
+        this.visits.push(l);
+      });
       this.checkVisits();
     }
   }
 
   checkVisits() {
-    if (this.visits.map(v => v.name).join('-') === this.namessequence.join('-') && !this.unlocked) {
-      this.openFinale();
+    if (this.visits.length === this.namessequence.length) {
+      if (this.visits.map(v => v.name).join('-') === this.namessequence.join('-') && !this.unlocked) {
+        this.openFinale();
+      } else {
+        this.failPath();
+      }
     }
   }
 
@@ -310,6 +317,27 @@ export class SanPietroburgoComponent implements OnInit {
     });
     audio.src = './assets/evviva.wav'
     audio.load();
+    audio.volume = 0.25;
+    audio.play();
+  }
+
+  actionSound() {
+    let audio = new Audio();
+    audio.src = './assets/action.ogg'
+    audio.load();
+    //audio.volume = 0.25;
+    audio.play();
+  }
+
+  failPath() {
+    if (this.unlocked) return;
+    let audio = new Audio();
+    fromEvent(audio, 'ended').subscribe(event =>  {
+      this.visits = [];
+    });
+    audio.src = './assets/fail.ogg'
+    audio.load();
+    audio.volume = 0.04;
     audio.play();
   }
 

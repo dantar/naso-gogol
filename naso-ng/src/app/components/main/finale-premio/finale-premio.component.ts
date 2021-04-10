@@ -61,6 +61,8 @@ export class FinalePremioComponent implements OnInit {
   }
 
   readerTransform(reader: GogolReader): string {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
     let num_rows = Math.ceil(this.readers.length / this.ROW_MAX);
     let s = 100 / num_rows;
     let index = this.readers.indexOf(reader);
@@ -68,9 +70,9 @@ export class FinalePremioComponent implements OnInit {
     let y = (index - x) / this.ROW_MAX;
     let deltax = - s * (this.ROW_MAX-1) / 2;
     let deltay =  - s * (num_rows-1) / 2;
-    let fitscale = Math.min(1, window.innerWidth / (s * this.ROW_MAX * window.innerHeight / 100));
-    console.log('fitscale', window.innerWidth, (s * this.ROW_MAX), fitscale);
-    return `translate(50 50) scale(${fitscale}) translate(${deltax + x * s} ${deltay + y * s}) scale(${s / 100})`;
+    let fitscale = Math.min(1, width / (s * this.ROW_MAX * height / 100));
+    console.log('fitscale', width, (s * this.ROW_MAX), fitscale);
+    return `translate(50 50) scale(0.9) scale(${fitscale}) translate(${deltax + x * s} ${deltay + y * s}) scale(${s / 100})`;
   }
 
   @HostListener('window:resize', ['$event'])
