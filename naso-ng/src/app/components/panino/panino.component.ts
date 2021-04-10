@@ -77,6 +77,10 @@ export class PaninoComponent implements OnInit {
     switch (this.step) {
       case 'spinning':
         this.step = 'splitting';
+        this.tickers.once('playintro', 300, () => {
+          this.startIntro();
+          this.toggleTrack();
+        });
         break;
       case 'splitting':
         this.toggleTrack();
