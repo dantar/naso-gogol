@@ -3,20 +3,23 @@
 @font-face {
     font-family: 'Garamond';
     src: url('./assets/Garamond-Regular.ttf') format("truetype");
-    font-weight:300;
 }
 
 @font-face {
     font-family: 'Goudy Old Style';
     src: url('./assets/Goudy-Old-Style-Regular.ttf') format("truetype");
-    font-weight:300;
 }
 
 @font-face {
     font-family: 'Goudy Old Style';
     src: url('./assets/Goudy-Old-Style-Italic.ttf') format("truetype");
-    font-weight:300;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'Goudy Old Style';
+    src: url('./assets/Goudy-Old-Style-Bold.ttf') format("truetype");
+    font-weight:bold;
 }
 
 .background {
