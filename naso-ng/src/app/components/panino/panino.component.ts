@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
         transform: 'scale(1.0)',
       })),
       state('up', style({
-        transform: 'translate(-30px,-2px) rotate(-30deg)',
+        transform: 'translate(-55px,-35px) rotate(-45deg)',
       })),
       state('down', style({
         transform: 'translateY(10px)',

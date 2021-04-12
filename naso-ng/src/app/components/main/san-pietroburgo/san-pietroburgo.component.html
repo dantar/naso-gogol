@@ -1,4 +1,4 @@
-<svg class="fullsvg" viewBox="0 0 100 100" (pan)="onPan($event)">
+<svg class="fullsvg" viewBox="0 0 100 100" (pan)="onPan($event)" style="background-color:white">
 
     <defs>
         <g id="transparent-layer">
@@ -64,6 +64,31 @@
         <image width="139.72601" height="100" preserveAspectRatio="none" xlink:href="assets/pietroburgo.jpg"
             id="image110" x="-19.863007" y="1.2694414e-08" />
     </g>
+
+    <g
+       id="fiori-verticali">
+      <image
+         width="103.35194"
+         height="25.387461"
+         preserveAspectRatio="none"
+         xlink:href="./assets/fiori-rossi.png"
+         id="image125-3"
+         x="-0.72895426"
+         y="-146.81635"
+         style="display:inline"
+         transform="rotate(90)" />
+      <image
+         transform="matrix(0,1,1,0,0,0)"
+         style="display:inline"
+         y="-46.821114"
+         x="-0.72895426"
+         id="image1106"
+         xlink:href="./assets/fiori-rossi.png"
+         preserveAspectRatio="none"
+         height="25.387461"
+         width="103.35194" />
+    </g>
+
 
     <g *ngIf="tutorial2.show">
         <path id="segmentDemo" [attr.d]="locsPathD(tutorial2.locations)"
