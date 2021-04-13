@@ -199,17 +199,10 @@ export class SanPietroburgoComponent implements OnInit {
       text: 'Ricostruisci la sequenza!',
       transform: `translate(${this.locations[0].x} ${this.locations[0].y})`,
       pulse: 'small',
-      show: false,
+      show: true,
       locations: [this.locations[0], this.locations[1], this.locations[2]],
       done: false,
     }
-    this.setCurrentTutorial();
-  }
-
-  setCurrentTutorial() {
-    this.currentTutorial = null;
-    if (!this.tutorial1.done && this.tutorial1.show) this.currentTutorial = this.tutorial1;
-    if (!this.tutorial2.done && this.tutorial2.show) this.currentTutorial = this.tutorial2;
   }
 
   clickGoBack() {
@@ -247,10 +240,6 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   private closeCurrentLocation() {
-    this.tutorial1.show = false;
-    this.tutorial1.done = true;
-    if (!this.tutorial2.done) this.tutorial2.show = true;
-    this.setCurrentTutorial();
     this.tickers.once('toggle-mini', 10, () => {
       if (this.location) {
         this.location.state = 'mini';
@@ -289,9 +278,6 @@ export class SanPietroburgoComponent implements OnInit {
   }
 
   onPan(event: any) {
-    this.tutorial2.show = false;
-    this.tutorial2.done = true;
-    this.setCurrentTutorial();
     if (this.locations.filter(l => l.state === 'full').length > 0) return;
     if (event.isFinal) {
       this.checkVisits();
@@ -407,13 +393,9 @@ export class SanPietroburgoComponent implements OnInit {
     item.pulse = item.pulse === 'big'? 'small' : 'big';
   }
 
-  clickTutorialFirst() {
-    this.tutorial1.show = false;
-    this.tutorial1.done = true;
-    this.setCurrentTutorial();
-    this.clickLocation(this.locations[0]);
+  clickTutorial(tutorial: TutorialOverlay) {
+    tutorial.show = false;
   }
-
 }
 
 class MapLocation {

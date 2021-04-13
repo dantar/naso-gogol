@@ -83,14 +83,6 @@
             xlink:href="./assets/fiori-rossi.png" preserveAspectRatio="none" height="25.387461" width="103.35194" />
     </g>
 
-
-    <g *ngIf="tutorial2.show">
-        <path id="segmentDemo" [attr.d]="locsPathD(tutorial2.locations)"
-            style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-        <use *ngFor="let location of tutorial2.locations" href="#pin-visited"
-            [attr.transform]="moveToLocation(location)"></use>
-    </g>
-
     <g style="display:inline" id="layer2">
         <path id="segment" *ngIf="(visits.length > 0) && panEvent" [attr.d]="locsPathD(visits)"
             style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
@@ -122,30 +114,21 @@
             (mousedown)="onTouchStart($event, loc)"></circle>
     </g>
 
-    <g *ngIf="currentTutorial != null">
+    <g *ngIf="tutorial1.show || tutorial2.show">
         <use href="#transparent-layer"></use>
-        <g>
-            <text y="93.136604" x="50.0625"
-                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Goudy Old Style;-inkscape-font-specification:'Goudy Old Style, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:0.75;"
-                xml:space="preserve">
-                <tspan y="93.136604" x="50.0625" id="tspan969">{{currentTutorial.text}}</tspan>
-            </text>
-            <text xml:space="preserve"
-                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Goudy Old Style;-inkscape-font-specification:'Goudy Old Style, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;"
-                x="50.0625" y="93.136604">
-                <tspan id="tspan845-6" x="50.0625" y="93.136604">{{currentTutorial.text}}</tspan>
-            </text>
-        </g>
     </g>
-    <g *ngIf="tutorial1.show">
-        <g [attr.transform]="tutorial1.transform">
-            <g id="touchfinger" [@pulsating]="tutorial1.pulse" (@pulsating.done)="togglePulse(tutorial1)">
-                <use href="#tutorial-pointer"></use>
-            </g>
-        </g>
-        <circle cx="0" cy="0" r="50" style="opacity: 0;" [attr.transform]="moveToLocation(locations[0])"
-            (click)="clickTutorialFirst()"></circle>
+
+    <g *ngIf="tutorial2.show" (click)="clickTutorial(tutorial2)" @zoominout>
+        <image transform="rotate(-15)" width="63.720203" height="83.185646" preserveAspectRatio="none"
+            xlink:href="./assets/tutorial-02.png" id="tutorial-02" x="36.24765" y="33.87524" style="display:inline" />
     </g>
+
+    <g *ngIf="tutorial1.show" (click)="clickTutorial(tutorial1)" @zoominout>
+        <image transform="rotate(15)" width="63.720203" height="83.185646" preserveAspectRatio="none"
+            xlink:href="./assets/tutorial-01.png" id="tutorial-01" x="-3.9376202" y="0.18116643"
+            style="display:inline" />
+    </g>
+
     <g *ngIf="unlocked">
         <g transform="translate(50 60) scale(1.5)">
             <image [@zoominout] width="43.809399" height="60.932877" preserveAspectRatio="none"
