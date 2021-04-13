@@ -52,6 +52,14 @@ import { fromEvent } from 'rxjs';
       transition(':enter', [style({opacity: 0}), animate('1s', style({opacity: 1}))]),
       transition(':leave', [style({opacity: 1}), animate('1s', style({opacity: 0}))]),
     ]),
+    trigger('fadefullmini', [
+      // states
+      state('mini', style({opacity: 0})),
+      state('full', style({opacity: 0.8})),
+      // transitions
+      transition('mini => full', animate('1000ms ease-in-out')),
+      transition('full => mini', animate('1000ms ease-in-out')),
+    ]),
     trigger('zoominout', [
       transition(':enter', [style({transform: 'scale(0)'}), animate('1s', style({transform: 'scale(1)'}))]),
       transition(':leave', [style({transform: 'scale(1)'}), animate('1s', style({transform: 'scale(0)'}))]),
@@ -388,7 +396,7 @@ export class SanPietroburgoComponent implements OnInit {
     }
   }
   scheduleRandomNasoPopup() {
-    this.tickers.once('nasopopup', this.games.randomInt(1000, 5000), () => {
+    this.tickers.once('nasopopup', this.games.randomInt(500, 3000), () => {
       if (this.currentStep < this.namessequence.length) {
         this.nasopopupState = 'shown';
       }
