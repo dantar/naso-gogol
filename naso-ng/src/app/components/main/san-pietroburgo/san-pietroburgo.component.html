@@ -57,6 +57,11 @@
         <g id="pin-J">
             <circle cx="0" cy="0" r="50" style="fill:#fff290;"></circle>
         </g>
+        <g id="location-visited">
+            <path
+                d="m 45.988505,-63.184546 q 2.041374,0 3.949612,3.106438 1.908239,3.062063 1.908239,6.346011 0,5.369701 -3.949612,10.251242 -3.283948,4.082747 -5.458456,4.082747 -0.7988,0 -0.7988,-0.710044 0,-0.48816 0.754425,-0.97631 1.597593,-1.020684 2.884548,-3.372702 1.331329,-2.396393 1.331329,-4.171502 0,-5.014677 -4.748412,-7.677334 -1.242574,-0.710045 -1.242574,-1.464464 0,-0.710045 0.798799,-1.464464 l 1.908239,-1.730729 1.641974,-1.908244 q 0.35503,-0.310671 1.020689,-0.310671 z"
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:medium;line-height:1.25;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#cd1719;fill-opacity:1;stroke:#800000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        </g>
     </defs>
 
     <g style="display:inline" id="layer1">
@@ -98,7 +103,11 @@
 
         <g *ngFor="let loc of locations">
             <g [@names]="locationStateName(loc)" app-location-underline [text]="loc.track.title"></g>
-            <use [attr.href]="'#pin-'+loc.name" [@location]="locationStatePin(loc)"></use>
+            <g [@location]="locationStatePin(loc)">
+                <use [attr.href]="'#pin-'+loc.name"></use>
+                <!-- <use *ngIf="loc && loc.listen && loc.state === 'mini'" href="#location-visited"></use> -->
+            </g>
+
             <g [@fadefullmini]="loc!=location && location && location.state || 'mini'">
                 <circle cx="0" cy="0" r="50" style="opacity: 0.5; fill:#ffffff;" [@location]="locationStatePin(loc)">
                 </circle>
