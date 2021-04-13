@@ -311,7 +311,9 @@ export class SanPietroburgoComponent implements OnInit {
     this.unlocked = true;
     let audio = new Audio();
     fromEvent(audio, 'ended').subscribe(event =>  {
-      this.router.navigate(['finale']);
+      this.tickers.once('triggerfinale', 1500, ()=> {
+        this.router.navigate(['finale']);
+      })
     });
     audio.src = './assets/evviva.wav'
     audio.load();
