@@ -26,7 +26,6 @@ import { SkipForwardComponent } from './components/widgets/skip-forward/skip-for
 import { GoBackComponent } from './components/widgets/go-back/go-back.component';
 import { AboutComponent } from './components/main/about/about.component';
 import { ReaderCardComponent } from './components/fragments/reader-card/reader-card.component';
-import { PrivacyPolicyComponent } from './components/main/privacy-policy/privacy-policy.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -52,7 +51,6 @@ export class MyHammerConfig extends HammerGestureConfig {
     GoBackComponent,
     AboutComponent,
     ReaderCardComponent,
-    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 <svg class="fullsvg finale" viewBox="0 0 100 100">
     <g *ngFor="let reader of readers" [attr.transform]="readerTransform(reader)" (click)="clickReader(reader)">
-        <g app-reader-card [reader]="reader"></g>
+        <g  [style]="readerStyle(reader)">
+            <g app-reader-card [reader]="reader"></g>
+        </g>
     </g>
 </svg>
 
