@@ -55,7 +55,7 @@
      inkscape:cx="100.95339"
      inkscape:cy="71.590131"
      inkscape:document-units="px"
-     inkscape:current-layer="reader-card"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1853"
@@ -114,7 +114,7 @@
      inkscape:label="mappa"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:none">
+     style="display:inline">
     <image
        sodipodi:absref="/home/daniele/hack/git/naso-gogol/naso-ng/src/assets/pietroburgo.jpg"
        y="1.2694414e-08"
@@ -835,7 +835,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer20"
-     inkscape:label="cards">
+     inkscape:label="cards"
+     style="display:none">
     <g
        id="reader-card"
        inkscape:label="#g972">
@@ -852,7 +853,8 @@
          style="opacity:0.5;vector-effect:none;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.06910181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
          d="M 66.73143,-50.558136 A 15.875351,15.875351 0 0 1 50.856079,-34.682785 15.875351,15.875351 0 0 1 34.980728,-50.558136 15.875351,15.875351 0 0 1 50.856079,-66.433487 15.875351,15.875351 0 0 1 66.73143,-50.558136 Z"
          id="path953"
-         transform="rotate(90)" />
+         transform="rotate(90)"
+         inkscape:connector-curvature="0" />
       <text
          id="text957"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:10.66666698px;line-height:1.25;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
