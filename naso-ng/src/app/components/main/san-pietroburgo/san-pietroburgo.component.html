@@ -16,7 +16,7 @@
         </g>
 
         <g id="pin-visited">
-            <circle cx="0" cy="0" r="60" style="fill:#00ccff;"></circle>
+            <circle cx="0" cy="0" r="60" style="fill:#cd1719;"></circle>
         </g>
         <g id="pin-A">
             <image width="155.90056" height="149.2946" preserveAspectRatio="none"
@@ -83,7 +83,7 @@
 
     <g style="display:inline" id="layer2">
         <path id="segment" *ngIf="(visits.length > 0) && panEvent" [attr.d]="locsPathD(visits)"
-            style="fill:none;stroke:#00ccff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+            style="fill:none;stroke:#cd1719;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <g *ngIf="showNaso()" id="naso-mappa" [@nasopopup]="animationStateNasopopup()"
             (@nasopopup.done)="animationDoneNasopopup($event)">
             <image xlink:href="./assets/naso.png" width="69.32" height="100" preserveAspectRatio="none" id="image1056"
