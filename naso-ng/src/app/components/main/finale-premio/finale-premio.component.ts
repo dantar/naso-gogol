@@ -14,7 +14,7 @@ export class FinalePremioComponent implements OnInit {
 
   video: VideoData;
 
-  ROW_MAX = 7;
+  ROW_MAX = 9;
 
   constructor(
     private changes: ChangeDetectorRef,
@@ -51,7 +51,6 @@ export class FinalePremioComponent implements OnInit {
       {id: '25', name: 'Claudia', image: 'assets/reader-01.jpg', video: { url: baseurl + 'assets/readers/luca-colzi.mp4' }},
       {id: '26', name: 'Fabrizio', image: 'assets/reader-01.jpg', video: { url: baseurl + 'assets/readers/luca-colzi.mp4' }},
       {id: '27', name: 'Francesco', image: 'assets/reader-01.jpg', video: { url: baseurl + 'assets/readers/luca-colzi.mp4' }},
-      {id: '28', name: 'Teresa', image: 'assets/reader-01.jpg', video: { url: baseurl + 'assets/readers/luca-colzi.mp4' }},
     ]
   }
 
@@ -71,9 +70,8 @@ export class FinalePremioComponent implements OnInit {
     let y = (index - x) / this.ROW_MAX;
     let deltax = - s * (this.ROW_MAX-1) / 2 * ratio;
     let deltay =  - s * (num_rows-1) / 2;
-    let fitscale = Math.min(1, width / (s * this.ROW_MAX * height / 100));
-    console.log('fitscale', width, (s * this.ROW_MAX), fitscale);
-    return `translate(50 50) scale(0.9) scale(${fitscale}) translate(${deltax + x * s * ratio} ${deltay + y * s}) scale(0.95) scale(${s / 100})`;
+    let fitscale = Math.min(1, width / (s * this.ROW_MAX * ratio * height / 100));
+    return `translate(50 50) scale(0.9) scale(${fitscale}) translate(${deltax + x * s * ratio} ${deltay + y * s}) scale(${s / 100})`;
   }
 
   @HostListener('window:resize', ['$event'])
