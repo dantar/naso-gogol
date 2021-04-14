@@ -1,6 +1,6 @@
-<svg class="fullsvg showrotate" viewBox="0 0 100 100">
+<svg class="fullsvg finale" viewBox="0 0 100 100">
     <g *ngFor="let reader of readers" [attr.transform]="readerTransform(reader)" (click)="clickReader(reader)">
-        <image width="100" height="100" preserveAspectRatio="none" [attr.xlink:href]="reader.image" x="-50" y="-50" />
+        <g app-reader-card [reader]="reader"></g>
     </g>
 </svg>
 

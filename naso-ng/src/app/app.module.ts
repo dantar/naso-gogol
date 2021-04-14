@@ -25,6 +25,7 @@ import { AudioToggleComponent } from './components/widgets/audio-toggle/audio-to
 import { SkipForwardComponent } from './components/widgets/skip-forward/skip-forward.component';
 import { GoBackComponent } from './components/widgets/go-back/go-back.component';
 import { AboutComponent } from './components/main/about/about.component';
+import { ReaderCardComponent } from './components/fragments/reader-card/reader-card.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -48,7 +49,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     AudioToggleComponent,
     SkipForwardComponent,
     GoBackComponent,
-    AboutComponent
+    AboutComponent,
+    ReaderCardComponent
   ],
   imports: [
     BrowserModule,

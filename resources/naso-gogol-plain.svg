@@ -69,7 +69,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer1">
     <image
        width="139.72601"
@@ -256,76 +256,76 @@
      id="layer3">
     <image
        xlink:href="../../../../Downloads/Nevskij-icon-02.png"
-       width="140.48317"
-       height="140.48317"
-       preserveAspectRatio="none"
-       id="image90"
+       y="-64.16906"
        x="-71.432701"
-       y="-64.16906" />
+       id="image90"
+       preserveAspectRatio="none"
+       height="140.48317"
+       width="140.48317" />
     <image
        xlink:href="../../../../Downloads/Kazan-icon-02.png"
-       width="154.37878"
-       height="147.8373"
-       preserveAspectRatio="none"
-       id="image68"
+       y="-73.669762"
        x="-77.367348"
-       y="-73.669762" />
+       id="image68"
+       preserveAspectRatio="none"
+       height="147.8373"
+       width="154.37878" />
     <image
        xlink:href="../naso-ng/src/assets/Torta-icon.png"
-       y="-65.815506"
-       x="-63.735977"
-       id="location-torta"
-       preserveAspectRatio="none"
+       width="132.93289"
        height="132.93289"
-       width="132.93289" />
+       preserveAspectRatio="none"
+       id="location-torta"
+       x="-63.735977"
+       y="-65.815506" />
     <image
        xlink:href="../naso-ng/src/assets/Polizia-icon.png"
-       y="-69.052467"
-       x="-63.357803"
-       id="location-capitano"
-       preserveAspectRatio="none"
+       width="137.65979"
        height="139.72"
-       width="137.65979" />
+       preserveAspectRatio="none"
+       id="location-capitano"
+       x="-63.357803"
+       y="-69.052467" />
     <image
        xlink:href="../naso-ng/src/assets/Palazzo-di-Tauride-icon.png"
-       y="-66.047112"
-       x="-64.292435"
-       id="location-tauride"
-       preserveAspectRatio="none"
+       width="132.42538"
        height="132.42538"
-       width="132.42538" />
+       preserveAspectRatio="none"
+       id="location-tauride"
+       x="-64.292435"
+       y="-66.047112" />
     <image
        xlink:href="../naso-ng/src/assets/Giornale-icon.png"
-       y="-69.385002"
-       x="-65.510002"
-       id="location-giornale"
-       preserveAspectRatio="none"
+       width="139.52"
        height="139.52"
-       width="139.52" />
+       preserveAspectRatio="none"
+       id="location-giornale"
+       x="-65.510002"
+       y="-69.385002" />
     <image
        xlink:href="../naso-ng/src/assets/esculapio-icon_2.png"
-       y="-72.072189"
-       x="-75.120811"
-       id="location-medico"
-       preserveAspectRatio="none"
+       width="149.17531"
        height="149.17531"
-       width="149.17531" />
+       preserveAspectRatio="none"
+       id="location-medico"
+       x="-75.120811"
+       y="-72.072189" />
     <image
        xlink:href="../naso-ng/src/assets/Due-lettere-icon.png"
-       y="-61.674915"
-       x="-69.752647"
-       id="location-lettere"
-       preserveAspectRatio="none"
+       width="149.27946"
        height="134.97273"
-       width="149.27946" />
+       preserveAspectRatio="none"
+       id="location-lettere"
+       x="-69.752647"
+       y="-61.674915" />
     <image
        xlink:href="../naso-ng/src/assets/Casa di Kovalev-icon.png"
-       y="-66.797112"
-       x="-63.417435"
-       id="location-casa"
-       preserveAspectRatio="none"
+       width="129.7"
        height="129.7"
-       width="129.7" />
+       preserveAspectRatio="none"
+       id="location-casa"
+       x="-63.417435"
+       y="-66.797112" />
     <path
        d="m 45.988505,-63.184546 q 2.041374,0 3.949612,3.106438 1.908239,3.062063 1.908239,6.346011 0,5.369701 -3.949612,10.251242 -3.283948,4.082747 -5.458456,4.082747 -0.7988,0 -0.7988,-0.710044 0,-0.48816 0.754425,-0.97631 1.597593,-1.020684 2.884548,-3.372702 1.331329,-2.396393 1.331329,-4.171502 0,-5.014677 -4.748412,-7.677334 -1.242574,-0.710045 -1.242574,-1.464464 0,-0.710045 0.798799,-1.464464 l 1.908239,-1.730729 1.641974,-1.908244 q 0.35503,-0.310671 1.020689,-0.310671 z"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:medium;line-height:1.25;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#cd1719;fill-opacity:1;stroke:#800000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -379,13 +379,13 @@
        id="panino-sotto">
       <image
          xlink:href="panino-lower.png"
-         width="70"
-         height="18.9"
-         preserveAspectRatio="none"
-         id="image1078"
-         x="15"
+         style="display:inline"
          y="55.299999"
-         style="display:inline" />
+         x="15"
+         id="image1078"
+         preserveAspectRatio="none"
+         height="18.9"
+         width="70" />
     </g>
     <g
        id="panino-naso">
@@ -395,25 +395,25 @@
          id="path851" />
       <image
          xlink:href="naso.png"
-         width="19.684422"
-         height="28.389927"
-         preserveAspectRatio="none"
-         id="image1056"
-         x="38.907787"
+         style="display:inline"
          y="38.430035"
-         style="display:inline" />
+         x="38.907787"
+         id="image1056"
+         preserveAspectRatio="none"
+         height="28.389927"
+         width="19.684422" />
     </g>
     <g
        id="panino-sopra">
       <image
          xlink:href="panino-upper.png"
-         width="70"
-         height="24.412498"
-         preserveAspectRatio="none"
-         id="image1089"
-         x="15.009515"
+         style="display:inline"
          y="37.821926"
-         style="display:inline" />
+         x="15.009515"
+         id="image1089"
+         preserveAspectRatio="none"
+         height="24.412498"
+         width="70" />
     </g>
     <text
        id="gogolgame"
@@ -442,12 +442,12 @@
    style="fill:#ff0000">’</tspan></tspan></text>
     <image
        xlink:href="panino-above.png"
-       y="-33.389297"
-       x="-35"
-       id="panino-above"
-       preserveAspectRatio="none"
+       width="70"
        height="68.162498"
-       width="70" />
+       preserveAspectRatio="none"
+       id="panino-above"
+       x="-35"
+       y="-33.389297" />
     <image
        width="43.809399"
        height="60.932877"
@@ -507,13 +507,13 @@
        x="0" />
     <image
        xlink:href="panino-above.png"
-       width="55.365852"
-       height="53.912498"
-       preserveAspectRatio="none"
-       id="panino-above-6"
-       x="22.418102"
+       style="display:inline"
        y="34.777878"
-       style="display:inline" />
+       x="22.418102"
+       id="panino-above-6"
+       preserveAspectRatio="none"
+       height="53.912498"
+       width="55.365852" />
   </g>
   <g
      style="display:none"
@@ -656,6 +656,48 @@
          x="-444.16537"
          id="tspan1407"
          style="fill:#ffffff;stroke-width:0.31073469">Carla</tspan></text>
+  </g>
+  <g
+     id="layer20">
+    <g
+       id="reader-card">
+      <image
+         y="2.5250483e-06"
+         x="18"
+         id="image950"
+         xlink:href="file:///home/daniele/hack/git/naso-gogol/naso-ng/src/assets/carta.png"
+         preserveAspectRatio="none"
+         height="100"
+         width="64" />
+      <path
+         transform="rotate(90)"
+         id="path953"
+         d="M 66.73143,-50.558136 A 15.875351,15.875351 0 0 1 50.856079,-34.682785 15.875351,15.875351 0 0 1 34.980728,-50.558136 15.875351,15.875351 0 0 1 50.856079,-66.433487 15.875351,15.875351 0 0 1 66.73143,-50.558136 Z"
+         style="opacity:0.5;vector-effect:none;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.06910181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-expanded;font-size:10.66666698px;line-height:1.25;font-family:'Goudy Old Style';-inkscape-font-specification:'Goudy Old Style, Semi-Expanded';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         id="text957"><textPath
+           id="textPath1437"
+           startOffset="50%"
+           xlink:href="#path953">Loredana</textPath></text>
+      <use
+         height="100%"
+         width="100%"
+         transform="rotate(180,50.534978,50.945893)"
+         id="use1439"
+         xlink:href="#text957"
+         y="0"
+         x="0" />
+      <rect
+         ry="4.5707521"
+         y="0.10025818"
+         x="18.099743"
+         height="99.800003"
+         width="63.799999"
+         id="rect1594"
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.19999869;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+    </g>
   </g>
   <g
      style="display:none"
