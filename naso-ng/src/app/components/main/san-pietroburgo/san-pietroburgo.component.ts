@@ -123,57 +123,57 @@ export class SanPietroburgoComponent implements OnInit {
   ngOnInit(): void {
     this.locations = [
       {
-        name: 'A', state: 'mini', listen: false, confirmed: 'mini', x: 10, y: 30, track: {
-          title: 'Pasticcerie sulla Sadovaja',
+        name: 'A', state: 'mini', listen: false, confirmed: 'mini', x: 46, y: 71, track: {
+          title: 'Pasticceria sulla Sadovaja',
           link: 'assets/tappa-01.mp3',
         }
       },
       {
-        name: 'B', state: 'mini', listen: false, confirmed: 'mini', x: 30, y: 10, track: {
+        name: 'B', state: 'mini', listen: false, confirmed: 'mini', x: 47, y: 55, track: {
           title: 'Cattedrale di Kazan',
           link: 'assets/tappa-02.mp3',
         }
       },
-      { name: 'C', state: 'mini', listen: false, confirmed: 'mini', x: 70, y: 60, track: {
+      { name: 'C', state: 'mini', listen: false, confirmed: 'mini', x: 66, y: 40, track: {
           title: 'Sede del giornale',
           link: 'assets/tappa-03.mp3',
         },
       },
       {
-        name: 'D', state: 'mini', listen: false, confirmed: 'mini', x: -10, y: 80, track: {
+        name: 'D', state: 'mini', listen: false, confirmed: 'mini', x: 98, y: 71, track: {
           title: 'Commissario di quartiere',
           link: 'assets/tappa-04.mp3',
         }
       },
       {
-        name: 'E', state: 'mini', listen: false, confirmed: 'mini', x: -15, y: 40, track: {
+        name: 'E', state: 'mini', listen: false, confirmed: 'mini', x: 33, y: 92, track: {
           title: 'Casa di Kovalèv',
           link: 'assets/tappa-05.mp3',
         }
       },
-      { name: 'F', state: 'mini', listen: false, confirmed: 'mini', x: 110, y: 35, track: {
+      { name: 'F', state: 'mini', listen: false, confirmed: 'mini', x: 14, y: 90, track: {
           title: 'Il medico',
           link: 'assets/tappa-06.mp3',
         },
       },
       {
-        name: 'G', state: 'mini', listen: false, confirmed: 'mini', x: 45, y: 75, track: {
+        name: 'G', state: 'mini', listen: false, confirmed: 'mini', x: 20, y: 23, track: {
           title: 'Due epistole',
           link: 'assets/tappa-07.mp3',
         }
       },
       {
-        name: 'H', state: 'mini', listen: false, confirmed: 'mini', x: 20, y: 85, track: {
+        name: 'H', state: 'mini', listen: false, confirmed: 'mini', x: 92, y: 37, track: {
           title: 'Palazzo di Tauride',
           link: 'assets/tappa-08.mp3',
         }
       },
-      { name: 'I', state: 'mini', listen: false, confirmed: 'mini', x: 80, y: 20, track: {
+      { name: 'I', state: 'mini', listen: false, confirmed: 'mini', x: 103, y: 50, track: {
           title: 'Il barbiere',
           link: 'assets/tappa-09.mp3',
         },
       },
-      { name: 'J', state: 'mini', listen: false, confirmed: 'mini', x: 80, y: 20, track: {
+      { name: 'J', state: 'mini', listen: false, confirmed: 'mini', x: 71, y: 63, track: {
         title: 'Prospettiva Nevskij',
         link: 'assets/tappa-10.mp3',
       },
@@ -181,7 +181,7 @@ export class SanPietroburgoComponent implements OnInit {
   ];
     this.locationsDict = {};
     this.locations.forEach(l => this.locationsDict[l.name] = l);
-    this.namessequence = 'A-B-I-F-C-G-H-D-E-J'.split('-');
+    this.namessequence = 'A-B-C-D-E-F-G-H-I-J'.split('-');
     this.track = null;
     this.visits = [];
     this.panEvent = null;
