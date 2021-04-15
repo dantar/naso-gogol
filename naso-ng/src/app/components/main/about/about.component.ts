@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common'
+import { SharedDataService } from 'src/app/services/shared-data.service';
 
 @Component({
   selector: 'app-about',
@@ -11,7 +12,8 @@ export class AboutComponent implements OnInit {
   readers: string[];
   mailto = 'info@teatrosantandrea.it';
 
-  constructor(private location: Location) { }
+  constructor(private location: Location, 
+    public shared: SharedDataService,) { }
 
   ngOnInit(): void {
     this.readers = [

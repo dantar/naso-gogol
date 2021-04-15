@@ -15,7 +15,7 @@ export class FinalePremioComponent implements OnInit {
 
   video: VideoData;
 
-  ROW_MAX = 9;
+  ROW_MAX = 7;
 
   constructor(
     private changes: ChangeDetectorRef,

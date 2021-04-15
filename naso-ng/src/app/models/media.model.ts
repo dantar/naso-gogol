@@ -8,6 +8,7 @@ export class GogolReader {
 
     id: string;
     name: string;
+    fullname: string;
     video: VideoData;
     image: string;
 

@@ -3,56 +3,67 @@
     <div class="aboutpage">
 
         <h1 class="fall-in-item">Gogol<span style="color: #cd1719;">’</span> game</h1>
-        <h2 class="fall-in-item">gioco multimediale da <span style="font-style: italic; color: #cd1719;">Il Naso</span> di Nikolaj Gogol’</h2>
-        <p class="fall-in-item">un progetto a cura di <span class="credit">Giulia Solano e Francesco Morosi</span></p>
-        <p class="fall-in-item">
-            con le voci di
-            <ng-container *ngFor="let reader of readers; let last=last">
-                <span class="credit">{{reader}}</span>{{last ? '' : ', '}}
-            </ng-container>
-        </p>
-        <p class="fall-in-item">progetto grafico<span class="credit">Vincenzo Letta</span></p>
-        <p class="fall-in-item">implementazione<span class="credit">Daniele Tarini</span></p>
-        <p class="fall-in-item">con il sostegno di <span class="credit"><a href="https://www.facebook.com/santandreateatro" target="_blank">Teatro Sant'Andrea di Pisa</a></span></p>
+        <h2 class="fall-in-item">gioco multimediale da <span style="font-style: italic; color: #cd1719;">Il Naso</span>
+            di Nikolaj Gogol’</h2>
+        <div class="headers">
+            <p class="fall-in-item"><span class="header">un progetto a cura di</span> <span class="credit">Giulia Solano e Francesco Morosi</span></p>
+            <p class="fall-in-item">
+                <span class="header">con le voci di</span>
+                <ng-container *ngFor="let reader of readers; let last=last">
+                    <span class="credit">{{reader}}</span>{{last ? '' : ', '}}
+                </ng-container>
+            </p>
+            <p class="fall-in-item"><span class="header">progetto grafico</span> <span class="credit">Vincenzo Letta</span></p>
+            <p class="fall-in-item"><span class="header">implementazione</span> <span class="credit">Daniele Tarini</span></p>
+            <p class="fall-in-item"><span class="header">con il sostegno di</span>
+                <span class="credit">
+                    <a href="https://www.facebook.com/santandreateatro" target="_blank">
+                        Teatro Sant'Andrea di Pisa
+                    </a>
+                </span>
+            </p>
+        </div>
         <p class="fall-in-item">
             Il progetto, che ha preso avvio nel gennaio 2021, nasce come esito
-conclusivo del laboratorio di Lettura ad Alta Voce &quot;La parola scritta,
-la parola letta, la parola detta&quot; promosso dal Teatro S. Andrea di
-Pisa
+            conclusivo del laboratorio di Lettura ad Alta Voce &quot;La parola scritta,
+            la parola letta, la parola detta&quot; promosso dal Teatro S. Andrea di
+            Pisa
         </p>
         <p class="fall-in-item">
             Il laboratorio di lettura è una realtà consolidata da oltre dieci anni
-nella città di Pisa: un modo per scoprire o riscoprire grandi classici
-della letteratura, ma soprattutto per scoprire la propria voce, tramite
-un lavoro individuale e collettivo.
+            nella città di Pisa: un modo per scoprire o riscoprire grandi classici
+            della letteratura, ma soprattutto per scoprire la propria voce, tramite
+            un lavoro individuale e collettivo.
         </p>
         <p class="fall-in-item">
             La pandemia ha costretto il laboratorio a lavorare a distanza e
-questo ha incentivato la produzone di un esito conclusivo che non
-fosse un surrogato della performance dal vivo, bensì qualche cosa
-che avesse nel web la sua naturale collocazione: è nato così il
-«Gogol&#39; Game», un gioco multimediale letterario ispirato dal
-racconto &quot;Il naso&quot; di Nikolaj Gogol, un&#39;avventura online nelle strade
-di uno dei più bei racconti dell&#39;autore russo.
+            questo ha incentivato la produzone di un esito conclusivo che non
+            fosse un surrogato della performance dal vivo, bensì qualche cosa
+            che avesse nel web la sua naturale collocazione: è nato così il
+            «Gogol&#39; Game», un gioco multimediale letterario ispirato dal
+            racconto &quot;Il naso&quot; di Nikolaj Gogol, un&#39;avventura online nelle strade
+            di uno dei più bei racconti dell&#39;autore russo.
         </p>
         <p class="fall-in-item">
             Dieci tappe e ventisette lettori e lettrici per godersi il racconto di
-Gogol&#39; attraverso un piccolo inseguimento, andando proprio sulle
-orme dell&#39; assessore di collegio Kovalev&#39; per le vie di San
-Pietroburgo, alla ricerca del suo naso...
+            Gogol&#39; attraverso un piccolo inseguimento, andando proprio sulle
+            orme dell&#39; assessore di collegio Kovalev&#39; per le vie di San
+            Pietroburgo, alla ricerca del suo naso...
         </p>
         <p class="fall-in-item">
             Buon divertimento!
         </p>
         <p class="fall-in-item">&nbsp;</p>
         <p class="fall-in-item trailing">
-            <a aria-label="scrivici" href="mailto:{{mailto}}">{{mailto}}</a><br/>
-            <a aria-label="il sito" href="https://www.gogolgame.com">www.gogolgame.com</a><br/>
+            <a aria-label="scrivici" href="mailto:{{mailto}}">{{mailto}}</a><br />
+            <a aria-label="il sito" href="https://www.gogolgame.it">www.gogolgame.it</a><br />
         </p>
+
+
     </div>
-
-    
-
+    <div class="maskgrid">
+        <img *ngFor="let reader of shared.readers" title="{{reader.name}}" class="maskitem" [src]="reader.image" />
+    </div>
     <div class="footer">&nbsp;</div>
 </div>
 

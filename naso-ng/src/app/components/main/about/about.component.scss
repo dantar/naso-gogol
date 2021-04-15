@@ -7,3 +7,25 @@
 .footer {
     height: 150px;
 }
+
+.header {
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.headers {
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+.maskgrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .maskitem {
+        width: 14%;
+        min-height: auto;
+        background-color: gray;
+    }
+}
