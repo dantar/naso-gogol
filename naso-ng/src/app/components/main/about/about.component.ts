@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-about',
@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   readers: string[];
   mailto = 'info@teatrosantandrea.it';
 
-  constructor(private router: Router) { }
+  constructor(private location: Location) { }
 
   ngOnInit(): void {
     this.readers = [
@@ -26,7 +26,7 @@ export class AboutComponent implements OnInit {
   }
 
   clickGoBack() {
-    this.router.navigate(['intro']);
+    this.location.back();
   }
 
 }

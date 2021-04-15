@@ -69,7 +69,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer1">
     <image
        width="139.72601"
@@ -112,7 +112,7 @@
        style="opacity:0.5;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer22">
     <image
        width="21.006062"
@@ -198,7 +198,7 @@
     <circle
        r="4.9181724"
        cy="3.7252903e-08"
-       cx="-20"
+       cx="-3.7252903e-08"
        id="path994"
        style="opacity:1;vector-effect:none;fill:#d40000;fill-opacity:1;stroke:#000000;stroke-width:0.16365521;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
     <g
@@ -208,13 +208,13 @@
          y="0"
          xlink:href="#path994"
          id="tappa-01"
-         transform="translate(65.996194,71.103263)"
+         transform="translate(45.996194,71.103263)"
          width="100%"
          height="100%" />
       <use
          height="100%"
          width="100%"
-         transform="translate(67.23363,54.486254)"
+         transform="translate(47.23363,54.486254)"
          id="tappa-02"
          xlink:href="#path994"
          y="0"
@@ -224,13 +224,13 @@
          y="0"
          xlink:href="#path994"
          id="tappa-03"
-         transform="translate(86.325512,39.813787)"
+         transform="translate(66.325512,39.813787)"
          width="100%"
          height="100%" />
       <use
          height="100%"
          width="100%"
-         transform="translate(117.61499,71.28004)"
+         transform="translate(97.61499,71.28004)"
          id="tappa-04"
          xlink:href="#path994"
          y="0"
@@ -239,7 +239,7 @@
          style="display:inline"
          height="100%"
          width="100%"
-         transform="translate(52.880457,92.575379)"
+         transform="translate(32.880457,92.575379)"
          id="tappa-05"
          xlink:href="#path994"
          y="0"
@@ -248,7 +248,7 @@
          style="display:inline"
          height="100%"
          width="100%"
-         transform="translate(33.611805,92.752156)"
+         transform="translate(13.611805,92.752156)"
          id="tappa-06"
          xlink:href="#path994"
          y="0"
@@ -257,7 +257,7 @@
          style="display:inline"
          height="100%"
          width="100%"
-         transform="translate(40.152543,22.748585)"
+         transform="translate(20.152543,22.748585)"
          id="tappa-07"
          xlink:href="#path994"
          y="0"
@@ -266,7 +266,7 @@
          style="display:inline"
          height="100%"
          width="100%"
-         transform="translate(111.92388,36.890719)"
+         transform="translate(91.92388,36.890719)"
          id="tappa-08"
          xlink:href="#path994"
          y="0"
@@ -275,7 +275,7 @@
          style="display:inline"
          height="100%"
          width="100%"
-         transform="translate(90.887457,63.053671)"
+         transform="translate(70.887457,63.053671)"
          id="tappa-10"
          xlink:href="#path994"
          y="0"
@@ -284,7 +284,7 @@
          style="display:inline"
          height="100%"
          width="100%"
-         transform="translate(123.23759,48.381204)"
+         transform="translate(103.23759,48.381204)"
          id="tappa-08-2"
          xlink:href="#path994"
          y="0"
@@ -904,10 +904,10 @@
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      id="layer11">
     <g
-       style="display:none"
+       style="display:inline"
        id="layer14">
       <rect
          ry="16.856144"
@@ -919,12 +919,12 @@
          style="opacity:1;vector-effect:none;fill:#ffb380;fill-opacity:1;stroke:none;stroke-width:2.80936098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        id="layer15">
       <path
          id="go-back"
-         d="M 50,-1.4042969 A 50,50 0 0 0 0,48.595703 a 50,50 0 0 0 50,50 50,50 0 0 0 50,-50 A 50,50 0 0 0 50,-1.4042969 Z M 68.220703,19.458984 c 0.648833,0.374604 0.166016,28.387512 0.166016,29.136719 0,0.749208 0.482817,28.760162 -0.166016,29.134766 C 67.57187,78.105073 43.55313,63.681244 42.904297,63.306641 42.255464,62.932037 17.755859,49.344911 17.755859,48.595703 c 0,-0.749207 24.499605,-14.338287 25.148438,-14.712891 C 43.55313,33.508209 67.57187,19.084381 68.220703,19.458984 Z"
-         style="opacity:0.5;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.41176462;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
+         d="M 50,0 A 50,50 0 0 1 100,50 50,50 0 0 1 50,100 50,50 0 0 1 0,50 50,50 0 0 1 50,0 Z M 76.261719,20.863281 C 75.877035,20.488677 61.636637,34.91446 61.251953,35.289062 60.867269,35.663666 46.341797,49.250792 46.341797,50 c 0,0.749208 14.525472,14.336333 14.910156,14.710938 0.384684,0.374603 14.625082,14.800385 15.009766,14.425781 0.384684,-0.374604 0.09766,-28.387511 0.09766,-29.136719 0,-0.749208 0.287028,-28.762115 -0.09766,-29.136719 z m -30.121094,0 C 45.755941,20.488677 31.515543,34.914459 31.130859,35.289062 30.746175,35.663666 16.220703,49.250792 16.220703,50 c 0,0.749208 14.525472,14.336334 14.910156,14.710938 0.384684,0.374603 14.625082,14.800385 15.009766,14.425781 0.384684,-0.374604 0.09961,-28.387511 0.09961,-29.136719 0,-0.749208 0.285075,-28.762115 -0.09961,-29.136719 z"
+         style="display:inline;opacity:0.5;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.82118273;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke" />
     </g>
     <g
        style="display:none"
