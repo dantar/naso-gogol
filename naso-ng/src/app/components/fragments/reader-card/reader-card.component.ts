@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GogolReader } from '../../main/finale-premio/finale-premio.component';
+import { GogolReader } from 'src/app/models/media.model';
 
 @Component({
   selector: '[app-reader-card]',
