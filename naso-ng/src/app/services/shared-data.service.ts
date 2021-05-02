@@ -26,8 +26,8 @@ export class SharedDataService {
       {id: '12', fullname:'Silvia Galletti', name: 'Silvia', image: 'assets/readers/silvia-galletti.jpg', video: { url: baseurl + 'assets/readers/silvia-galletti.mp4' }},
       {id: '13', fullname:'Alessandra Manfredini', name: 'Alessandra', image: 'assets/readers/alessandra-manfredini.jpg', video: { url: baseurl + 'assets/readers/alessandra-manfredini.mp4' }},
       {id: '14', fullname:'Michela Melai', name: 'Michela M', image: 'assets/readers/michela-melai.jpg', video: { url: baseurl + 'assets/readers/michela-melai.mp4' }},
-      {id: '15', fullname:'Claudia Melli', name: 'Claudia M', image: 'assets/readers/claudia-melli.jpg', video: null},
-      {id: '16', fullname:'Mara Pacini', name: 'Mara', image: 'assets/readers/mara-pacini.jpg', video: null},
+      {id: '15', fullname:'Claudia Melli', name: 'Claudia M', image: 'assets/readers/claudia-melli.jpg', video: { url: baseurl + 'assets/readers/claudia-melli.mp4' }},
+      {id: '16', fullname:'Mara Pacini', name: 'Mara', image: 'assets/readers/mara-pacini.jpg', video: { url: baseurl + 'assets/readers/mara-pacini.mp4' }},
       {id: '17', fullname:'Loredana Paris', name: 'Loredana', image: 'assets/readers/loredana-paris.jpg', video: { url: baseurl + 'assets/readers/loredana-paris.mp4' }},
       {id: '18', fullname:'Michela Podda', name: 'Michela P', image: 'assets/readers/michela-podda.jpg', video: { url: baseurl + 'assets/readers/michela-podda.mp4' }},
       {id: '19', fullname:'Enza Rampello', name: 'Enza', image: 'assets/readers/enza-rampello.jpg', video: { url: baseurl + 'assets/readers/enza-rampello.mp4' }},
@@ -36,9 +36,9 @@ export class SharedDataService {
       {id: '22', fullname:'Andrea Spresian', name: 'Andrea S', image: 'assets/readers/andrea-spresian.jpg', video: { url: baseurl + 'assets/readers/andrea-spresian.mp4' }},
       {id: '23', fullname:'Claudia Taffi', name: 'Claudia T', image: 'assets/readers/claudia-taffi.jpg', video: { url: baseurl + 'assets/readers/claudia-taffi.mp4' }},
       {id: '24', fullname:'Daniele Tarini', name: 'Daniele', image: 'assets/readers/daniele-tarini.jpg', video: { url: baseurl + 'assets/readers/daniele-tarini.mp4' }},
-      {id: '25', fullname:'Carmela Trimarchi', name: 'Carmela', image: 'assets/readers/carmela-trimarchi.jpg', video: null},
+      {id: '25', fullname:'Carmela Trimarchi', name: 'Carmela', image: 'assets/readers/carmela-trimarchi.jpg', video: { url: baseurl + 'assets/readers/carmela-trimarchi.mp4' }},
       {id: '26', fullname:'Elena Zucconi', name: 'Elena', image: 'assets/readers/elena-zucconi.jpg', video: { url: baseurl + 'assets/readers/elena-zucconi.mp4' }},
-      {id: '27', fullname:'Giulia Solano', name: 'Giulia S', image: 'assets/readers/giulia-solano.jpg', video: null},
+      {id: '27', fullname:'Giulia Solano', name: 'Giulia S', image: 'assets/readers/giulia-solano.jpg', video: { url: baseurl + 'assets/readers/giulia-solano.mp4' }},
       {id: '28', fullname:'Francesco Morosi', name: 'Francesco', image: 'assets/readers/francesco-morosi.jpg', video: null},
     ];
   }
